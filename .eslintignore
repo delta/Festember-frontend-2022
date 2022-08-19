@@ -1,0 +1,12 @@
+*.png
+*.css
+package.json
+package-lock.json
+public/
+build/
+README.md
+src/service-worker.ts
+src/reportWebVitals.ts
+src/index.tsx
+src/serviceWorkerRegistration.ts
+src/App.tsx
