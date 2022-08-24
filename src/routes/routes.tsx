@@ -1,11 +1,13 @@
-import { ContactUs, Home, Sponsors } from "../pages";
+import { ContactUs, Sponsors } from "../pages";
+import React from "react";
+import Homepage from "../pages/homepage/Homepage";
 
 const routes: RouteType[] = [
 	{
 		title: "Home",
 		path: "/",
 		description: "Home Page of Festember 2022",
-		element: <Home />,
+		element: <Homepage />,
 	},
 	{
 		title: "Contact Us",
