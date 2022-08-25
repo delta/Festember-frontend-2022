@@ -18,7 +18,9 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: yarn install
 
       - name: Build
-        run: npm run build
+        run: |
+          cp config.example config.ts
+          yarn build
