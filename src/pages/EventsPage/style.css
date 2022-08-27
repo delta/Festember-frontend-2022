@@ -1,0 +1,106 @@
+.eventDetails {
+    background-color: black;
+    opacity: 0.75; 
+    height: 18rem;
+    width: 15%;
+    padding: 2rem;
+    margin: 3rem;
+    margin-top: 8rem;
+    color: white;
+    overflow-y: scroll;}
+  
+    .eventTitle {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+        background-color: black;
+        opacity: 0.75; 
+        height: 18rem;
+        width: 15%;
+        padding: 2rem;
+        margin: 3rem;
+        margin-top: 8rem;
+        color: white;}
+
+  .clusters {
+  font-size: 6rem;
+  text-align: center;
+  font-family: 'Atlantic-Cruise';
+  margin-top: 2rem;
+  background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+  background : linear-gradient(#FFFFFF, #3AD4F8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+  }
+
+  .clustersMobile {
+    display: none;
+    font-size: 6rem;
+    text-align: center;
+    font-family: 'Atlantic-Cruise';
+    margin-top: 2rem;
+    background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+    background : linear-gradient(#FFFFFF, #3AD4F8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+    }
+
+  .eventsLayout {
+      display: flex;
+     flex-direction: row;
+      justify-content: space-between;
+
+
+}
+
+@media screen and (max-width: 575px) {
+    .eventsLayout {
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .eventDetails {
+      height: 10rem;
+      width: 14rem;
+      font-size: 0.8rem;
+    }
+
+    .eventTitle{
+      height: 1rem;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      width: 80vw;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .clusters{
+      opacity: 0;
+    }
+    .clustersMobile{
+     display: block;
+    }
+
+    .slick-slide{
+      font-size: 0.5rem;
+    }
+  }
+  
+  .slick-slide{
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+
+  .slick-center {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+    color: #79E2FB;
+    text-decoration: line-through;
+}
