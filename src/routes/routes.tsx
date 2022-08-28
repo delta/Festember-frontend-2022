@@ -4,13 +4,13 @@ const routes: RouteType[] = [
 	{
 		title: "Home",
 		path: "/",
-		description: "Home Page of Aaveg 2022",
+		description: "Home Page of Festember 2022",
 		element: <Home />,
 	},
 	{
 		title: "Contact Us",
 		path: "/contact",
-		description: "Contact Us about Aaveg 2022",
+		description: "Contact Us about Festember 2022",
 		element: <ContactUs />,
 	},
 ];
