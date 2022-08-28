@@ -17,7 +17,7 @@ const NavBar = () => {
     'Workshops'
   ];
   const [isNavOpen, setIsNavOpen] = React.useState<boolean>(false);
-  const isMobileDevice = window.matchMedia('(max-width: 640px)').matches;
+  const isMobileDevice = window.matchMedia('(max-width: 900px)').matches;
 
   const toggleNavBar = () => {
     setIsNavOpen(!isNavOpen);

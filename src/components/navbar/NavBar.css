@@ -87,7 +87,7 @@
 }
 
 /* Phones */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   #nav-bar{
     height: 8vh;
     padding: 0 2em;
