@@ -16,3 +16,7 @@
 	src: local('Atlantic-Cruise'),
 		url(./assets/fonts/atlantic_cruise/Atlantic_Cruise-Demo.ttf) format('truetype');
 }
+
+body{
+  margin: 0px;
+}
