@@ -1,0 +1,18 @@
+.footer{
+  position: absolute;
+  text-transform: uppercase;
+  color: #79E2FB;
+  top: 96vh;
+  left: 50%; 
+  font-family: Poppins;
+  transform: translateX(-50%);
+  font-size: 0.85em;
+  text-align: center;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer{
+    font-size: 1em;
+  }
+}

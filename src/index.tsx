@@ -4,6 +4,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./components";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<ErrorBoundary FallbackComponent={ErrorFallback}>
-		<App />
+		<ChakraProvider>
+			<App />
+		</ChakraProvider>
 	</ErrorBoundary>
 );
 

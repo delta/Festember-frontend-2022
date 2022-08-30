@@ -1,0 +1,21 @@
+.separator{
+    position: relative;
+    background: linear-gradient(179deg, #FFFFFF 14.23%, #3AD4F8 99.14%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.button{
+    position: relative;
+    border-top: 3px #3AD4F8;
+	text-transform: uppercase;
+    padding: 0.35em 0.5em 0.35em 0.5em;
+    margin: 0.25em;
+    border: 2px solid #3AD4F8;
+    border-bottom: none;
+    border-image: linear-gradient(to bottom, #79E2FBFF, #79E2FB00) 1;
+	color: white;
+    background: rgba(0, 0, 0, 0.33);
+}
