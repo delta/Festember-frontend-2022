@@ -25,6 +25,13 @@
     width: 30em;
 }
 
+.card{
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 24px rgba(121, 226, 251, 0.35);
+    backdrop-filter: blur(8px);
+}
+
 .name{
     position: relative;
     font-family: Atlantic_Cruise;
@@ -39,7 +46,7 @@
 @media only screen and (min-width: 1024px) {
     .name {
       font-size: 6em;
-      width: 110%;
+      text-align: center;
     }
     .container{
         width: 50%

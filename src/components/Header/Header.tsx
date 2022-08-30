@@ -8,6 +8,7 @@ import {
 	Drawer,
 	DrawerContent,
 	DrawerOverlay,
+	SlideFade,
 } from "@chakra-ui/react";
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -72,9 +73,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 								<CloseIcon boxSize="20px" ml="15px" />
 							)}
 						</Button>
-						<Fade in={isOpen}>
+						<SlideFade in={isOpen} reverse={true}>
 							<Navbar />
-						</Fade>
+						</SlideFade>
 					</Center>
 				</Flex>
 			</BrowserView>

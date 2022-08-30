@@ -1,4 +1,4 @@
-import { ContactUs, Home } from "../pages";
+import { ContactUs, Home, Sponsors } from "../pages";
 
 const routes: RouteType[] = [
 	{
@@ -12,6 +12,12 @@ const routes: RouteType[] = [
 		path: "/contact",
 		description: "Contact Us about Festember 2022",
 		element: <ContactUs />,
+	},
+	{
+		title: "Sponsors",
+		path: "/sponsors",
+		description: "Sponsors of Festember 2022",
+		element: <Sponsors />,
 	},
 ];
 

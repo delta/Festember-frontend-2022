@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0em 1.5em 0em 1.5em;
+    font-family: Poppins;
     background: linear-gradient(180deg, #000000 -48.72%, rgba(0, 0, 0, 0) 184.19%);
 }
 
