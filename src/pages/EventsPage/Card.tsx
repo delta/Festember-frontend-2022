@@ -11,7 +11,7 @@ export const Card = ({
 			backgroundColor: color,
 		}}
 	>
-		<img src={'https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706__340.jpg'} className={`${styles.cardImg} card-img-top m-auto`} alt="logo-UN" />
+		<img src={'https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706__340.jpg'} className={`${styles.cardImg} card-img-top m-auto`} alt="cluster-image" />
 	</div>
 );
 

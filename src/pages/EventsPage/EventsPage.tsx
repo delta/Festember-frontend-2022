@@ -10,6 +10,35 @@ import './style.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Scrollbars } from 'react-custom-scrollbars';
+
+function SampleNextArrow(props: { className: string; onClick: React.MouseEventHandler<HTMLDivElement>; }) {
+  const {className, onClick}=props;
+  return (
+    <div
+      className={className}
+      style={{ position: 'relative',
+      left: '50%',
+      top: '40%',
+      transform: 'translate(-50%, -50%) rotate(90deg)' }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props: { className: string; onClick: React.MouseEventHandler<HTMLDivElement>; }) {
+  const {className, onClick}=props;
+  return (
+    <div
+      className={className}
+      style={{ position: 'relative',
+      left: '50%',
+      top: '20%',
+      transform: 'translate(-50%, -500%) rotate(90deg)' }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default function EventsPage(){
   const [goToSlide, setGoToSlide] = React.useState(0);
@@ -33,8 +62,10 @@ export default function EventsPage(){
     centerMode: true,
     focusOnSelect: true,
     className: "center",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     afterChange: () => setEventIndex((eventIndex+1)%noOfEvents),
-    responsive: [ { breakpoint: 575, settings: { slidesToShow: 1, vertical: false, arrows: true } } ]
+    responsive: [ { breakpoint: 575, settings: { slidesToShow: 1, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined } } ]
   };
 
   const slides = contents.map((slide, index) => ({
@@ -73,12 +104,14 @@ export default function EventsPage(){
         </div>
         <div style={{width: '10%'}}></div>
         <div className="eventDetails">
+          <Scrollbars >
         <h3 style={{color: '#79E2FB'}}>Event Description</h3>
         <p>{eventDetails.eventDetails[eventIndex].description}</p>
         <h3 style={{color: '#79E2FB'}}>Event Details</h3>
         <p>{eventDetails.eventDetails[eventIndex].details}</p>
         <h3 style={{color: '#79E2FB'}}>Registration Link</h3>
         <p>{eventDetails.eventDetails[eventIndex].link}</p>
+        </Scrollbars>
         </div>
       </div>
       </>
