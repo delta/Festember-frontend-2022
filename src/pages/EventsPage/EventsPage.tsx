@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Scrollbars } from 'react-custom-scrollbars';
 
-function SampleNextArrow(props: { className: string; onClick: React.MouseEventHandler<HTMLDivElement>; }) {
+function SampleNextArrow({...props}) {
   const {className, onClick}=props;
   return (
     <div
@@ -26,7 +26,7 @@ function SampleNextArrow(props: { className: string; onClick: React.MouseEventHa
   );
 }
 
-function SamplePrevArrow(props: { className: string; onClick: React.MouseEventHandler<HTMLDivElement>; }) {
+function SamplePrevArrow({...props}) {
   const {className, onClick}=props;
   return (
     <div
