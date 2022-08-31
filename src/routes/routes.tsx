@@ -1,6 +1,5 @@
-import { ContactUs, Sponsors } from "../pages";
+import { ContactUs, Sponsors, Homepage } from "../pages";
 import React from "react";
-import Homepage from "../pages/homepage/Homepage";
 
 const routes: RouteType[] = [
 	{

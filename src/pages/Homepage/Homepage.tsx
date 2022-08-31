@@ -1,13 +1,8 @@
 import React from 'react';
-import BackgroundAnimation from '../../components/background/BackgroundAnimation';
-import Footer from '../../components/footer/Footer';
-import NavBar from '../../components/navbar/NavBar';
 import './Homepage.css';
 
 const Homepage = () => (
   <>
-    <BackgroundAnimation />
-    <NavBar />
     <div className='title-box'>
       <div className='title-prefix'>Nit Trichy&apos;s</div>
       <div className='title'>Festember</div>
@@ -16,7 +11,6 @@ const Homepage = () => (
         Register
       </button>
     </div>
-    <Footer />
   </>
 );
 export default Homepage;
