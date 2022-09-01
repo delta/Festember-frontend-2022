@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins'),
+		url(./assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Poppins';
+  font-weight: bold;
+	src: local('Poppins'),
+		url(./assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Atlantic-Cruise';
+	src: local('Atlantic-Cruise'),
+		url(./assets/fonts/atlantic_cruise/Atlantic_Cruise-Demo.ttf) format('truetype');
+}
+
+body{
+  margin: 0px;
+}
