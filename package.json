@@ -57,7 +57,7 @@
 		"prettier:fix": "prettier '**/*.{json,md,html,yaml,ts,js,tsx,jsx}'  --write",
 		"format": "yarn run lint:fix && yarn run stylelint:fix && yarn run prettier:fix",
 		"format:error": "yarn run lint && yarn run stylelint && yarn run prettier",
-		"postinstall": "cd .. && husky install OPAReact/.husky"
+		"postinstall": "cd .. && husky install Festember-frontend-2022/.husky"
 	},
 	"eslintConfig": {
 		"extends": [
