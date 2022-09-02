@@ -1,7 +1,5 @@
 import React from "react";
 import Carousel from "react-spring-3d-carousel";
-import BackgroundAnimation from '../../components/Background/BackgroundAnimation';
-import NavBar from '../../components/Navbar/Navbar';
 import { config } from "react-spring";
 import { Card } from "./Card";
 import { contents } from "./assets/contents";
