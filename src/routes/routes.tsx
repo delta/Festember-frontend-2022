@@ -1,5 +1,6 @@
 import { ContactUs, Sponsors, Homepage } from "../pages";
 import React from "react";
+import EventsPage from "../pages/EventsPage/EventsPage";
 
 const routes: RouteType[] = [
 	{
@@ -20,6 +21,12 @@ const routes: RouteType[] = [
 		description: "Sponsors of Festember 2022",
 		element: <Sponsors />,
 	},
+	{
+		title: "EventPage",
+		path: "/events",
+		description: "Events Page",
+		element: <EventsPage />
+	}
 ];
 
 export default routes;
