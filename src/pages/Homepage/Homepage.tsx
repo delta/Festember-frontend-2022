@@ -1,16 +1,32 @@
-import React from 'react';
-import './Homepage.css';
+import { AboutUs, ContactUs, Landing, Sponsors } from "../../components";
+import ReactFullpage from "@fullpage/react-fullpage";
+
+import "./Homepage.css";
+
+const anchors = ["home", "aboutUs", "contactUs", "sponsors"];
 
 const Homepage = () => (
-  <>
-    <div className='title-box'>
-      <div className='title-prefix'>Nit Trichy&apos;s</div>
-      <div className='title'>Festember</div>
-      <div className='title-suffix'>The Sunken Paradise</div>
-      <button className='register-button' type='button'>
-        Register
-      </button>
-    </div>
-  </>
+	<ReactFullpage
+		scrollingSpeed={1000}
+		anchors={anchors}
+		render={() => {
+			return (
+				<ReactFullpage.Wrapper>
+					<div className="section">
+						<Landing />
+					</div>
+					<div className="section">
+						<AboutUs />
+					</div>
+					<div className="section">
+						<ContactUs />
+					</div>
+					<div className="section">
+						<Sponsors />
+					</div>
+				</ReactFullpage.Wrapper>
+			);
+		}}
+	/>
 );
 export default Homepage;
