@@ -6,6 +6,7 @@ import {
 	Heading,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
 
@@ -15,6 +16,8 @@ const Login = () => {
 		user_email: "",
 		user_pass: "",
 	});
+
+	const navigate = useNavigate();
 
 	const handleFormChange = (field: string, value: string) => {
 		setLoginForm({ ...loginForm, [field]: value });
@@ -33,6 +36,7 @@ const Login = () => {
 			setFormError("");
 			fetch(`${config.backendOrigin}/auth/web`, {
 				method: "POST",
+				credentials: "include",
 				headers: {
 					"Content-Type": "application/json",
 				},
@@ -75,13 +79,16 @@ const Login = () => {
 
 				<div className={styles.buttonSection}>
 					<div className={styles.loginButtons}>
-						<button className={`${styles.button} ${styles.leftButton}`}>
+						<button
+							className={`${styles.button} ${styles.leftButton}`}
+							onClick={handleFormSubmit}
+						>
 							LOGIN
 						</button>
 
 						<button
 							className={`${styles.button} ${styles.rightButton}`}
-							onClick={handleFormSubmit}
+							onClick={() => navigate("/register")}
 						>
 							SIGN UP
 						</button>

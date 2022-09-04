@@ -9,6 +9,7 @@ import {
 	Radio,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
 
@@ -32,6 +33,8 @@ const Register = () => {
 		user_college: "",
 		user_city: "",
 	});
+
+	const navigate = useNavigate();
 
 	const handleFormChange = (field: string, value: string) => {
 		setRegisterForm({
@@ -380,7 +383,10 @@ const Register = () => {
 				<div className={styles.buttonSection}>
 					<p>Already been here?</p>
 					<div className={styles.registerButtons}>
-						<button className={`${styles.button} ${styles.leftButton}`}>
+						<button
+							className={`${styles.button} ${styles.leftButton}`}
+							onClick={() => navigate("/login")}
+						>
 							LOGIN
 						</button>
 						{formPage !== 4 && (
