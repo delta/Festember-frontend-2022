@@ -1,7 +1,14 @@
-import routes from "../../routes/routes";
+// import routes from "../../routes/routes";
 import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styles from "./styles.module.css";
+
+const routes = [
+	{name: "Home", path: "/#home"},
+	{name: "About Us", path: "/#aboutUs"},
+	{name: "Contact Us", path: "/#contactUs"},
+	{name: "Sponsors", path: "/#sponsors"}
+]
 
 const Navbar = () => {
   return (
@@ -17,7 +24,7 @@ const Navbar = () => {
                                     width="12em"
                                     className={styles.button}
 								>
-									{route.title}
+									{route.name}
 								</Center>
 							</Link>
 						);
@@ -48,7 +55,7 @@ const Navbar = () => {
 											fontWeight: "bold",
 										}}
 									>
-										{route.title}
+										{route.name}
 									</Text>
 								</Flex>
 							</Link>

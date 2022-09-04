@@ -42,6 +42,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
 } 
 
 @media only screen and (min-width: 1024px) {
