@@ -1,20 +1,21 @@
-.home-container{
-  position:relative;
-  display: flex;
-  top: 41.5vh;
+.title-box {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 40vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 83vh;
-  align-items:center;
+  text-transform: uppercase;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   user-select: none;
-  overflow-y: scroll;
 }
 
-.title-prefix{
+.title-prefix {
   color: white;
-  font-size: 1.25rem;
-  margin-top: 4em;
+  font-size: 1rem;
   font-family: Poppins;
 }
 
@@ -22,8 +23,8 @@
   font-size: 12rem;
   font-family: 'Atlantic-Cruise';
   margin-top: 1rem;
-  background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
-  background : linear-gradient(#FFFFFF, #3AD4F8);
+  background: -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+  background: linear-gradient(#FFFFFF, #3AD4F8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -40,17 +41,17 @@
   word-spacing: 0.5em;
 }
 
-.register-button{
+.register-button {
   background: #79E2FB;
   color: #0F1B33;
   padding: 0.75em 1em;
   text-transform: uppercase;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-size: Poppins;
   font-weight: bold;
   outline: none;
   border: none;
-  margin: 2rem 0 2rem 0;
+  margin-top: 4rem;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -62,11 +63,12 @@
 
 /* Phones */
 @media (max-width: 640px) {
-  .title{
+  .title {
     font-size: 6rem;
     margin-bottom: 1rem;
   }
-  .title-suffix{
+
+  .title-suffix {
     font-size: 1rem;
   }
 }
