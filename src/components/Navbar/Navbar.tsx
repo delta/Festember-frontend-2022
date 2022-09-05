@@ -10,7 +10,7 @@ const routes = [
 	{name: "Sponsors", path: "/#sponsors"}
 ]
 
-const Navbar = () => {
+const Navbar = ({onClose}: any) => {
   return (
 		<>
 			<MobileView>
@@ -23,6 +23,7 @@ const Navbar = () => {
                                     fontSize="2xl"
                                     width="12em"
                                     className={styles.button}
+									onClick={onClose}
 								>
 									{route.name}
 								</Center>
