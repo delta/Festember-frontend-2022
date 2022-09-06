@@ -1,6 +1,6 @@
 import { Center, Flex, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView, isTablet } from "react-device-detect";
-import { SplideCarousel } from "..";
+import { SplideCarousel } from "../../components";
 import styles from "./styles.module.css";
 
 const Sponsor = [
