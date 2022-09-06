@@ -8,7 +8,7 @@ import {
 	RadioGroup,
 	Radio,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
@@ -35,6 +35,10 @@ const Register = () => {
 	});
 
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (localStorage.getItem("user")) navigate("/");
+	}, []);
 
 	const handleFormChange = (field: string, value: string) => {
 		setRegisterForm({
@@ -105,7 +109,16 @@ const Register = () => {
 			body: JSON.stringify(registerForm),
 		})
 			.then((res) => res.json())
-			.then((data) => console.log(data));
+			.then((data) => {
+				if (data.status_code === 200) navigate("/login");
+				else if (
+					data.status_code === 400 &&
+					data.message === "You have already registered"
+				)
+					setFormError("already_registered");
+				else setFormError("register_failure");
+			})
+			.catch(() => setFormError("register_failure"));
 	};
 
 	return (
@@ -376,6 +389,17 @@ const Register = () => {
 									handleFormChange("user_voucher_name", e.target.value)
 								}
 							/>
+						</FormControl>
+						<FormControl isInvalid={formError === "register_failure"}>
+							<FormErrorMessage className={styles.errorMessage}>
+								Error Occurred while registering, check your details and
+								try again
+							</FormErrorMessage>
+						</FormControl>
+						<FormControl isInvalid={formError === "already_registered"}>
+							<FormErrorMessage className={styles.errorMessage}>
+								User already registered
+							</FormErrorMessage>
 						</FormControl>
 					</>
 				)}

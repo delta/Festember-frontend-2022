@@ -81,9 +81,19 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					</Center>
 				</Flex>
 			</BrowserView>
-			<Button bg="#79E2FB" onClick={() => navigate("/login")}>
-				LOGIN
-			</Button>
+			{!localStorage.getItem("user") && (
+				<Button bg="#79E2FB" onClick={() => navigate("/login")}>
+					LOGIN
+				</Button>
+			)}
+			{localStorage.getItem("user") && (
+				<Button
+					bg="#79E2FB"
+					onClick={() => localStorage.removeItem("user")}
+				>
+					LOGOUT
+				</Button>
+			)}
 		</Box>
 	);
 };

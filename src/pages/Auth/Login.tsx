@@ -5,7 +5,7 @@ import {
 	Input,
 	Heading,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
@@ -18,6 +18,10 @@ const Login = () => {
 	});
 
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (localStorage.getItem("user")) navigate("/");
+	}, []);
 
 	const handleFormChange = (field: string, value: string) => {
 		setLoginForm({ ...loginForm, [field]: value });
@@ -43,7 +47,14 @@ const Login = () => {
 				body: JSON.stringify(loginForm),
 			})
 				.then((res) => res.json())
-				.then((data) => console.log(data));
+				.then((data) => {
+					console.log(data);
+					if (data.status_code === 200) {
+						localStorage.setItem("user", data.message.user_id);
+						navigate("/");
+					} else setFormError("login_failure");
+				})
+				.catch(() => setFormError("login_failure"));
 		}
 	};
 
@@ -75,6 +86,11 @@ const Login = () => {
 						}}
 					/>
 					<FormErrorMessage>Password is required</FormErrorMessage>
+				</FormControl>
+				<FormControl isInvalid={formError === "login_failure"}>
+					<FormErrorMessage className={styles.errorMessage}>
+						Invalid Credentials
+					</FormErrorMessage>
 				</FormControl>
 
 				<div className={styles.buttonSection}>

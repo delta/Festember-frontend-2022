@@ -144,6 +144,11 @@
 	font-style: normal;
 }
 
+.errorMessage {
+	justify-content: center;
+	text-align: center;
+}
+
 @media screen and (max-width: 500px) {
 	.authForm {
 		margin-left: 1rem;
