@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
+import { useNavigate } from "react-router-dom";
 import { Navbar } from "../index";
 
 import styles from "./styles.module.css";
@@ -19,6 +20,7 @@ import styles from "./styles.module.css";
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const menuToggleSVG = "../../../public/Assets/Images/";
 	const festemberLogoSVG = "../../../public/Assets/Images/festember_logo.svg";
+	const navigate = useNavigate();
 	return (
 		<Box className={styles.gradient}>
 			<MobileView>
@@ -44,7 +46,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					>
 						<DrawerOverlay maxH="85vh" mt="9.4vh" />
 						<DrawerContent maxH="85vh" mt="9.6vh" bg="#fff0">
-							<Navbar onClose={onClose} />
+							<Navbar />
 						</DrawerContent>
 					</Drawer>
 				</Flex>
@@ -79,7 +81,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					</Center>
 				</Flex>
 			</BrowserView>
-			<Button bg="#79E2FB">LOGIN</Button>
+			<Button bg="#79E2FB" onClick={() => navigate("/login")}>
+				LOGIN
+			</Button>
 		</Box>
 	);
 };
