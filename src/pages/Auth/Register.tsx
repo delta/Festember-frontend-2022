@@ -83,7 +83,11 @@ const Register = () => {
 		} else if (formPage === 2) {
 			if (!registerForm.user_degree) setFormError("user_degree");
 			else if (!registerForm.user_address) setFormError("user_address");
-			else if (!registerForm.user_pincode) setFormError("user_pincode");
+			else if (
+				!registerForm.user_pincode ||
+				!/^\+?(0|[1-9]\d*)$/.test(registerForm.user_phno)
+			)
+				setFormError("user_pincode");
 			else {
 				setFormError("");
 				setFormPage(3);
@@ -303,7 +307,9 @@ const Register = () => {
 									handleFormChange("user_pincode", e.target.value)
 								}
 							/>
-							<FormErrorMessage>Pincode is required</FormErrorMessage>
+							<FormErrorMessage>
+								Pincode is required and should be a number
+							</FormErrorMessage>
 						</FormControl>
 					</>
 				)}
