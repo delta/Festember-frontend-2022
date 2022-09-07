@@ -8,19 +8,19 @@ const Sponsor = [
 		name: "Lorem ipsum",
 		designation: "Lorem ipsum",
 		content:
-			"urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi.",
+			["urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi."],
 	},
 	{
 		name: "Lorem ipsum",
 		designation: "Lorem ipsum",
 		content:
-			"urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi.",
+			["urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi."],
 	},
 	{
 		name: "Lorem ipsum",
 		designation: "Lorem ipsum",
 		content:
-			"urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi.",
+			["urna egestas auctor blandit, quam nunc mollis ante, eu consectetur quam ex vitae erat. Nulla ut pretium nulla. Praesent commodo ex odio, at ultricies sem ultrices ut. Sed et ullamcorper mi."],
 	},
 ];
 
