@@ -1,0 +1,161 @@
+.authFormContainer {
+	position: relative;
+	height: calc(100vh - 10rem);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.authForm {
+	width: 100%;
+	max-width: 425px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2em;
+	padding: 2em 3em 3em 3em;
+	background: rgba(0, 0, 0, 0.45);
+	backdrop-filter: blur(4px);
+	border-radius: 4px;
+}
+
+.authForm > div > label {
+	color: #fff !important;
+	font-family: "Poppins" !important;
+	font-size: 14px !important;
+	font-style: normal;
+}
+
+.formHeading {
+	font-family: "Poppins" !important;
+	font-size: 47px;
+	font-weight: 700;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+
+.loginSubHeader {
+	font-family: "Poppins";
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #ffffff;
+	margin-bottom: 2em;
+}
+
+.formInput {
+	background: rgba(255, 255, 255, 0.07) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 12px !important;
+	caret-color: #ffffff !important;
+	margin-bottom: 1rem !important;
+	color: #ffffffcc !important;
+}
+
+.buttonSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+	flex-direction: column;
+	width: 100%;
+}
+
+.buttonSection > p {
+	color: #ffffffcc;
+	font-family: "Poppins" !important;
+	font-size: 12px !important;
+	font-style: normal;
+	margin-bottom: 0.5rem;
+	width: 100%;
+	text-align: left;
+}
+
+.button {
+	padding: 5px 1.8rem;
+	font-size: 18px;
+	font-family: "Poppins";
+	font-weight: 700;
+	letter-spacing: 0em;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.leftButton {
+	border: 2px solid #79e2fb;
+	color: #ffffff;
+}
+
+.leftButton:hover {
+	background: #79e2fb;
+	color: #000000;
+}
+
+.leftButton:active {
+	background: #1ca2c4;
+	color: #000000;
+	border: 2px solid #1ca2c4;
+}
+
+.rightButton {
+	background: #79e2fb;
+	color: #000000;
+}
+
+.rightButton:hover {
+	background: #4bcae9;
+}
+
+.rightButton:active {
+	background: #1ca2c4;
+}
+
+.registerButtons {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.loginButtons {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.loginButtons > button {
+	margin-bottom: 0.5rem;
+}
+
+.radioGroup {
+	display: flex;
+	justify-content: space-around;
+}
+
+.radioGroup > label > span {
+	color: #ffffffcc;
+	font-family: "Poppins" !important;
+	font-size: 14px !important;
+	font-style: normal;
+}
+
+.errorMessage {
+	justify-content: center;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+	.authForm {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		padding: 1.5em 1.5em 1.5em 1.5em;
+	}
+	.authFormContainer {
+		height: auto;
+	}
+}

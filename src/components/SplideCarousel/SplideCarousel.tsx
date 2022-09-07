@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const SplideCarousel = ({ Details }: any) => {
 	return (
 		<Splide
-			style={{fontFamily: "Poppins"}}
+			style={{ fontFamily: "Poppins" }}
 			hasTrack={false}
 			options={
 				!isBrowser
@@ -47,7 +47,7 @@ const SplideCarousel = ({ Details }: any) => {
 			<SplideTrack>
 				{Details.map((obj: any) => {
 					return (
-						<SplideSlide className={styles.card}>
+						<SplideSlide className={styles.card} key={obj.name}>
 							<Flex
 								flexDirection="column"
 								color="white"
@@ -87,13 +87,21 @@ const SplideCarousel = ({ Details }: any) => {
 			<div className="splide__arrows">
 				<button
 					className="splide__arrow splide__arrow--prev"
-					style={{ color: "white", marginTop: isBrowser? "0em" : "-3em", marginLeft: isBrowser? "-5em" : "0em"}}
+					style={{
+						color: "white",
+						marginTop: isBrowser ? "0em" : "-3em",
+						marginLeft: isBrowser ? "-5em" : "0em",
+					}}
 				>
 					<ChevronRightIcon />
 				</button>
 				<button
 					className="splide__arrow splide__arrow--next"
-					style={{ color: "white", marginBottom: isBrowser? "0em" : "-3em", marginRight: isBrowser? "-5em" : "0em"}}
+					style={{
+						color: "white",
+						marginBottom: isBrowser ? "0em" : "-3em",
+						marginRight: isBrowser ? "-5em" : "0em",
+					}}
 				>
 					<ChevronRightIcon />
 				</button>

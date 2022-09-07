@@ -1,0 +1,118 @@
+import {
+	FormControl,
+	FormLabel,
+	FormErrorMessage,
+	Input,
+	Heading,
+} from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { config } from "../../../config";
+import styles from "./styles.module.css";
+
+const Login = () => {
+	const [formError, setFormError] = useState<string>("");
+	const [loginForm, setLoginForm] = useState<LoginFormType>({
+		user_email: "",
+		user_pass: "",
+	});
+
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (localStorage.getItem("user")) navigate("/");
+	}, []);
+
+	const handleFormChange = (field: string, value: string) => {
+		setLoginForm({ ...loginForm, [field]: value });
+	};
+
+	const handleFormSubmit = () => {
+		if (
+			!loginForm.user_email ||
+			!loginForm.user_email.match(
+				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			)
+		)
+			setFormError("user_email");
+		else if (!loginForm.user_pass) setFormError("user_pass");
+		else {
+			setFormError("");
+			fetch(`${config.backendOrigin}/auth/web`, {
+				method: "POST",
+				credentials: "include",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(loginForm),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
+					if (data.status_code === 200) {
+						localStorage.setItem("user", data.message.user_id);
+						navigate("/");
+					} else setFormError("login_failure");
+				})
+				.catch(() => setFormError("login_failure"));
+		}
+	};
+
+	return (
+		<div className={styles.authFormContainer}>
+			<div className={styles.authForm}>
+				<Heading className={styles.formHeading}>Login</Heading>
+				<p className={styles.loginSubHeader}>
+					Please use your <b>Festember Credentials</b> to login
+				</p>
+				<FormControl isRequired isInvalid={formError === "user_email"}>
+					<FormLabel>Email</FormLabel>
+					<Input
+						className={styles.formInput}
+						type="email"
+						onChange={(e) => {
+							handleFormChange("user_email", e.target.value);
+						}}
+					/>
+					<FormErrorMessage>Enter a valid email</FormErrorMessage>
+				</FormControl>
+				<FormControl isRequired isInvalid={formError === "user_pass"}>
+					<FormLabel>Password</FormLabel>
+					<Input
+						className={styles.formInput}
+						type="password"
+						onChange={(e) => {
+							handleFormChange("user_pass", e.target.value);
+						}}
+					/>
+					<FormErrorMessage>Password is required</FormErrorMessage>
+				</FormControl>
+				<FormControl isInvalid={formError === "login_failure"}>
+					<FormErrorMessage className={styles.errorMessage}>
+						Invalid Credentials
+					</FormErrorMessage>
+				</FormControl>
+
+				<div className={styles.buttonSection}>
+					<div className={styles.loginButtons}>
+						<button
+							className={`${styles.button} ${styles.leftButton}`}
+							onClick={handleFormSubmit}
+						>
+							LOGIN
+						</button>
+
+						<button
+							className={`${styles.button} ${styles.rightButton}`}
+							onClick={() => navigate("/register")}
+						>
+							SIGN UP
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Login;
