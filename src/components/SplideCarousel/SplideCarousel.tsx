@@ -56,15 +56,29 @@ const SplideCarousel = ({ Details }: any) => {
 								justifyContent="center"
 								height="100%"
 							>
-								<Text align="center" fontSize="2xl">
+								<Text align="center" fontSize="2xl" mt={5}>
 									{obj.name}
 								</Text>
 								<Text align="center" fontSize="lg">
 									{obj.designation}
 								</Text>
-								<Text align="center" fontSize="sm">
-									{obj.content}
-								</Text>
+								<Flex 
+									flexDirection="column"
+									align="center"
+									justifyContent="center"
+									height="100%"
+									width="100%"
+									m={[15, 0, 0, 0]}
+								>
+								{obj.content.map((cont : any) => {
+									return(
+										<Text align="center" fontSize="md" p={1.5}>
+											{cont}
+										</Text>
+									)
+								})}
+								</Flex>
+								
 							</Flex>
 						</SplideSlide>
 					);
