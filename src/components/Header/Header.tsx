@@ -13,13 +13,14 @@ import {
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
 import { useNavigate } from "react-router-dom";
+import festemberLogoSVG from "../../../public/Assets/Images/festember_logo.svg";
+import menuToggleSVGClosed from "../../../public/Assets/Images/menu_toggle.svg";
+import menuToggleSVGOpen from "../../../public/Assets/Images/menu.svg";
 import { Navbar } from "../index";
 
 import styles from "./styles.module.css";
 
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
-	const menuToggleSVG = "../../../public/Assets/Images/";
-	const festemberLogoSVG = "../../../public/Assets/Images/festember_logo.svg";
 	const navigate = useNavigate();
 	return (
 		<Box className={styles.gradient}>
@@ -27,11 +28,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 				<Flex align="center" justifyContent="space-around" h="20em">
 					<Box className={styles.menuBar} mr={5} onClick={onOpen}>
 						<Image
-							src={
-								isOpen
-									? menuToggleSVG + "menu_toggle.svg"
-									: menuToggleSVG + "menu.svg"
-							}
+							src={isOpen ? menuToggleSVGClosed : menuToggleSVGOpen}
 							alt="Festember"
 						/>
 					</Box>
