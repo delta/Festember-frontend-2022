@@ -7,7 +7,7 @@ const routes = [
 	{name: "Home", path: "/#home"},
 	{name: "About Us", path: "/#aboutUs"},
 	{name: "Contact Us", path: "/#contactUs"},
-	{name: "Sponsors", path: "/#sponsors"}
+	{name: "Sponsors", path: "/sponsors"}
 ]
 
 const Navbar = ({onClose}: any) => {

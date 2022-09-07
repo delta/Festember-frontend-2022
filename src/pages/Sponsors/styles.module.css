@@ -1,6 +1,6 @@
 .container{
     position: absolute;
-    top: 45vh;
+    top: 55vh;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Poppins;
@@ -14,7 +14,7 @@
     justify-content: space-around;
     height: 85vh;
     padding: 1em;
-    margin-top: -8em;
+    margin-top: -1em;
     font-family: Poppins;
 }
 
