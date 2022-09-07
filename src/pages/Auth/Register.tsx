@@ -28,7 +28,7 @@ const Register = () => {
 		user_pincode: "",
 		user_state: "",
 		user_phno: "",
-		user_degree: "",
+		user_degree: "BTech",
 		user_year: "1st Year",
 		user_college: "",
 		user_city: "",
@@ -85,7 +85,7 @@ const Register = () => {
 			else if (!registerForm.user_address) setFormError("user_address");
 			else if (
 				!registerForm.user_pincode ||
-				!/^\+?(0|[1-9]\d*)$/.test(registerForm.user_phno)
+				!/^\+?(0|[1-9]\d*)$/.test(registerForm.user_pincode)
 			)
 				setFormError("user_pincode");
 			else {
@@ -137,6 +137,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_name}
 								onChange={(e) =>
 									handleFormChange("user_name", e.target.value)
 								}
@@ -151,6 +152,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_fullname}
 								onChange={(e) =>
 									handleFormChange("user_fullname", e.target.value)
 								}
@@ -162,6 +164,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_phno}
 								onChange={(e) =>
 									handleFormChange("user_phno", e.target.value)
 								}
@@ -178,6 +181,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="email"
+								value={registerForm.user_email}
 								onChange={(e) =>
 									handleFormChange("user_email", e.target.value)
 								}
@@ -199,6 +203,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="password"
+								value={registerForm.user_password}
 								onChange={(e) =>
 									handleFormChange("user_password", e.target.value)
 								}
@@ -215,6 +220,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="password"
+								value={confirmPassword}
 								onChange={(e) => setConfirmPassword(e.target.value)}
 							/>
 							<FormErrorMessage>Passwords don't match</FormErrorMessage>
@@ -223,6 +229,8 @@ const Register = () => {
 							<FormLabel>Gender</FormLabel>
 							<Select
 								className={styles.formInput}
+								color="black"
+								value={registerForm.user_sex}
 								onChange={(e) =>
 									handleFormChange("user_sex", e.target.value)
 								}
@@ -240,6 +248,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_college}
 								onChange={(e) =>
 									handleFormChange("user_college", e.target.value)
 								}
@@ -256,19 +265,28 @@ const Register = () => {
 							isInvalid={formError === "user_degree"}
 						>
 							<FormLabel>Degree</FormLabel>
-							<Input
+							<Select
 								className={styles.formInput}
-								type="text"
+								color="black"
+								value={registerForm.user_year}
 								onChange={(e) =>
 									handleFormChange("user_degree", e.target.value)
 								}
-							/>
-							<FormErrorMessage>Degree is required</FormErrorMessage>
+							>
+								<option>BTech</option>
+								<option>MTech</option>
+								<option>BWhatever</option>
+								<option>MWhatever</option>
+								<option>Medical people</option>
+								<option>Others</option>
+							</Select>
 						</FormControl>
 						<FormControl isRequired>
 							<FormLabel>Year</FormLabel>
 							<Select
 								className={styles.formInput}
+								color="black"
+								value={registerForm.user_year}
 								onChange={(e) =>
 									handleFormChange("user_year", e.target.value)
 								}
@@ -289,6 +307,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_address}
 								onChange={(e) =>
 									handleFormChange("user_address", e.target.value)
 								}
@@ -303,6 +322,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_pincode}
 								onChange={(e) =>
 									handleFormChange("user_pincode", e.target.value)
 								}
@@ -324,6 +344,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_nationality}
 								onChange={(e) =>
 									handleFormChange("user_nationality", e.target.value)
 								}
@@ -338,6 +359,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_state}
 								onChange={(e) =>
 									handleFormChange("user_state", e.target.value)
 								}
@@ -349,6 +371,7 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={registerForm.user_city}
 								onChange={(e) =>
 									handleFormChange("user_city", e.target.value)
 								}
@@ -378,6 +401,11 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={
+									registerForm.user_referral_code
+										? registerForm.user_referral_code
+										: ""
+								}
 								onChange={(e) =>
 									handleFormChange(
 										"user_referral_code",
@@ -391,6 +419,11 @@ const Register = () => {
 							<Input
 								className={styles.formInput}
 								type="text"
+								value={
+									registerForm.user_voucher_name
+										? registerForm.user_voucher_name
+										: ""
+								}
 								onChange={(e) =>
 									handleFormChange("user_voucher_name", e.target.value)
 								}
@@ -413,12 +446,22 @@ const Register = () => {
 				<div className={styles.buttonSection}>
 					<p>Already been here?</p>
 					<div className={styles.registerButtons}>
-						<button
-							className={`${styles.button} ${styles.leftButton}`}
-							onClick={() => navigate("/login")}
-						>
-							LOGIN
-						</button>
+						{formPage === 0 && (
+							<button
+								className={`${styles.button} ${styles.leftButton}`}
+								onClick={() => navigate("/login")}
+							>
+								LOGIN
+							</button>
+						)}
+						{formPage !== 0 && (
+							<button
+								className={`${styles.button} ${styles.leftButton}`}
+								onClick={() => setFormPage(formPage - 1)}
+							>
+								&#10094; PREV
+							</button>
+						)}
 						{formPage !== 4 && (
 							<button
 								className={`${styles.button} ${styles.rightButton}`}

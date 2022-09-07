@@ -66,7 +66,7 @@ const Login = () => {
 					Please use your <b>Festember Credentials</b> to login
 				</p>
 				<FormControl isRequired isInvalid={formError === "user_email"}>
-					<FormLabel>Login ID</FormLabel>
+					<FormLabel>Email</FormLabel>
 					<Input
 						className={styles.formInput}
 						type="email"

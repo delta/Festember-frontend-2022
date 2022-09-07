@@ -1,4 +1,4 @@
-import { Homepage, Register, Login } from "../pages";
+import { Homepage, Register, Login, Sponsors } from "../pages";
 import React from "react";
 
 const routes: RouteType[] = [
@@ -19,6 +19,12 @@ const routes: RouteType[] = [
 		path: "/login",
 		description: "Login to Festember 2022",
 		element: <Login />,
+	},
+	{
+		title: "Sponsors",
+		path: "/sponsors",
+		description: "Sponsors of Festember 2022",
+		element: <Sponsors />,
 	},
 ];
 

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 const Landing = () => {
 	const navigate = useNavigate();
+	useEffect(() => {
+		localStorage.setItem("chakra-ui-color-mode", "dark");
+	}, []);
 	return (
 		<>
 			<div className="title-box">
