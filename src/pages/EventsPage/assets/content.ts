@@ -17,13 +17,7 @@ export const content = [
 				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 				"link": "www.b.com"
 			},
-			{
-				"title": "Whats the Good word",
-				"id": "C",
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"link": "www.c.com"
-			},
+			
 			{
 				"title": "Main Quiz",
 				"id": "D",
@@ -99,13 +93,7 @@ export const content = [
 				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 				"link": "www.b.com"
 			},
-			{
-				"title": "Whats the Good word",
-				"id": "C",
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"link": "www.c.com"
-			},
+			
 			{
 				"title": "Main Quiz",
 				"id": "D",
@@ -140,13 +128,7 @@ export const content = [
 				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 				"link": "www.b.com"
 			},
-			{
-				"title": "Whats the Good word",
-				"id": "C",
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"link": "www.c.com"
-			},
+			
 			{
 				"title": "Main Quiz",
 				"id": "D",
@@ -181,13 +163,7 @@ export const content = [
 				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 				"link": "www.b.com"
 			},
-			{
-				"title": "Whats the Good word",
-				"id": "C",
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-				"link": "www.c.com"
-			},
+			
 			{
 				"title": "Main Quiz",
 				"id": "D",

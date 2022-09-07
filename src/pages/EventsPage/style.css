@@ -1,14 +1,32 @@
  .slick-slide{
     text-transform: capitalize;
     margin: 10px 0;
+    opacity: 0.5;
   }
 
   .slick-center {
-    transform: scale(1.5);
+    transform: scale(1.25);
+    opacity: 1;
+    padding: 1rem;
     color: #79E2FB;
     text-decoration: line-through !important;
 }
 
-  .slick-tracker {
-    height: 20rem;
+.slick-list{
+  min-height: 30vh;
+}
+
+@media screen and (max-width: 1024px){
+  .slick-slide{
+    margin: 0px 0px;
+    opacity: 0;
   }
+
+  .slick-center{
+    opacity:1;
+    transform: scale(1);
+  }
+  .slick-list{
+    min-height: 0vh;
+  }
+}

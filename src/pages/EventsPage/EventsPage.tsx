@@ -7,7 +7,6 @@ import './style.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Scrollbars } from 'react-custom-scrollbars';
 import styles from "./style.module.css";
 import { ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -17,7 +16,7 @@ function SampleNextArrow({...props}) {
   return (
     <ChevronDownIcon
       style={{ position: 'relative',
-      transform: 'translate(0%, 1300%) scale(2)' }}
+      transform: 'translate(0%, 150%) scale(2)' }}
       onClick={onClick}
     />
   );
@@ -28,7 +27,7 @@ function SamplePrevArrow({...props}) {
   return (
     <ChevronUpIcon
       style={{ position: 'relative',
-      transform: 'translate(0%, -1300%) scale(2)' }}
+      transform: 'translate(0%, -150%) scale(2)' }}
       onClick={onClick}
     />
   );
@@ -50,8 +49,8 @@ export default function EventsPage(){
     dots: false,
     infinite: true,
     vertical: true,
-    slidesToShow: 3,
-    adaptiveHeight: true,
+    slidesToShow: 1,
+    adaptiveHeight: false,
     slidesToScroll: 1,
     centerMode: true,
     className: 'center',
@@ -59,7 +58,7 @@ export default function EventsPage(){
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     afterChange: () => setEventIndex((eventIndex+1)%noOfEvents),
-    responsive: [ { breakpoint: 575, settings: { slidesToShow: 1, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined } } ]
+    responsive: [ { breakpoint: 1025, settings: { slidesToShow: 1, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined } } ]
   };
 
   const slides = content.map((slide, index) => ({
@@ -72,8 +71,8 @@ export default function EventsPage(){
 
   return (
     <>
-      <div className={styles.clustersMobile}>{content[clusterIndex].title}</div>
       <div className={styles.eventsLayout}>
+      <div className={styles.clustersMobile}>{content[clusterIndex].title}</div>
       <div className={styles.eventTitle}>
       <Slider {...settings}>
         {content[clusterIndex].eventDetails.map((event,i) => {
@@ -95,14 +94,12 @@ export default function EventsPage(){
 				/>
         </div>
         <div className={styles.eventDetails}>
-          <Scrollbars >
-        <h3 style={{color: '#79E2FB'}}>Event Description</h3>
+        <h3>Event Description</h3>
         <p>{content[clusterIndex].eventDetails[eventIndex].description}</p><br/>
-        <h3 style={{color: '#79E2FB'}}>Event Details</h3>
+        <h3>Event Details</h3>
         <p>{content[clusterIndex].eventDetails[eventIndex].details}</p><br/>
-        <h3 style={{color: '#79E2FB'}}>Registration Link</h3>
+        <h3>Registration Link</h3>
         <p>{content[clusterIndex].eventDetails[eventIndex].link}</p>
-        </Scrollbars>
         </div>
       </div>
       </>
