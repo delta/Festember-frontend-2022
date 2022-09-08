@@ -45,11 +45,18 @@
     margin: 3rem;
     margin-top: 8rem;
     color: white;
-    overflow-y: auto;}
+    overflow-y: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);}
 
     .eventDetails h3{
         font-size: 2rem;
         color: #79E2FB
+    }
+
+    .eventDetails a{
+        color: white;
     }
   
     .carouselFix{
@@ -70,7 +77,12 @@
         padding: 0 2rem;
         margin: 3rem;
         margin-top: 8rem;
-        color: white;}
+        color: white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+cursor: pointer;
+    }
 
   .clusters {
   font-size: 20vh;

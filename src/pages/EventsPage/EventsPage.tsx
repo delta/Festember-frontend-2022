@@ -99,7 +99,7 @@ export default function EventsPage(){
         <h3>Event Details</h3>
         <p>{content[clusterIndex].eventDetails[eventIndex].details}</p><br/>
         <h3>Registration Link</h3>
-        <p>{content[clusterIndex].eventDetails[eventIndex].link}</p>
+        <a href={'https://'+ content[clusterIndex].eventDetails[eventIndex].link} target="_blank"><p style={{paddingBottom: '2rem'}}>{content[clusterIndex].eventDetails[eventIndex].link}</p></a>
         </div>
       </div>
       </>
