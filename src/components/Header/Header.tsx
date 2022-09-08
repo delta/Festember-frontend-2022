@@ -43,7 +43,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					>
 						<DrawerOverlay maxH="85vh" mt="9.4vh" />
 						<DrawerContent maxH="85vh" mt="9.6vh" bg="#fff0">
-							<Navbar />
+							<Navbar onClose={onClose} />
 						</DrawerContent>
 					</Drawer>
 				</Flex>
@@ -72,9 +72,11 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 								<CloseIcon boxSize="20px" ml="15px" />
 							)}
 						</Button>
-						<SlideFade in={isOpen} reverse={true}>
-							<Navbar />
-						</SlideFade>
+						<Box visibility = {isOpen ? "visible" : "hidden"}>
+							<SlideFade in={isOpen} reverse={true}>
+								<Navbar />
+							</SlideFade>
+						</Box>
 					</Center>
 				</Flex>
 			</BrowserView>
