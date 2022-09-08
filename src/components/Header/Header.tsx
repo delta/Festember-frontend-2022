@@ -22,6 +22,21 @@ import styles from "./styles.module.css";
 
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const navigate = useNavigate();
+
+	const handleLogout = () => {
+		fetch("/api/logout", {
+			method: "POST",
+			credentials: "include",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((res) => res.json())
+			.then((data) => console.log(data))
+			.catch((err) => console.log(err));
+		localStorage.removeItem("user");
+	};
+
 	return (
 		<Box className={styles.gradient}>
 			<MobileView>
@@ -86,10 +101,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 				</Button>
 			)}
 			{localStorage.getItem("user") && (
-				<Button
-					bg="#79E2FB"
-					onClick={() => localStorage.removeItem("user")}
-				>
+				<Button bg="#79E2FB" onClick={handleLogout}>
 					LOGOUT
 				</Button>
 			)}
