@@ -6,7 +6,7 @@ import { AppLayout } from "../components";
 
 const Router = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/22" >
 			<AppLayout>
 				<Routes>
 					{routes.map((route) => {

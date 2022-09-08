@@ -4,10 +4,10 @@ import { BrowserView, MobileView } from "react-device-detect";
 import styles from "./styles.module.css";
 
 const routes = [
-	{ name: "Home", path: "/#home" },
-	{ name: "About Us", path: "/#aboutUs" },
-	{ name: "Contact Us", path: "/#contactUs" },
-	{ name: "Sponsors", path: "/sponsors" },
+	{ name: "Home", path: "/22/#home" },
+	{ name: "About Us", path: "/22/#aboutUs" },
+	{ name: "Contact Us", path: "/22/#contactUs" },
+	{ name: "Sponsors", path: "/22/sponsors" },
 ];
 
 const Navbar = ({ onClose }: any) => {
