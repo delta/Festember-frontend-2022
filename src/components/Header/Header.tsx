@@ -24,7 +24,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const navigate = useNavigate();
 
 	const handleLogout = () => {
-		fetch("/api/logout", {
+		fetch("/api/test", {
 			method: "POST",
 			credentials: "include",
 			headers: {
@@ -35,6 +35,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 			.then((data) => console.log(data))
 			.catch((err) => console.log(err));
 		localStorage.removeItem("user");
+		navigate("/login");
 	};
 
 	return (
@@ -87,7 +88,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 								<CloseIcon boxSize="20px" ml="15px" />
 							)}
 						</Button>
-						<Box visibility = {isOpen ? "visible" : "hidden"}>
+						<Box visibility={isOpen ? "visible" : "hidden"}>
 							<SlideFade in={isOpen} reverse={true}>
 								<Navbar />
 							</SlideFade>
