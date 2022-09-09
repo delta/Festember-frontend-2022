@@ -1,5 +1,6 @@
 export const PORT_CLIENT = 8080;
 export const ORIGIN = "http://127.0.0.1:" + PORT_CLIENT;
+export const ReCAPTCHA_SITE_KEY = "";
 export const config = {
 	backendOrigin: "http://127.0.0.1:3000", //backend URL
 	dauth: {
