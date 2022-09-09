@@ -17,6 +17,7 @@ const AppLayout = (props: AppLayoutProps) => {
 			<div style={{ overflow: "hidden" }}>
 				{isOpen && isMobile ? null : props.children}
 			</div>
+			{isOpen && isMobile ? null : <Footer />}
 		</>
 	);
 };
