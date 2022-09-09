@@ -9,3 +9,4 @@ export { default as SplideCarousel } from "./SplideCarousel/SplideCarousel";
 export { default as AboutUs } from "./AboutUs/AboutUs";
 export { default as ContactUs } from "./ContactUs/ContactUs";
 export { default as Landing } from "./Landing/Landing";
+export { default as ListLayout } from "./ListLayout/ListLayout";

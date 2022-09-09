@@ -1,4 +1,11 @@
-import { Homepage, Register, Login, Sponsors } from "../pages";
+import {
+	Homepage,
+	Register,
+	Login,
+	Sponsors,
+	Events,
+	Wildfire,
+} from "../pages";
 import React from "react";
 
 const routes: RouteType[] = [
@@ -25,6 +32,18 @@ const routes: RouteType[] = [
 		path: "/sponsors",
 		description: "Sponsors of Festember 2022",
 		element: <Sponsors />,
+	},
+	{
+		title: "Events",
+		path: "/events",
+		description: "Event Clusters of Festember 2022",
+		element: <Events />,
+	},
+	{
+		title: "Wildfire",
+		path: "/wildfire",
+		description: "Wildfire Page of Festember 2022",
+		element: <Wildfire />,
 	},
 ];
 
