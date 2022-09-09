@@ -19,12 +19,13 @@ import menuToggleSVGOpen from "../../../public/Assets/Images/menu.svg";
 import { Navbar } from "../index";
 
 import styles from "./styles.module.css";
+import { config } from "../../../config";
 
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const navigate = useNavigate();
 
 	const handleLogout = () => {
-		fetch("/api/test", {
+		fetch(`${config.backendOrigin}/auth/logout`, {
 			method: "POST",
 			credentials: "include",
 			headers: {
@@ -32,10 +33,15 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 			},
 		})
 			.then((res) => res.json())
-			.then((data) => console.log(data))
+			.then((data) => {
+				if (data.status_code === 200) {
+					localStorage.removeItem("user");
+					navigate("/login");
+				} else {
+					console.log(data);
+				}
+			})
 			.catch((err) => console.log(err));
-		localStorage.removeItem("user");
-		navigate("/login");
 	};
 
 	return (
