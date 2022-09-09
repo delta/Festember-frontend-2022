@@ -22,6 +22,22 @@ import styles from "./styles.module.css";
 
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const navigate = useNavigate();
+
+	const handleLogout = () => {
+		fetch("/api/test", {
+			method: "POST",
+			credentials: "include",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((res) => res.json())
+			.then((data) => console.log(data))
+			.catch((err) => console.log(err));
+		localStorage.removeItem("user");
+		navigate("/login");
+	};
+
 	return (
 		<Box className={styles.gradient}>
 			<MobileView>
@@ -43,7 +59,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					>
 						<DrawerOverlay maxH="85vh" mt="9.4vh" />
 						<DrawerContent maxH="85vh" mt="9.6vh" bg="#fff0">
-							<Navbar />
+							<Navbar onClose={onClose} />
 						</DrawerContent>
 					</Drawer>
 				</Flex>
@@ -72,9 +88,11 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 								<CloseIcon boxSize="20px" ml="15px" />
 							)}
 						</Button>
-						<SlideFade in={isOpen} reverse={true}>
-							<Navbar />
-						</SlideFade>
+						<Box visibility={isOpen ? "visible" : "hidden"}>
+							<SlideFade in={isOpen} reverse={true}>
+								<Navbar />
+							</SlideFade>
+						</Box>
 					</Center>
 				</Flex>
 			</BrowserView>
@@ -84,10 +102,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 				</Button>
 			)}
 			{localStorage.getItem("user") && (
-				<Button
-					bg="#79E2FB"
-					onClick={() => localStorage.removeItem("user")}
-				>
+				<Button bg="#79E2FB" onClick={handleLogout}>
 					LOGOUT
 				</Button>
 			)}
