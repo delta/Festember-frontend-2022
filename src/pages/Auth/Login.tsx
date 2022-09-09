@@ -48,7 +48,6 @@ const Login = () => {
 			})
 				.then((res) => res.json())
 				.then((data) => {
-					console.log(data);
 					if (data.status_code === 200) {
 						localStorage.setItem("user", data.message.user_id);
 						navigate("/");

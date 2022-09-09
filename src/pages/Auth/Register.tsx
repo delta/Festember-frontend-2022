@@ -11,6 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
+import Recaptcha from "../../components/ReCaptcha/ReCaptcha";
 import styles from "./styles.module.css";
 
 const Register = () => {
@@ -435,6 +436,7 @@ const Register = () => {
 								}
 							/>
 						</FormControl>
+						<Recaptcha />
 						<FormControl isInvalid={formError === "register_failure"}>
 							<FormErrorMessage className={styles.errorMessage}>
 								Error Occurred while registering, check your details and
@@ -450,7 +452,7 @@ const Register = () => {
 				)}
 
 				<div className={styles.buttonSection}>
-					<p>Already been here?</p>
+					{formPage === 0 && <p>Already been here?</p>}
 					<div className={styles.registerButtons}>
 						{formPage === 0 && (
 							<button
