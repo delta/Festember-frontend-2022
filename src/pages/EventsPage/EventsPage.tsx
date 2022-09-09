@@ -15,8 +15,8 @@ function SampleNextArrow({...props}) {
   const {onClick}=props;
   return (
     <ChevronDownIcon
-      style={{ position: 'relative',
-      transform: 'translate(0%, 150%) scale(2)' }}
+      style={{ position: 'absolute',
+      transform: 'translate(-50%, 150%) scale(2)' }}
       onClick={onClick}
     />
   );
@@ -26,8 +26,8 @@ function SamplePrevArrow({...props}) {
   const {onClick}=props;
   return (
     <ChevronUpIcon
-      style={{ position: 'relative',
-      transform: 'translate(0%, -150%) scale(2)' }}
+      style={{ position: 'absolute',
+      transform: 'translate(-50%, -150%) scale(2)' }}
       onClick={onClick}
     />
   );
@@ -47,7 +47,7 @@ export default function EventsPage(){
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     vertical: true,
     slidesToShow: 1,
     adaptiveHeight: false,
@@ -58,7 +58,7 @@ export default function EventsPage(){
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     afterChange: () => setEventIndex((eventIndex+1)%noOfEvents),
-    responsive: [ { breakpoint: 1025, settings: { slidesToShow: 1, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined } } ]
+    responsive: [ { breakpoint: 1025, settings: { slidesToShow: 1, infinite: true, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined } } ]
   };
 
   const slides = content.map((slide, index) => ({

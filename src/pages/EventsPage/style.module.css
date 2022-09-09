@@ -20,8 +20,8 @@
 
 .cardFull {
     color: #FFF;
-    width: 40vh;
-    height: 40vh;
+    width: 45vh;
+    height: 45vh;
     border-radius: 2rem;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .cardImg {
-    width: 40vh;
-    height: 40vh;
+    width: 45vh;
+    height: 45vh;
     border-radius: 2rem;
 }
 
@@ -111,6 +111,11 @@ cursor: pointer;
     }
 
 @media (max-height: 1000px){
+
+    .container {
+        background-size: cover;
+    }
+
     .eventDetails{
         font-size: 1rem;
     }
@@ -121,13 +126,6 @@ cursor: pointer;
 
     .eventTitle{
         font-size: 1.3rem;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .container {
-        background-size: cover;
     }
 }
 
