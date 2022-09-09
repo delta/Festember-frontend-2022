@@ -275,9 +275,15 @@ const Register = () => {
 							>
 								<option>BTech</option>
 								<option>MTech</option>
-								<option>BWhatever</option>
-								<option>MWhatever</option>
-								<option>Medical people</option>
+								<option>BArch</option>
+								<option>BA</option>
+								<option>BBA</option>
+								<option>MBA</option>
+								<option>MBBS</option>
+								<option>PhD</option>
+								<option>BSc</option>
+								<option>MSc</option>
+								<option>MCA</option>
 								<option>Others</option>
 							</Select>
 						</FormControl>
