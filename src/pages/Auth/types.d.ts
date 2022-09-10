@@ -16,6 +16,7 @@ interface RegisterFormType {
 	user_sponsor?: string;
 	user_voucher_name?: string;
 	user_referral_code?: string;
+	recaptcha_code?: string;
 }
 
 interface LoginFormType {
