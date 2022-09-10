@@ -32,7 +32,8 @@ const Register = () => {
 		user_degree: "BTech",
 		user_year: "1st Year",
 		user_college: "",
-		user_city: "",
+    user_city: "",
+    recaptcha_code:""
 	});
 
 	const navigate = useNavigate();
@@ -436,7 +437,7 @@ const Register = () => {
 								}
 							/>
 						</FormControl>
-						<Recaptcha />
+						<Recaptcha handleFormChange={handleFormChange} />
 						<FormControl isInvalid={formError === "register_failure"}>
 							<FormErrorMessage className={styles.errorMessage}>
 								Error Occurred while registering, check your details and
