@@ -1,5 +1,5 @@
 .footer {
-	position: absolute;
+	position: fixed;
 	text-transform: uppercase;
 	color: #79e2fb;
 	bottom: 5px;
@@ -7,10 +7,18 @@
 	font-size: 0.85em;
 	text-align: center;
 	width: 100%;
+	visibility: visibile;
+}
+
+@media only screen and (max-height: 500px){
+	.footer{
+		visibility: hidden;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
 	.footer {
+		bottom: 1vh;
 		font-size: 1em;
 	}
 }

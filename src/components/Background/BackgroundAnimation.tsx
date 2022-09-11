@@ -21,7 +21,6 @@ const BackgroundAnimation = () => {
 			}}
 		>
 			<Lottie options={defaultOptions} isClickToPauseDisabled />
-			<Footer />
 		</div>
 	);
 };

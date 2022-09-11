@@ -14,7 +14,6 @@ const SplideCarousel = ({ Details }: any) => {
 			options={
 				!isBrowser
 					? {
-							type: "loop",
 							perPage: window.innerWidth < 390 ? 2 : isTablet ? 4 : 3,
 							perMove: 1,
 							direction: "ttb",
@@ -24,7 +23,6 @@ const SplideCarousel = ({ Details }: any) => {
 									: isTablet
 									? "44rem"
 									: "34rem",
-							rewind: true,
 							pagination: false,
 							arrows: true,
 							gap: "0.8em",
