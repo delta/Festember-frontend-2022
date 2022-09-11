@@ -1,8 +1,9 @@
 {
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "color-no-invalid-hex": true,
-    "unit-no-unknown": true,
-    "property-no-unknown": true
-  }
+	"extends": "stylelint-config-standard",
+	"rules": {
+		"color-no-invalid-hex": true,
+		"unit-no-unknown": true,
+		"property-no-unknown": true,
+		"indentation": "tab"
+	}
 }
