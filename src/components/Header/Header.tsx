@@ -63,7 +63,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 						onClose={onClose}
 						size="full"
 					>
-						<DrawerOverlay maxH="85gitvh" mt="9.4vh" />
+						<DrawerOverlay maxH="85vh" mt="9.4vh" />
 						<DrawerContent maxH="85vh" mt="9.6vh" bg="#fff0">
 							<Navbar onClose={onClose} />
 						</DrawerContent>
