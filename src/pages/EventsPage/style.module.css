@@ -1,0 +1,265 @@
+.eventsLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+    height: 80vh
+}
+
+.outerContainer {
+    height: 100vh;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.cardFull {
+    color: #FFF;
+    width: 45vh;
+    height: 45vh;
+    border-radius: 2rem;
+}
+
+.cardFull:hover{
+    cursor: pointer;
+}
+
+.cardImg {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 2rem;
+}
+
+.eventDetails {
+    background-color: black;
+    opacity: 0.65; 
+    font-size: 1.5rem;
+    height: 70vh;
+    width: 20%;
+    padding: 3rem;
+    margin: 3rem;
+    margin-top: 8rem;
+    color: white;
+    overflow-y: auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);}
+
+    .eventDetails h3{
+        font-size: 2rem;
+        color: #79E2FB
+    }
+
+    .eventDetails a{
+        color: white;
+    }
+  
+    .carouselFix{
+        opacity: 0;
+        font-size: 0.1rem;
+    }
+
+    .eventTitle {
+      text-align: center;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      justify-content: center;
+        background-color: black;
+        opacity: 0.65; 
+        height: 70vh;
+        width: 20%;
+        padding: 0 2rem;
+        margin: 3rem;
+        margin-top: 8rem;
+        color: white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+cursor: pointer;
+    }
+
+  .clusters {
+  font-size: 20vh;
+  font-family: 'Atlantic-Cruise';
+  margin-top: 1rem;
+  background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+  background : linear-gradient(#FFFFFF, #3AD4F8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+  }
+
+  .clustersMobile {
+    display: none;
+    font-size: 12vh;
+    text-align: center;
+    margin-bottom: 0rem;
+    font-family: 'Atlantic-Cruise';
+    background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+    background : linear-gradient(#FFFFFF, #3AD4F8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+    }
+
+@media (max-height: 1000px){
+
+    .container {
+        background-size: cover;
+    }
+
+    .eventDetails{
+        font-size: 1rem;
+    }
+
+    .eventDetails h3{
+        font-size: 1.3rem;
+    }
+
+    .eventTitle{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .eventsLayout {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 85vh;
+    }
+
+    .eventDetails h3{
+        font-size: 1.3rem;
+    }
+
+    .eventDetails {
+      height: 15rem;
+      width: 100%;
+      font-size: 1rem;
+      padding: 2rem;
+    }
+
+    .eventTitle{
+      height: 2rem;
+      width: 100%;
+      margin: 0;
+      font-size: 1.3rem;
+      padding: 0 2rem;
+      margin-top: -5rem;
+    }
+
+    .clusters{
+      display: none;
+    }
+
+    .carouselFix{ 
+        font-size: 5rem;
+    }
+    .clustersMobile{
+     display: block;
+    }
+
+    .cardFull {
+        color: #FFF;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 2rem;
+    }
+  }
+
+@media only screen and (max-width: 660px)  {
+
+    .clustersMobile{
+        font-size: 10vh;
+    }
+    .eventDetails{
+        font-size: 0.8rem;
+        padding: 1.5rem;
+    }
+
+    .eventDetails h3{
+        font-size: 1rem;
+    }
+
+    .eventTitle{
+        font-size: 1rem;
+      margin-top: -0.5rem;
+
+    }
+
+    .cardFull {
+        color: #FFF;
+        width: 16rem;
+        height: 16rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 8rem;
+        width: 16rem;
+        height: 16rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px)  {
+
+    .cardFull {
+        color: #FFF;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (max-width: 300px)  {
+
+    .cardFull {
+        color: #FFF;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2rem;
+    }
+
+    .cardImg {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2rem;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .cardFull {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .cardImg {
+        width: 15rem;
+        height: 15rem;
+        padding: 2px;
+    }
+}
