@@ -10,22 +10,21 @@ const AboutUs = () => {
 					<div className={styles.mobileContent}>
 						<p>
 							Festember, the largest cultural festival of South India,
-							started off by the students of National Institute of
-							Technology, Tiruchirapalli in the year 1975 now attracts
-							students from over 500 colleges pan India. It has provided
-							multiple talented artists to kick-start their careers while
-							attracting them back year after year.The fest is known for
-							bringing forth legends in the industry such as Jonty
-							Rhodes, Ashwin Sanghi, Nithya Menen, Amit Trivedi, Guns n
-							Hoses, Ambi Subramaniam, Karthick Iyer and more. Festember
-							continues to birth new friendships and even more memories.
+							was started by the students of the National Institute of
+							Technology, Tiruchirappalli, as a zero-budget fest in the
+							year 1975. Since then, it has grown to attract students
+							from over 500 colleges from all across India. Apart from
+							that, it has also been known to bring forth stalwarts from
+							various fields such as Jonty Rhodes, Nithya Menen, Amit
+							Trivedi, Guns n Roses, and Karthick Iyer, to name a few.
+							Festember continues to grow and help create memories each
+							year, living upto its name of "a fest to remember".
 						</p>
 						<br />
 						<p>
-							Join us this year from October 3rd for a celebration of art
-							and culture like none other. Mark your calendars and save
-							the dates as this year's edition will surpass all
-							expectations.
+							Join us this year from September 29th, for a celebration of
+							art and culture like none other. Mark your calendars and
+							save your dates for a deep dive into a sunken paradise.
 						</p>
 					</div>
 				</div>
@@ -37,23 +36,23 @@ const AboutUs = () => {
 						<div className={styles.content}>
 							<p>
 								Festember, the largest cultural festival of South India,
-								started off by the students of National Institute of
-								Technology, Tiruchirapalli in the year 1975 now attracts
-								students from over 500 colleges pan India. It has
-								provided multiple talented artists to kick-start their
-								careers while attracting them back year after year.The
-								fest is known for bringing forth legends in the industry
-								such as Jonty Rhodes, Ashwin Sanghi, Nithya Menen, Amit
-								Trivedi, Guns n Hoses, Ambi Subramaniam, Karthick Iyer
-								and more. Festember continues to birth new friendships
-								and even more memories.
+								was started by the students of the National Institute of
+								Technology, Tiruchirappalli, as a zero-budget fest in
+								the year 1975. Since then, it has grown to attract
+								students from over 500 colleges from all across India.
+								Apart from that, it has also been known to bring forth
+								stalwarts from various fields such as Jonty Rhodes,
+								Nithya Menen, Amit Trivedi, Guns n Roses, and Karthick
+								Iyer, to name a few. Festember continues to grow and
+								help create memories each year, living upto its name of
+								"a fest to remember".
 							</p>
 							<br />
 							<p>
-								Join us this year from October 3rd for a celebration of
-								art and culture like none other. Mark your calendars and
-								save the dates as this year's edition will surpass all
-								expectations.
+								Join us this year from September 29th, for a celebration
+								of art and culture like none other. Mark your calendars
+								and save your dates for a deep dive into a sunken
+								paradise.
 							</p>
 						</div>
 					</div>
