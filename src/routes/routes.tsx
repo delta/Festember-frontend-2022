@@ -42,7 +42,7 @@ const routes: RouteType[] = [
 	},
 	{
 		title: "Events Page",
-		path: "/eventspage",
+		path: "/events/:cluster",
 		description: 'Events Page of Festember 2022',
 		element: <EventsPage />
 	},

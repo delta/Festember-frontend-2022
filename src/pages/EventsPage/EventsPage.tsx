@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import { Card } from "./Card";
@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./style.module.css";
 import { ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
-
 
 function SampleNextArrow({...props}) {
   const {onClick}=props;
@@ -43,6 +42,17 @@ export default function EventsPage(){
     setClusterIndex(index)
   }
 
+  const url=window.location.href;
+  const cluster = url.split("/").pop();
+
+  useEffect(()=>{
+    content.map((clusterName,i) => {
+      if(cluster?.toLowerCase()==clusterName.title.toLowerCase()){
+        navigateClusters(i)
+      }
+    })
+  }, [])
+
   const noOfEvents=content[clusterIndex].eventDetails.length;
 
   const settings = {
@@ -64,7 +74,7 @@ export default function EventsPage(){
   const slides = content.map((slide, index) => ({
 		key: index,
 		content: (
-			<Card color={slide.color} />
+			<Card color={slide.color} src={slide.src}/>
 		),
 		onClick: () => navigateClusters(index),
 	}));
@@ -98,8 +108,13 @@ export default function EventsPage(){
         <p>{content[clusterIndex].eventDetails[eventIndex].description}</p><br/>
         <h3>Event Details</h3>
         <p>{content[clusterIndex].eventDetails[eventIndex].details}</p><br/>
-        <h3>Registration Link</h3>
-        <a href={'https://'+ content[clusterIndex].eventDetails[eventIndex].link} target="_blank"><p style={{paddingBottom: '2rem'}}>{content[clusterIndex].eventDetails[eventIndex].link}</p></a>
+        <button
+					className={styles.registerButton}
+					type="button"
+					onClick={() => window.open('https:/' + content[clusterIndex].eventDetails[eventIndex].link, '_blank')}
+				>
+					Register here
+				</button>
         </div>
       </div>
       </>

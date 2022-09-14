@@ -110,6 +110,26 @@ cursor: pointer;
     filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
     }
 
+    .registerButton {
+        background: #79E2FB;
+        color: #0F1B33;
+        padding: 0.75em 1em;
+        text-transform: uppercase;
+        font-size: Poppins;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      
+      .registerButton:hover {
+        background-color: #50b6cf;
+        transform: scale(1.1);
+      }
+
 @media (max-height: 1000px){
 
     .container {

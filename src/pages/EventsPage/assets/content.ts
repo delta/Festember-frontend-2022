@@ -2,6 +2,7 @@ export const content = [
 	{
         title: 'Dance',
 		color: "#000000",
+		src: 'https://image.shutterstock.com/image-vector/abstract-perlin-noise-geometric-pattern-260nw-2140623217.jpg',
 		eventDetails: [
 			{
 				"title": "JAM",
@@ -37,6 +38,7 @@ export const content = [
 	{
         title: 'Music',
 		color: "#FFFFFF",
+		src: 'https://www.computerhope.com/jargon/r/random-dice.jpg',
 		eventDetails: [
 			{
 				"title": "A",
@@ -78,6 +80,7 @@ export const content = [
 	{
         title: 'Arts',
 		color: "#000000",
+		src: 'https://cdn.pixabay.com/photo/2015/03/17/02/01/cubes-677092__480.png',
 		eventDetails: [
 			{
 				"title": "JAM",
@@ -111,8 +114,9 @@ export const content = [
 		]
 	},
 	{
-        title: 'Arts',
+        title: 'Literature',
 		color: "#397BCE",
+		src: 'https://image.shutterstock.com/image-illustration/geometry-random-dimensional-wave-series-260nw-1831016305.jpg',
 		eventDetails: [
 			{
 				"title": "JAM",
@@ -146,8 +150,9 @@ export const content = [
 		]
 	},
 	{
-        title: 'Arts',
+        title: 'Sports',
 		color: "#000000",
+		src: 'https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706__340.jpg',
 		eventDetails: [
 			{
 				"title": "JAM",
