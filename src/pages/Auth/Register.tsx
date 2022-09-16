@@ -73,7 +73,7 @@ const Register = () => {
 		if (field === "user_college")
 			setRegisterForm({ ...registerForm, user_othercollege: "" });
 		else if (field === "user_othercollege")
-			setRegisterForm({ ...registerForm, user_college: "" });
+			setRegisterForm({ ...registerForm, user_college: "Other" });
 		setRegisterForm({
 			...registerForm,
 			[field]: value,
