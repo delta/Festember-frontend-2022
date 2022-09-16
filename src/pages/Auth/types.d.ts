@@ -12,6 +12,7 @@ interface RegisterFormType {
 	user_degree: string;
 	user_year: string;
 	user_college: string;
+	user_othercollege?: string;
 	user_city: string;
 	user_sponsor?: string;
 	user_voucher_name?: string;
