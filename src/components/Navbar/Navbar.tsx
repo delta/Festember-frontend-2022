@@ -8,6 +8,7 @@ const routes = [
 	{ name: "About Us", path: "/#aboutUs" },
 	{ name: "Contact Us", path: "/#contactUs" },
 	// { name: "Sponsors", path: "/sponsors" },
+	{ name: "Wildfire", path: "/wildfire" },
 ];
 
 const Navbar = ({ onClose }: any) => {
