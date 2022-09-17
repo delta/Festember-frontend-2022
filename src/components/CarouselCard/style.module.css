@@ -1,0 +1,113 @@
+.outerContainer {
+    height: 100vh;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+}
+
+.cardFull {
+    color: #FFF;
+    width: 45vh;
+    height: 45vh;
+    border-radius: 2rem;
+}
+
+.cardFull:hover{
+    cursor: pointer;
+}
+
+.cardImg {
+    width: 45vh;
+    height: 45vh;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 1000px){
+
+    .container {
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .cardFull {
+        color: #FFF;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 2rem;
+    }
+  }
+
+@media only screen and (max-width: 660px)  {
+
+    .cardFull {
+        color: #FFF;
+        width: 16rem;
+        height: 16rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 8rem;
+        width: 16rem;
+        height: 16rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px)  {
+
+    .cardFull {
+        color: #FFF;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+    }
+    
+    .cardImg {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 2rem;
+    }
+}
+
+@media only screen and (max-width: 300px)  {
+
+    .cardFull {
+        color: #FFF;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2rem;
+    }
+
+    .cardImg {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 2rem;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .cardFull {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .cardImg {
+        width: 15rem;
+        height: 15rem;
+        padding: 2px;
+    }
+}

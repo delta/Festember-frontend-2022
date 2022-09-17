@@ -1,4 +1,4 @@
-.eventsLayout {
+.workshopsLayout {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -6,12 +6,18 @@
     height: 80vh
 }
 
-.eventDetails {
+.workshopCarousel{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.workshopDetails {
     background-color: black;
     opacity: 0.65; 
     font-size: 1.5rem;
     height: 70vh;
-    width: 20%;
+    width: 40%;
     padding: 3rem;
     margin: 3rem;
     margin-top: 8rem;
@@ -21,12 +27,12 @@
 backdrop-filter: blur(4.3px);
 -webkit-backdrop-filter: blur(4.3px);}
 
-    .eventDetails h3{
+    .workshopDetails h3{
         font-size: 2rem;
         color: #79E2FB
     }
 
-    .eventDetails a{
+    .workshopDetails a{
         color: white;
     }
   
@@ -35,27 +41,7 @@ backdrop-filter: blur(4.3px);
         font-size: 0.1rem;
     }
 
-    .eventTitle {
-      text-align: center;
-      display: flex;
-      font-size: 2rem;
-      flex-direction: column;
-      justify-content: center;
-        background-color: black;
-        opacity: 0.65; 
-        height: 70vh;
-        width: 20%;
-        padding: 0 2rem;
-        margin: 3rem;
-        margin-top: 8rem;
-        color: white;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.3px);
--webkit-backdrop-filter: blur(4.3px);
-cursor: pointer;
-    }
-
-  .clusters {
+  .workshops {
   font-size: 20vh;
   font-family: 'Atlantic-Cruise';
   margin-top: 1rem;
@@ -67,19 +53,6 @@ cursor: pointer;
   filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
   }
 
-  .clustersMobile {
-    display: none;
-    font-size: 12vh;
-    text-align: center;
-    margin-bottom: 0rem;
-    font-family: 'Atlantic-Cruise';
-    background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
-    background : linear-gradient(#FFFFFF, #3AD4F8);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
-    }
 
     .registerButton {
         background: #79E2FB;
@@ -103,25 +76,17 @@ cursor: pointer;
 
 @media (max-height: 1000px){
 
-    .container {
-        background-size: cover;
-    }
-
-    .eventDetails{
+    .workshopDetails{
         font-size: 1rem;
     }
 
-    .eventDetails h3{
-        font-size: 1.3rem;
-    }
-
-    .eventTitle{
+    .workshopDetails h3{
         font-size: 1.3rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .eventsLayout {
+    .workshopsLayout {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
@@ -130,55 +95,39 @@ cursor: pointer;
       height: 85vh;
     }
 
-    .eventDetails h3{
+    .workshopDetails h3{
         font-size: 1.3rem;
     }
 
-    .eventDetails {
+    .workshopDetails {
       height: 15rem;
       width: 100%;
       font-size: 1rem;
       padding: 2rem;
     }
 
-    .eventTitle{
-      height: 2rem;
-      width: 100%;
-      margin: 0;
-      font-size: 1.3rem;
-      padding: 0 2rem;
-      margin-top: -5rem;
-    }
-
-    .clusters{
-      display: none;
-    }
-
-    .carouselFix{ 
-        font-size: 5rem;
-    }
-    .clustersMobile{
-     display: block;
-    }
+    .workshops {
+        font-size: 12vh;
+        margin-bottom: 10rem;
+        }
   }
 
 @media only screen and (max-width: 660px)  {
 
-    .clustersMobile{
+    .workshops{
         font-size: 10vh;
+        margin-bottom: 5rem;
     }
-    .eventDetails{
+    .workshopDetails{
         font-size: 0.8rem;
         padding: 1.5rem;
     }
 
-    .eventDetails h3{
+    .workshopDetails h3{
         font-size: 1rem;
-    }
-
-    .eventTitle{
-        font-size: 1rem;
-      margin-top: -0.5rem;
-
     }
 }
+
+
+
+

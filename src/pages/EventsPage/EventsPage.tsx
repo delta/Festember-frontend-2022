@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
-import { Card } from "./Card";
+import { Card } from "../../components/CarouselCard/Card";
 import { content } from "./assets/content";
 import './style.css'
 import Slider from "react-slick";
