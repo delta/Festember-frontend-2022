@@ -1,9 +1,9 @@
-import { AboutUs, ContactUs, Landing } from "../../components";
+import { AboutUs, ContactUs, Landing, Timeline } from "../../components";
 import ReactFullpage from "@fullpage/react-fullpage";
 
 import "./Homepage.css";
 
-const anchors = ["home", "aboutUs", "contactUs", "sponsors"];
+const anchors = ["home", "aboutUs", "timeline", "contactUs", "sponsors"];
 
 const Homepage = () => (
 	<ReactFullpage
@@ -17,6 +17,9 @@ const Homepage = () => (
 					</div>
 					<div className="section">
 						<AboutUs />
+					</div>
+					<div className="section">
+						<Timeline />
 					</div>
 					<div className="section">
 						<ContactUs />
