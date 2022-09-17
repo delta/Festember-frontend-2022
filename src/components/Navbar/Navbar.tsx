@@ -2,6 +2,7 @@
 import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styles from "./styles.module.css";
+import { Link as RouterLink } from "react-router-dom";
 
 const routes = [
 	{ name: "Home", path: "/#home" },
@@ -25,7 +26,20 @@ const Navbar = ({ onClose }: any) => {
 				>
 					{routes.map((route) => {
 						return (
-							<Link href={route.path} key={route.name}>
+							<Link
+								as={
+									route.path.startsWith("/#") ? undefined : RouterLink
+								}
+								href={
+									route.path.startsWith("/#") ? route.path : undefined
+								}
+								to={
+									route.path.startsWith("/#")
+										? route.path.substring(1)
+										: route.path
+								}
+								key={route.name}
+							>
 								<Center
 									position="relative"
 									fontSize="2xl"
@@ -45,7 +59,17 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route, key) => {
 						return (
 							<Link
-								href={route.path}
+								as={
+									route.path.startsWith("/#") ? undefined : RouterLink
+								}
+								href={
+									route.path.startsWith("/#") ? route.path : undefined
+								}
+								to={
+									route.path.startsWith("/#")
+										? route.path.substring(1)
+										: route.path
+								}
 								_hover={{ border: "none" }}
 								key={route.name}
 							>
