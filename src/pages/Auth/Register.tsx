@@ -32,17 +32,48 @@ const Register = () => {
 		user_degree: "BTech",
 		user_year: "1st Year",
 		user_college: "",
-    user_city: "",
-    recaptcha_code:""
+		user_othercollege: "",
+		user_city: "",
+		recaptcha_code: "",
 	});
+	const [colleges, setColleges] = useState<
+		| {
+				id: number;
+				college_name: string;
+		  }[]
+		| []
+	>([]);
 
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (localStorage.getItem("user")) navigate("/");
+		const fetchColleges = async () => {
+			const response = await fetch(`${config.backendOrigin}/colleges`);
+			if (response.ok) {
+				const data = await response.json();
+				if (!Array.isArray(data.message)) {
+					setFormError("Error fetching colleges");
+				} else {
+					data.message.push({ id: 0, college_name: "Other" });
+					setColleges(data.message);
+				}
+			} else {
+				setFormError("Error fetching colleges");
+			}
+		};
+		if (localStorage.getItem("user")) {
+			navigate("/");
+		}
+		if (colleges && colleges.length === 0) {
+			fetchColleges();
+		}
 	}, []);
 
 	const handleFormChange = (field: string, value: string) => {
+		if (field === "user_college")
+			setRegisterForm({ ...registerForm, user_othercollege: "" });
+		else if (field === "user_othercollege")
+			setRegisterForm({ ...registerForm, user_college: "Other" });
 		setRegisterForm({
 			...registerForm,
 			[field]: value,
@@ -77,7 +108,8 @@ const Register = () => {
 				setFormError("user_password");
 			else if (registerForm.user_password !== confirmPassword)
 				setFormError("confirm_password");
-			else if (!registerForm.user_college) setFormError("user_college");
+			else if (!registerForm.user_college && !registerForm.user_othercollege)
+				setFormError("user_college");
 			else {
 				setFormError("");
 				setFormPage(2);
@@ -247,16 +279,39 @@ const Register = () => {
 							isInvalid={formError === "user_college"}
 						>
 							<FormLabel>College</FormLabel>
-							<Input
+							<Select
 								className={styles.formInput}
-								type="text"
+								color="black"
 								value={registerForm.user_college}
+								defaultValue="Select College"
 								onChange={(e) =>
 									handleFormChange("user_college", e.target.value)
 								}
-							/>
+							>
+								{colleges.map((college) => (
+									<option key={college.id}>
+										{college.college_name}
+									</option>
+								))}
+							</Select>
 							<FormErrorMessage>College is required</FormErrorMessage>
 						</FormControl>
+						{registerForm.user_college === "Other" && (
+							<FormControl isRequired>
+								<FormLabel>College</FormLabel>
+								<Input
+									className={styles.formInput}
+									type="text"
+									value={registerForm.user_othercollege}
+									onChange={(e) =>
+										handleFormChange(
+											"user_othercollege",
+											e.target.value
+										)
+									}
+								/>
+							</FormControl>
+						)}
 					</>
 				)}
 

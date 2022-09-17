@@ -7,5 +7,4 @@ export const config = {
 		clientId: "",
 		redirectURI: ORIGIN + "/auth-callback.html",
 	},
-	questionnaireEnabled: false,
 };
