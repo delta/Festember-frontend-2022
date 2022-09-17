@@ -2,7 +2,7 @@ import React from "react";
 import routes from "./routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "../pages";
-import { AppLayout } from "../components";
+import { AppLayout, Page } from "../components";
 
 const Router = () => {
 	return (
@@ -14,7 +14,14 @@ const Router = () => {
 							<Route
 								key={route.path}
 								path={route.path}
-								element={route.element}
+								element={
+									<Page
+										title={"Festember '22 | " + route.title}
+										description={route.description}
+									>
+										{route.element}
+									</Page>
+								}
 							/>
 						);
 					})}

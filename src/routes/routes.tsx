@@ -6,7 +6,7 @@ import {
 	Events,
 	Wildfire,
 	EventsPage,
-	Workshops
+	Workshops,
 } from "../pages";
 import React from "react";
 
@@ -42,16 +42,16 @@ const routes: RouteType[] = [
 		element: <Events />,
 	},
 	{
-		title: "Events Page",
+		title: "Events",
 		path: "/events/:cluster",
-		description: 'Events Page of Festember 2022',
-		element: <EventsPage />
+		description: "Events Page of Festember 2022",
+		element: <EventsPage />,
 	},
 	{
-		title: "Workshops Page",
+		title: "Workshops",
 		path: "/workshops",
-		description: 'Workshops Page of Festember 2022',
-		element: <Workshops />
+		description: "Workshops Page of Festember 2022",
+		element: <Workshops />,
 	},
 	{
 		title: "Wildfire",
