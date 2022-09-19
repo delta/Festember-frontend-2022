@@ -2,7 +2,9 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../contexts/UserContext";
 import "./styles.css";
-
+import { Box, Image } from "@chakra-ui/react";
+import nittLogo from "../../../public/Assets/Images/NITT.png";
+import { BrowserView } from "react-device-detect";
 const Landing = () => {
 	const navigate = useNavigate();
 	const { isLoggedIn } = useContext(userContext);
@@ -12,6 +14,11 @@ const Landing = () => {
 	return (
 		<>
 			<div className="title-box">
+				<BrowserView>
+					<Box className="nittLogo">
+						<Image src={nittLogo} alt="NITT" />
+					</Box>
+				</BrowserView>
 				<div className="title-prefix">Nit Trichy&apos;s</div>
 				<div className="title">Festember</div>
 				<div className="title-suffix">The Sunken Paradise</div>

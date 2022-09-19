@@ -61,6 +61,15 @@
   transform: scale(1.1);
 }
 
+.nittLogo{
+    display: flex;
+    justify-content: center;
+  }
+
+.nittLogo >img{
+  max-width: 50%;
+}
+
 /* Phones */
 @media (max-width: 640px) {
   .title {
