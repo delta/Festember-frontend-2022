@@ -74,6 +74,7 @@ const Navbar = ({ onClose }: any) => {
 											backgroundClip: "text",
 											fontWeight: "bold",
 										}}
+										className={styles.navbarText}
 									>
 										{route.name}
 									</Text>
