@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 
 const routes = [
 	{ name: "Home", path: "/#home" },
-	{ name: "Events", path: "/events" },
-	{ name: "Workshops", path: "/workshops" },
+	// { name: "Events", path: "/events" },
+	// { name: "Workshops", path: "/workshops" },
 	{ name: "About Us", path: "/#aboutUs" },
 	{ name: "Contact Us", path: "/#contactUs" },
 	// { name: "Sponsors", path: "/sponsors" },
@@ -74,6 +74,7 @@ const Navbar = ({ onClose }: any) => {
 											backgroundClip: "text",
 											fontWeight: "bold",
 										}}
+										className={styles.navbarText}
 									>
 										{route.name}
 									</Text>
