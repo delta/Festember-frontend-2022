@@ -82,6 +82,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					<Box className={styles.festemberLogo}>
 						<Image src={festemberLogoSVG} alt="Festember" />
 					</Box>
+					<Box className={styles.nittLogoBrowser}>
+						<Image src={nittLogo} alt="NITT" />
+					</Box>
 					<Center>
 						<Button
 							color="white"

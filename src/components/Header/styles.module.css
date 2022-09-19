@@ -10,6 +10,16 @@
     background: linear-gradient(180deg, #000000 -48.72%, rgba(0, 0, 0, 0) 184.19%);
 }
 
+.nittLogoBrowser{
+    display: flex;
+    justify-content:center;
+    width:16%;
+}
+
+.nittLogoBrowser>img{
+    max-width:48%;
+}
+
 .nittLogo{
     width:26%;
 }
