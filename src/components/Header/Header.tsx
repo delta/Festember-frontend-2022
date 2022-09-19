@@ -13,6 +13,7 @@ import {
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
 import { useNavigate } from "react-router-dom";
+import { userContext } from "../../contexts/UserContext";
 import festemberLogoSVG from "../../../public/Assets/Images/festember_logo.svg";
 import menuToggleSVGClosed from "../../../public/Assets/Images/menu_toggle.svg";
 import menuToggleSVGOpen from "../../../public/Assets/Images/menu.svg";
@@ -20,8 +21,10 @@ import { Navbar } from "../index";
 
 import styles from "./styles.module.css";
 import { config } from "../../../config";
+import { useContext } from "react";
 
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
+	const { isLoggedIn, setIsLoggedIn } = useContext(userContext);
 	const navigate = useNavigate();
 
 	const handleLogout = () => {
@@ -35,7 +38,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 			.then((res) => res.json())
 			.then((data) => {
 				if (data.status_code === 200) {
-					localStorage.removeItem("user");
+					setIsLoggedIn(false);
 					navigate("/login");
 				} else {
 					console.log(data);
@@ -102,12 +105,14 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					</Center>
 				</Flex>
 			</BrowserView>
-			{!localStorage.getItem("user") && (
-				<Button bg="#79E2FB" onClick={() => navigate("/login")}>
-					LOGIN
-				</Button>
-			)}
-			{localStorage.getItem("user") && (
+			{!isLoggedIn &&
+				window.location.pathname !== "/login" &&
+				window.location.pathname !== "/register" && (
+					<Button bg="#79E2FB" onClick={() => navigate("/login")}>
+						LOGIN
+					</Button>
+				)}
+			{isLoggedIn && (
 				<Button bg="#79E2FB" onClick={handleLogout}>
 					LOGOUT
 				</Button>
