@@ -61,17 +61,32 @@
   transform: scale(1.1);
 }
 
-.nittLogo{
+.nittLogoBrowser,.nittLogo{
     display: flex;
     justify-content: center;
   }
 
-.nittLogo >img{
-  max-width: 50%;
+.nittLogoBrowser >img {
+  max-width: min(10vw,13vh);
+}
+
+.nittLogo>img {
+  max-width: max(20vw,13vh);
 }
 
 /* Phones */
-@media (max-width: 640px) {
+@media screen and (max-width:350px){
+  .title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .title-suffix {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:351px) and (max-width: 640px) {
   .title {
     font-size: 6rem;
     margin-bottom: 1rem;
@@ -80,4 +95,12 @@
   .title-suffix {
     font-size: 1rem;
   }
+}
+
+/* When laptop screen's resolution is not good */
+@media screen and
+  (max-height:700px) { 
+    .nittLogoBrowser>img{
+      max-width:min(9vh,7vw);
+    }
 }
