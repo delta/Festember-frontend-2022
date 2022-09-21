@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { userContext } from "../../contexts/UserContext";
 import "./styles.css";
-
 const Landing = () => {
 	const navigate = useNavigate();
+	const { isLoggedIn } = useContext(userContext);
 	useEffect(() => {
 		localStorage.setItem("chakra-ui-color-mode", "dark");
 	}, []);
@@ -13,13 +14,15 @@ const Landing = () => {
 				<div className="title-prefix">Nit Trichy&apos;s</div>
 				<div className="title">Festember</div>
 				<div className="title-suffix">The Sunken Paradise</div>
-				<button
-					className="register-button"
-					type="button"
-					onClick={() => navigate("/register")}
-				>
-					Register
-				</button>
+				{!isLoggedIn && (
+					<button
+						className="register-button"
+						type="button"
+						onClick={() => navigate("/register")}
+					>
+						Register
+					</button>
+				)}
 			</div>
 		</>
 	);
