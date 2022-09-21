@@ -14,7 +14,7 @@ const ListLayout = ({ title, list }: ListLayoutProps) => {
 					<Link
 						key={item.text}
 						className={styles.linkContainer}
-						as={item.link.endsWith(".pdf") ? ReactRouterLink : undefined}
+						as={item.link.endsWith(".pdf") ? undefined : ReactRouterLink}
 						to={item.link}
 						href={item.link.endsWith(".pdf") ? item.link : undefined}
 						target={item.link.endsWith(".pdf") ? "_blank" : undefined}
