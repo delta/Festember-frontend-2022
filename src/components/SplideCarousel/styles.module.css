@@ -4,3 +4,11 @@
     box-shadow: 4px 4px 24px rgba(121, 226, 251, 0.35);
     backdrop-filter: blur(8px);
 }
+
+.cardNoScroll {
+  height: auto!important;
+}
+
+.cardScroll {
+  overflow-y: auto;
+}

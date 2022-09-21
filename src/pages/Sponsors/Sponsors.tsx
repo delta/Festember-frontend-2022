@@ -31,17 +31,17 @@ const Sponsors = () => {
 				<div className={styles.mobileContainer}>
 					<Text className={styles.name}>SPONSORS</Text>
 					<Flex p={3}>
-						<SplideCarousel Details={Sponsor} />
+						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
 					</Flex>
 				</div>
 			</MobileView>
 			<BrowserView>
 				<Flex flexDirection="column" className={styles.container}>
 					<Center mb={5}>
-						<SplideCarousel Details={Sponsor} />
+						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
 					</Center>
 					<Center>
-						<SplideCarousel Details={Sponsor} />
+						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
 					</Center>
 					<Text className={styles.name}>SPONSORS</Text>
 				</Flex>
