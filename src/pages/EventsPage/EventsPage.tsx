@@ -121,10 +121,9 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
-
-        <br />
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('format') &&
@@ -138,10 +137,10 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
-        <br />
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('rules') &&
@@ -155,10 +154,11 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
-        <br />
+        
 
 
         {
@@ -173,6 +173,7 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
@@ -187,6 +188,7 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
@@ -203,11 +205,10 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
-
-        <br />
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('photograph specifications') &&
@@ -221,6 +222,7 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
@@ -236,6 +238,7 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
@@ -255,10 +258,11 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
-        <br />
+       
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('contact') &&
@@ -271,6 +275,7 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
 
@@ -285,10 +290,9 @@ export default function EventsPage(){
                 )
               })
             }
+            <br />
           </>
         }
-        
-        <br />
 
         <button
 					className={styles.registerButton}
