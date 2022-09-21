@@ -3,36 +3,48 @@ import { ListLayout } from "../../components";
 
 const eventClusters = [
 	{
-		text: "Cluster-1",
-		link: "/events/cluster-1",
+		text: "Dance",
+		link: "/events/dance",
 	},
 	{
-		text: "Cluster-2",
-		link: "/events/cluster-2",
+		text: "Arts",
+		link: "/events/arts",
 	},
 	{
-		text: "Cluster-3",
-		link: "/events/cluster-3",
+		text: "Music",
+		link: "/events/music",
 	},
 	{
-		text: "Cluster-4",
-		link: "/events/cluster-4",
+		text: "Fashion",
+		link: "/events/fashion",
 	},
 	{
-		text: "Cluster-5",
-		link: "/events/cluster-5",
+		text: "Photography",
+		link: "/events/photography",
 	},
 	{
-		text: "Cluster-6",
-		link: "/events/cluster-6",
+		text: "Dramatics",
+		link: "/events/dramatics",
 	},
 	{
-		text: "Cluster-7",
-		link: "/events/cluster-7",
+		text: "Telugu Lits",
+		link: "/events/telugulits",
 	},
 	{
-		text: "Cluster-8",
-		link: "/events/cluster-8",
+		text: "Hindi Lits",
+		link: "/events/hindilits",
+	},
+	{
+		text: "Tamil Lits",
+		link: "/events/tamillits",
+	},
+	{
+		text: "English Lits",
+		link: "/events/englishlits",
+	},
+	{
+		text: "Shrutilaya",
+		link: "/events/shrutilaya",
 	},
 ];
 
