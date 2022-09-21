@@ -17,7 +17,7 @@ import { userContext } from "../../contexts/UserContext";
 import festemberLogoSVG from "../../../public/Assets/Images/festember_logo.svg";
 import menuToggleSVGClosed from "../../../public/Assets/Images/menu_toggle.svg";
 import menuToggleSVGOpen from "../../../public/Assets/Images/menu.svg";
-import nittLogo from "../../../public/Assets/Images/NITT.png";
+// import nittLogo from "../../../public/Assets/Images/NITT.png";
 import { Navbar } from "../index";
 
 import styles from "./styles.module.css";
@@ -61,9 +61,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					<Box className={styles.festemberLogo}>
 						<Image src={festemberLogoSVG} alt="Festember" />
 					</Box>
-					<Box className={styles.nittLogo}>
+					{/* <Box className={styles.nittLogo}>
 						<Image src={nittLogo} alt="NITT" />
-					</Box>
+					</Box> */}
 					<Drawer
 						isOpen={isOpen}
 						placement="left"
@@ -82,9 +82,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 					<Box className={styles.festemberLogo}>
 						<Image src={festemberLogoSVG} alt="Festember" />
 					</Box>
-					<Box className={styles.nittLogoBrowser}>
+					{/* <Box className={styles.nittLogoBrowser}>
 						<Image src={nittLogo} alt="NITT" />
-					</Box>
+					</Box> */}
 					<Center>
 						<Button
 							color="white"

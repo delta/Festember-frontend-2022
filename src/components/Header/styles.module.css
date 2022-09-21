@@ -10,7 +10,7 @@
     background: linear-gradient(180deg, #000000 -48.72%, rgba(0, 0, 0, 0) 184.19%);
 }
 
-.nittLogoBrowser{
+/* .nittLogoBrowser{
     display: flex;
     justify-content:center;
     width:16%;
@@ -22,7 +22,7 @@
 
 .nittLogo{
     width:26%;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
     .gradient{
@@ -31,7 +31,7 @@
     }
 }
 
-@media only screen and (min-width: 360px) and (max-width:499px) {
+/* @media only screen and (min-width: 360px) and (max-width:499px) {
     .nittLogo{
         width:24%;
     }
@@ -47,4 +47,4 @@
     .nittLogo{
         width:26%;
     }
-}
+} */
