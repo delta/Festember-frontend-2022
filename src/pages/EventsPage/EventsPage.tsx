@@ -105,10 +105,7 @@ export default function EventsPage(){
         </div>
         <div className={styles.eventDetails}>
         <h3>Event Details</h3>
-
-
         <br />
-
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('description') &&
           <>
@@ -141,7 +138,6 @@ export default function EventsPage(){
           </>
         }
 
-
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('rules') &&
           <>
@@ -157,9 +153,6 @@ export default function EventsPage(){
             <br />
           </>
         }
-
-        
-
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('preliminary round') &&
@@ -192,7 +185,6 @@ export default function EventsPage(){
           </>
         }
 
-
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('judging criteria') &&
           <>
@@ -208,7 +200,6 @@ export default function EventsPage(){
             <br />
           </>
         }
-
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('photograph specifications') &&
@@ -226,7 +217,6 @@ export default function EventsPage(){
           </>
         }
 
-
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('script guidelines') &&
           <>
@@ -241,10 +231,6 @@ export default function EventsPage(){
             <br />
           </>
         }
-
-
-
-
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('prizes') &&
@@ -261,8 +247,6 @@ export default function EventsPage(){
             <br />
           </>
         }
-
-       
 
         {
           content[clusterIndex].eventDetails[eventIndex].details.hasOwnProperty('contact') &&
@@ -297,7 +281,7 @@ export default function EventsPage(){
         <button
 					className={styles.registerButton}
 					type="button"
-					onClick={() => window.open('https:/' + content[clusterIndex].eventDetails[eventIndex].details.link, '_blank')}
+					onClick={() => window.open(content[clusterIndex].eventDetails[eventIndex].details.link, '_blank')}
 				>
 					Register here
 				</button>
