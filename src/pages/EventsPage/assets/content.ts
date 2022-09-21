@@ -984,7 +984,7 @@ export const content: any = [
 					],
 					
 					"prizes":['1st Place - 1500', '2nd Place - 1000', '3rd Place - 500'],
-					"poc":[
+					"contact":[
 						"Krishna : 9003052447",
 						"Tharunika : 8610952873",
 						"Suhail : 7904339571 "			
@@ -1096,9 +1096,8 @@ export const content: any = [
 					"link": ["https://docs.google.com/forms/d/e/1FAIpQLSdNXWe-WwF_ntNfXBZ10e0mql6dPhOeJYSIEBb5J9nJxo-ueQ/viewform?usp=sf_link"],
 					"format": ['Potpourri is an E-Lits event that is a combination of every other E-Lits event. ', 'Questions can and will be asked from any domain of E-Lits.', 'Your team should consist of 4-5 members. ', 'Event is of two rounds: prelims and finals.', 'Prelims will have two parts: written and miming/drawing', 'Top 8 teams will qualify for the finals.'],
 					"rules": ['Only 2 members from each team can attempt the written section.', 'Any attempt to cheat will result in disqualification', 'Bonuses are indicated for each section for answering all questions correctly.', 'Any attempt to cheat will result in disqualification.', 'Organizers’ decisions are final.'],
-					"jud_crit":[],
 					"prizes":['1st Place - 3000', '2nd Place - 2000', '3rd Place - 1000'],
-					"poc":[
+					"contact":[
 						"Jairam  9380872847",
 						"Hensiha  8778353203",
 						"Rehma  6382305540",		
@@ -1149,7 +1148,7 @@ export const content: any = [
 					"rules": ['Adopting any kind of malpractice will lead to disqualification.', 'Quizmaster’s decisions are final. ', 'No requests for re-evaluation will be entertained.'],
 					
 					"prizes":['1st Place - 2000', '2nd Place - 1500', '3rd Place - 1000'],
-					"poc":[
+					"contact":[
 						"Jairam  9380872847",
 						"Hensiha  8778353203",
 						"Rehma  6382305540",		
