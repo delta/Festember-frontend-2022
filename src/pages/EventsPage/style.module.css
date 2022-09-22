@@ -142,7 +142,8 @@ cursor: pointer;
     }
 
     .eventTitle{
-      height: 2rem;
+      justify-content: start;
+      height: 3rem;
       width: 100%;
       margin: 0;
       font-size: 1.3rem;
