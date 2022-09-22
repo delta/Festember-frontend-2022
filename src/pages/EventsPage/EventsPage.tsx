@@ -4,6 +4,9 @@ import { config } from "react-spring";
 import { Card } from "../../components/CarouselCard/Card";
 import { content } from "./assets/content";
 import './style.css'
+import { isBrowser } from "react-device-detect";
+import {Carousel as HorizontalCarousel} from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,9 +46,13 @@ export default function EventsPage() {
 
   function navigateClusters(index: number) {
     setGoToSlide(index)
-    setClusterIndex(index)
+    setClusterIndex(index);
+    setEventIndex(0);
+    // @ts-ignore
+    sliderRef.current?.slickGoTo(0);
   }
 
+  const sliderRef= React.useRef(null);
   const url = window.location.href;
   const cluster = url.split("/").pop()
 
@@ -68,9 +75,14 @@ export default function EventsPage() {
     focusOnSelect: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    afterChange: (e: any) => setEventIndex(e),
-    responsive: [{ breakpoint: 1025, settings: { slidesToShow: 1, infinite: true, vertical: false, arrows: true, prevArrow: undefined, nextArrow: undefined, afterChange: () => (e: any) => setEventIndex(e) } }]
+    afterChange: (e: number) => setEventIndex(e),
   };
+
+
+  function navigateEvents(event: number){
+    console.log(event);
+    setEventIndex(event);
+  }
 
   const slides = content.map((slide: any, index: any) => ({
     key: index,
@@ -84,15 +96,23 @@ export default function EventsPage() {
     <>
       <div className={styles.eventsLayout}>
         <div className={styles.clustersMobile}>{content[clusterIndex].title}</div>
-        <div className={styles.eventTitle}>
-          <Slider {...settings}>
+        {isBrowser ? <div className={styles.eventTitle}>
+          <Slider ref={sliderRef} {...settings}>
             {content[clusterIndex].eventDetails.map((event: any, i: any) => {
               return <div key={i}>
                 <h3>{event.title}</h3>
               </div>
             })}
           </Slider>
-        </div>
+        </div> : <div className={styles.eventTitle}>
+        <HorizontalCarousel infiniteLoop={true} showStatus={false} showIndicators={false} onChange= {(e) => navigateEvents(e)}>
+        {content[clusterIndex].eventDetails.map((event: any, i: any) => {
+              return <div key={i}>
+                <h3 style={{ marginTop:'10px', color: '#79E2FB'}}>{event.title}</h3>
+              </div>
+            })}
+            </HorizontalCarousel>
+        </div>}
         <div style={{ display: "flex", flexDirection: 'column' }}>
           <div className={styles.clusters}>{content[clusterIndex].title}</div>
           <div className={styles.carouselFix}>Hi</div>
