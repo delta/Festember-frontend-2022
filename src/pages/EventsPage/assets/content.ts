@@ -23,7 +23,7 @@ export const content: any = [
 				"details" : {
 					"description": ["A platform where every single heart beats with exhilaration as performers try to set the stage on fire through their performances. Western dance allows for any form of dance including but not limited to hip hop, breaking, house, locking, popping, afro, krump or one that may be uniquely yours. Festember’22 presents Western Solo, where you can revel in the rhythm, dance your heart out and amaze the audience."],
 					"link": ["https://forms.gle/qUAGdqQHGK5dv8ex7"],
-					"format":['The event consists of two rounds :', 'Round - 1, Eliminations : Dancers must showcase their own choreography for 2 to 2.5 minutes.', 'Round - 2, Cypher: Get ready to move your feet to the beat played by our DJ. ', 'There are three sub - rounds: ','a)  Face-off:', 'Dancers battle each other twice to the music played by the DJ.', 'Duration: 45 seconds per person per battle.', 'b)  Prop Pop:', 'The prop-based round where the participants must include the allotted prop in their dance. The props that the dancers get to perform with is decided by picking from lots. ', 'Duration: 60 seconds per artist per prop.', 'c)  Powerhouse:', 'The ultimate opportunity for the top dancers to battle against each other and showcase their best sequences of power moves.', 'Duration: 45 seconds per powerhouse per battle.'],
+					"format":['The event consists of two rounds:', 'Round - 1, Eliminations : Dancers must showcase their own choreography for 2 to 2.5 minutes.', 'Round - 2, Cypher: Get ready to move your feet to the beat played by our DJ. ', 'There are three sub - rounds: ','a)  Face-off:', 'Dancers battle each other twice to the music played by the DJ.', 'Duration: 45 seconds per person per battle.', 'b)  Prop Pop:', 'The prop-based round where the participants must include the allotted prop in their dance. The props that the dancers get to perform with is decided by picking from lots. ', 'Duration: 60 seconds per artist per prop.', 'c)  Powerhouse:', 'The ultimate opportunity for the top dancers to battle against each other and showcase their best sequences of power moves.', 'Duration: 45 seconds per powerhouse per battle.'],
 					"rules":['A maximum of 3 registrations (excluding the dancers qualified through choreonite finals) shall be permitted per college.', 'Participants are requested to send their audio tracks (elimination round) while registering. ', 'On spot registrations will close 30 minutes prior to the commencement of the event.', 'Deviation from the time limit will lead to reduction of points.', 'The best participants will qualify from the Eliminations round to the Finals round.', 'All musical languages are permitted. However, gestures that are vulgar or profane, either in a statement of intent, are strictly prohibited. Any action deemed offensive to a particular community or section of society (religion, race, caste, creed, gender, etc.) will result in instant disqualification.', 'All decisions taken by the judges shall be deemed final.'],
 					"judging criteria":['The participants are expected to prepare and deliver a top notch performance to cross the Eliminations. ', "The audience' response and entertainment value shall be considered. Also, the depth in specific styles portrayed, mastery in powermoves, and choreography will also be important factors.", 'Western Solo should not be confused with Freestyle Solo by the participants. Judges shall rate the performances based on Western styles.', 'The basic elements of judgement of a Cypher remain unchanged. However, some of the specifications have been discussed as follows:', 'Sub-round-1:', 'Dancers will be judged based on their uniqueness and justice done to the music played.', 'Sub-round-2:', 'Dancers will be judged based on their creative usage of props and spontaneity.', 'Sub-round-3:', 'Dancers will be judged based on their energy, synchronisation of routine and entertainment value.'],
 					"prizes" : ["First place - 5000INR","Second place - 3500INR"],
@@ -37,7 +37,7 @@ export const content: any = [
 				"details":{
 					"description": ["A tryst with the stage can be enhanced when a team brings out their best feet forward and procreates a flurry of funky moves. Festember'22 presents Choreonite: Western. Bring your dance contingents and kick the competition a notch up by flaunting your flashy moves with unparalleled creativity."],
 					"link": ["http://fstm.in/dance"],
-					"format":['The event consists of two rounds :', 'Round 1: Eliminations (online) - 3 to 6 minutes video clip', 'Round 2: Finals (offline) - 10 minutes (includes time for setup) '],
+					"format":['The event consists of two rounds:', 'Round 1: Eliminations (online) - 3 to 6 minutes video clip', 'Round 2: Finals (offline) - 10 minutes (includes time for setup) '],
 					"rules":['ONLY ONE registration per college shall be permitted to take part in this event.', 'All teams must send in a recently recorded western themed dance video with the participating team by 17th September while registering.  ', 'The permitted video length is 3 to 6 minutes (STC). ', 'Number of participants in a crew is 8 - 25 along with 3 extra members for backstage, lighting and costume requirements.', 'The shortlisted teams will be invited to perform in Choreonite Finals during Festember.', 'Few teams will be called to participate in the Wildcard round based on their performance from round 1, resulting in 1 team being given another shot at making it to the choreonite finals. The same set of rules followed in finals applies for the wildcard round.  ', 'Team captains along with their entire crew are requested to be present 4 hours prior to the event, as registration will happen along with song submission and slot allocation. ', 'The duration of the performance is 10 minutes (inclusive of setup and narrative, if any). Deviation from the time limit will lead to reduction of points.', 'The participating teams are given the freedom to go with any genre of their choice.', 'Teams selected for Choreonite Finals can directly send one of their dancers to Western Solo finals and one pair of dancers to Duet Freestyle finals (out-of-quota). ', 'All musical languages are permitted. However, gestures that are vulgar or profane,either in a statement of intent or inadvertent, are strictly prohibited. Any action deemed offensive to a particular community or section of society (religion, race, caste, creed, gender, etc.) will result in instant disqualification.', 'All props are allowed, with an exception of fire, oil, glass, water or any object that could possibly be damaging the stage.', 'The teams are entirely responsible for their belongings. Festember will not be responsible in case of missing props, costumes etc.', 'All decisions taken by the judges shall be deemed final.'],
 					"judging criteria":['Incorporating multiple dance styles will fetch brownie points.', "The audience' response and entertainment value shall be considered. ", 'Energy, cohesion will also be taken into consideration. '],
 					"prizes" : ['First Place - 30,000 INR', 'Second Place - 20,000 INR'],
@@ -64,7 +64,7 @@ export const content: any = [
 				"id": "E",
 				"details":{
 					"description":["Charm the audience with your elegant and graceful moves in a fiery battle that rewards the best. Festember 22 presents Choreonite: Eastern, a chance for your team to hypnotize the crowd with your elegant moves and regal steps."],
-					"format":['The event consists of two rounds :', 'Round 1: Eliminations (online) - 3 to 6 minutes video clip', 'Round 2: Finals (offline) - 10 minutes (includes time for setup)'],
+					"format":['The event consists of two rounds:', 'Round 1: Eliminations (online) - 3 to 6 minutes video clip', 'Round 2: Finals (offline) - 10 minutes (includes time for setup)'],
 					"rules":['ONLY ONE registration per college shall be permitted to take part in this event.', 'All teams must send in a recently recorded eastern themed dance video with the complete participating team by 17th September while registering. ', 'Click here to register', 'The permitted video length is 3 to 6 minutes (STC). ', 'Number of participants in a crew is 8 - 25 along with 3 extra members for backstage, lighting and costume requirements.', 'The shortlisted teams will be invited to perform in Choreonite Finals during Festember.', 'Few teams will be called to participate in the Wildcard round based on their performance from round 1, resulting in 1 team being given another shot at making it to the choreonite finals.The same set of rules followed in finals applies for the wildcard round.  ', 'Team captains along with their entire crew are requested to be present 4 hours prior to the event, as registration will happen along with song submission and slot allocation. ', 'The duration of the performance is 10 minutes (inclusive of setup and narrative, if any). Deviation from the time limit will lead to reduction of points.', 'Teams selected for Choreonite Finals can directly send 2 of their dancers to Eastern Solo finals.', 'All musical languages are permitted. However, gestures that are vulgar or profane, either in a statement of intent or inadvertent, are strictly prohibited. Any action deemed offensive to a particular community or section of society (religion, race, caste, creed, gender, etc.) will result in instant disqualification.', 'All props are allowed, with an exception of fire, oil, glass, water or any object that could possibly be damaging the stage.', 'The teams are entirely responsible for their belongings. Festember will not be responsible in case of missing props, costumes etc.', 'All decisions taken by the judges shall be deemed final.'],
 					"judging criteria":['Expressions, grace and perfection of moves.', 'Energy, Depth in Dance form, Justified Portrayal of the moods, Choreography and Costumes that fit well in their dance form(s).', 'The participants are encouraged to take up a creative approach in their performances.'],
 					"prizes": ['First Place - 27000 INR'],
@@ -274,7 +274,7 @@ export const content: any = [
 				"details":{
 					"description":["Chisel the Climax is an unique event which seeks to channel your artistic flair and ingenuity. Form teams of two, and register to script and paint your own ending to an unfinished story  given to you during the event, on a number of CDs."],
 					"link": ["https://forms.gle/vG78BE1Ykiw8cxti6"],
-					"format":["Number of rounds : 1","Time limit : 2 hours."],
+					"format":["Number of rounds: 1","Time limit : 2 hours."],
 					"rules":["Participants will be narrated an incomplete story.They are expected to think of their own ending and create graffiti of the entire climax on a collection  of CDs ( 4 to 6 nos.).","The final presentation of the CDs combined should give a visual representation of the theme’s climax in its entirety.","Number of members per team : 2","Number of teams per college : 3 teams (maximum)","Storyline will be narrated only once 15 minutes prior to the event.","Only the best 10 teams as decided by the judges will be allowed to explain their design.","Use of any electronic devices or printouts to copy a design will lead to immediate disqualification from the event.","Teams will face disqualification if the paintings are found to be offensive or inappropriate.","Use of materials other than those provided by the organizers will not be allowed.","The decision of the judge will be final and binding.","Spot registrations will close half an hour prior to the event.","Spot Registrations are compulsory."],
 					"judging criteria":["Creativity and originality","Visual appeal","Adherence to the storyline","Overall impression"],
 					"prizes":["First Place : 3000 INR","Second Place : 2000 INR","Third Place : 1000 INR"],
@@ -286,12 +286,12 @@ export const content: any = [
 				"details":{
 					"description": ["Taking a mundane walk along the dull walls of gray concrete, every once in a while, we feel the need for embellishment. Festember presents you with the opportunity to channel and showcase the Picasso in you. Capture hearts and enrapture souls by creating an everlasting expression, etched on the walls!"],
 					"link": ["https://forms.gle/FW4fZyhUjVmYEhut7"],
-					"format":["Number of rounds : 2","Time limit : 45 minutes","Final Round Time Limit : 3 hours"],
+					"format":["Number of rounds: 2","Time limit : 45 minutes","Final Round Time Limit : 3 hours"],
 					"rules":[
 						"Theme will be revealed 15 minutes before the event.",
 						"Number of members per team : 5",
 						"Number of teams per college : 3 teams (maximum)",
-						"Number of rounds : 2",
+						"Number of rounds: 2",
 						"The decision of the judges will be final and binding."
 					],
 					"preliminary round":['Time limit : 45 minutes', 'The teams should draw/sketch the graffiti they intend to paint with the materials provided.', 'The usage of phones, tablets or printouts to copy a design will lead to immediate disqualification from the event.', 'The top 6 teams as decided by the panel of judges will move on to the final round.'],
@@ -320,7 +320,7 @@ export const content: any = [
 				"details":{
 					"description": ["Exhibit emotions and paint stories, not on paper, but on skin. Use creativity to produce beauty, and walk away from the event with the satisfaction of an artisan. Register with a friend to ink your very own tattoo on, and come out on top!"],
 					"link": ["https://forms.gle/C2uRUBi9Ko4LEi7M6"],
-					"format":["Number of rounds : 1","Time limit : 2 hours"],
+					"format":["Number of rounds: 1","Time limit : 2 hours"],
 					"rules":[
 						"One participant should paint a tattoo on the other using the colours and the brushes provided.",
 						"Number of members per team : 2 (1 painter + 1 to be painted on)",
@@ -356,7 +356,7 @@ export const content: any = [
 				"details":{
 					"description": ["Festember’s face painting event gives one an opportunity to paint on the human face. Grab a partner and some brushes, and register away to create something truly, artistically beautiful!"],
 					"link": ["https://forms.gle/LMUzDuysB9hCe1357"],
-					"format":["Number of rounds : 1","Time limit : 2 hours"],
+					"format":["Number of rounds: 1","Time limit : 2 hours"],
 					"rules":[
 						"One participant should paint on the other using the colours and the brushes provided.",
 						"Number of members per team : 2 (1 painter + 1 to be painted on)",
@@ -393,7 +393,7 @@ export const content: any = [
 				"details":{
 					"description": ["In pairs, get those hands working by making the fabric you wear into your very own canvas, limited only by your imagination. Register away for Festember's very own T-shirt designing competition, and stand out from the crowd!"],
 					"link": ["https://forms.gle/Ab6soE833rMJvXqH7"],
-					"format":["Number of rounds : 1","Time limit : 2 hours"],
+					"format":["Number of rounds: 1","Time limit : 2 hours"],
 					"rules":[
 						"Participants have to design a plain T-shirt  by painting on it with the colours provided.",
 						"Number of members per team : 2",
