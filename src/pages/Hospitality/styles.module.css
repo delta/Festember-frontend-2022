@@ -1,0 +1,38 @@
+.container{
+    position: relative;
+    height: 60vh;
+    margin-top: -7em;
+}
+
+.header{
+    font-size: 4.5em;
+    font-family: Atlantic_Cruise;
+    margin-top: 2em;
+    text-transform: uppercase;  
+    background: linear-gradient(179deg, #FFFFFF 14.23%, #3AD4F8 99.14%);
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.button {
+	position: relative;
+    font-family: Poppins;
+	border-top: 3px #3ad4f8;
+	text-transform: uppercase;
+	padding: 0.35em 0.5em 0.35em 0.5em;
+	margin: 0.25em;
+	border: 2px solid #3ad4f8;
+	border-bottom: none;
+	border-image: linear-gradient(to bottom, #79e2fbff, #79e2fb00) 1;
+	color: white;
+	background: rgba(0, 0, 0, 0.33);
+}
+
+@media only screen and (min-width: 1024px){
+    .container{
+        margin-top: 0em;
+    }
+}

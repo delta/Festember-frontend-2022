@@ -11,7 +11,7 @@ const routes = [
 	{ name: "Contact Us", path: "/#contactUs" },
 	// { name: "Sponsors", path: "/sponsors" },
 	{ name: "Wildfire", path: "/wildfire" },
-	{ name: "Accomodation", path: "/accomodation" },
+	{ name: "Hospitality", path: "/hospitality" },
 ];
 
 const Navbar = ({ onClose }: any) => {

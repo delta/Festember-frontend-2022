@@ -37,16 +37,25 @@
 
 @media only screen and (min-width: 1024px){
     .wrapper{
-        width: 60%;
+        width: 50%;
         flex-direction: row;
     }
     .header{
-        writing-mode: sideways-lr;
-        font-size: 7.5em;
-
+        font-family: Atlantic_Cruise;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        font-size: 6.5em;
+        margin-right: -3em;
     }
     .content{
-        margin-left: -4.5em;
         font-size: 1.15em;
         padding: 3em;
     }

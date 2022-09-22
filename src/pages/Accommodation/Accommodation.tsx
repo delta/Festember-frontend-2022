@@ -22,7 +22,7 @@ const fares = [
 	"The hospitality charges per person are : \
 	Standardized Accommodation Cost: ₹300 per day\
 	Caution Deposit: ₹150 (refundable)",
-	"*All accomodation is provided with a common fare and air conditioners are subject to  availability",
+	"*All accommodation is provided with a common fare and air conditioners are subject to  availability",
 	"**Caution deposit will be refunded at the sole discretion of Festember.",
 	"***The fare for faculty members is the same as the fare for students.",
 ];
@@ -31,7 +31,7 @@ const adv_booking = [
 	"Advance Booking : Per Person advance: Rs 50 (one time payment)",
 	"Advance booking is applicable only for groups having a minimum size of 25 students.",
 	"Send us an e-mail to hospitalityfpr@gmail.com that contains the following details :",
-]
+];
 
 const adv_booking_sub = [
 	"Name of the representative",
@@ -42,9 +42,17 @@ const adv_booking_sub = [
 	"Date and time of check-in",
 	"Date and time of check-out",
 	"Name and e-mail IDs of all students and faculties (should be registered in festember.com and have received QR code)",
+];
+
+const adv_booking_inst = [
+	"Mail us the necessary details as specified if there are more than 25 people coming for Festember from your college.",
+	"On getting your details, we will reply informing the total advance money to be paid, and the representative will have to pay it online (Payment instructions will be mailed). After payment, send us a proper proof, such as an e-receipt or transaction number.",
+	"After verifying the payment, confirmation regarding the advance booking will be mailed, which should be shown while coming to Festember.",
+	"The advance money is collected only to ensure the availability of accommodation. Note: The booking will get cancelled if the participants don’t turn up within the buffer time for reporting.",
+	"People who have done advance booking have to pay the actual accommodation charges only on arrival.",
 ]
 
-const Accomodation = () => {
+const Accommodation = () => {
 	return (
 			<ReactFullpage
 					scrollingSpeed={1000}
@@ -65,7 +73,7 @@ const Accomodation = () => {
 								</div>
 								<div className="section">
 									<div className={styles.wrapper}>
-										<div className={styles.header}>Fares</div>
+										<div className={styles.header} style={{marginRight: isMobile ? "0em" : "-1.5em"}}>Fares</div>
 										<div className={styles.content}>
 											<ul>
 												{fares.map((fare: string) => {
@@ -77,7 +85,7 @@ const Accomodation = () => {
 								</div>
 								<div className="section">
 									<div className={styles.wrapper}>
-										<div className={styles.header} style={{ fontSize: isMobile ? "2.5em" : "5em" }}>
+										<div className={styles.header} style={{ fontSize: isMobile ? "2em" : "4em", marginRight: isMobile ? "0em" : "-3em"}}>
 											Advance Booking
 										</div>
 										<div className={styles.content} style={{ marginLeft: isMobile ? "0em" : "-3.3em" }}>
@@ -105,6 +113,16 @@ const Accomodation = () => {
 													that advance booking gets automatically
 													cancelled.
 												</li>
+												<li>Instructions</li>
+												<ul style={{ paddingLeft: "1.5em" }}>
+													{adv_booking_inst.map((advbi: string) => {
+														return (
+															<li style={{ padding: "0.1em" }}>
+																{advbi}
+															</li>
+														);
+													})}
+												</ul>
 											</ul>
 										</div>
 									</div>
@@ -116,4 +134,4 @@ const Accomodation = () => {
 	);
 };
 
-export default Accomodation;
+export default Accommodation;
