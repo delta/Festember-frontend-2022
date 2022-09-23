@@ -6,7 +6,13 @@ import {
 	Events,
 	Wildfire,
 	EventsPage,
-	Workshops
+	Workshops,
+	Accommodation,
+	Hospitality,
+	Instructions,
+	HowToReach,
+	FAQ,
+	Contact
 } from "../pages";
 import React from "react";
 
@@ -58,6 +64,42 @@ const routes: RouteType[] = [
 		path: "/wildfire",
 		description: "Wildfire Page of Festember 2022",
 		element: <Wildfire />,
+	},
+	{
+		title: "Hospitality",
+		path: "/hospitality",
+		description: "Hospitality Page of Festember 2022",
+		element: <Hospitality />,
+	},
+	{
+		title: "Instruction",
+		path: "/hospitality/instructions",
+		description: "Instructions for Festember 2022",
+		element: <Instructions />,
+	},
+	{
+		title: "How To Reach",
+		path: "/hospitality/how_to_reach",
+		description: "How To Reach for Festember 2022",
+		element: <HowToReach />,
+	},
+	{
+		title: "Accommodation",
+		path: "/hospitality/accommodation",
+		description: "Accommodation for Festember 2022",
+		element: <Accommodation />,
+	},
+	{
+		title: "Contact",
+		path: "/hospitality/contacts",
+		description: "Contact for Festember 2022",
+		element: <Contact />,
+	},
+	{
+		title: "FAQ",
+		path: "/hospitality/faq",
+		description: "FAQ for Festember 2022",
+		element: <FAQ />,
 	},
 ];
 
