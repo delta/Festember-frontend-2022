@@ -1,7 +1,7 @@
 .container{
     position: relative;
-    height: 60vh;
-    margin-top: -7em;
+    height: 65vh;
+    margin-top: -7.5em;
 }
 
 .header{
@@ -22,8 +22,8 @@
     font-family: Poppins;
 	border-top: 3px #3ad4f8;
 	text-transform: uppercase;
-	padding: 0.35em 0.5em 0.35em 0.5em;
-	margin: 0.25em;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	margin: 0.2em;
 	border: 2px solid #3ad4f8;
 	border-bottom: none;
 	border-image: linear-gradient(to bottom, #79e2fbff, #79e2fb00) 1;
@@ -31,8 +31,19 @@
 	background: rgba(0, 0, 0, 0.33);
 }
 
+.content{
+    margin-top: -1em;
+}
+
 @media only screen and (min-width: 1024px){
     .container{
         margin-top: 0em;
+    }
+    .button{
+        padding: 0.35em 0.5em 0.35em 0.5em;
+	    margin: 0.25em;
+    }
+    .content{
+        margin-top: 0;
     }
 }
