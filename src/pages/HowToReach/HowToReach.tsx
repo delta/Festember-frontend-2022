@@ -1,5 +1,5 @@
 import { BrowserView, MobileView } from "react-device-detect";
-import styles from "./styles.module.css";
+import styles from "../infobox.module.css";
 
 const HowToReach = () => {
 	return (

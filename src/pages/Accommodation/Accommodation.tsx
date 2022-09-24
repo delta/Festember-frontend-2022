@@ -59,7 +59,7 @@ const Accommodation = () => {
 					render={() => {
 						return (
 							<ReactFullpage.Wrapper>
-								<div className="section">
+								<div className={`section ${styles.about}`}>
 									<div className={styles.wrapper}>
 										<div className={styles.header}>Rules</div>
 										<div className={styles.content}>
@@ -71,9 +71,9 @@ const Accommodation = () => {
 										</div>
 									</div>
 								</div>
-								<div className="section">
+								<div className={`section ${styles.about}`}>
 									<div className={styles.wrapper}>
-										<div className={styles.header} style={{marginRight: isMobile ? "0em" : "-1.5em"}}>Fares</div>
+										<div className={styles.header}>Fares</div>
 										<div className={styles.content}>
 											<ul>
 												{fares.map((fare: string) => {
@@ -83,12 +83,12 @@ const Accommodation = () => {
 										</div>
 									</div>
 								</div>
-								<div className="section">
+								<div className={`section ${styles.about}`}>
 									<div className={styles.wrapper}>
-										<div className={styles.header} style={{ fontSize: isMobile ? "2em" : "4em", marginRight: isMobile ? "0em" : "-3em"}}>
+										<div className={styles.header} style={{ fontSize: isMobile ? "2em" : '', marginBottom: isMobile ? '' : "2em"}}>
 											Advance Booking
 										</div>
-										<div className={styles.content} style={{ marginLeft: isMobile ? "0em" : "-3.3em" }}>
+										<div className={styles.content}>
 											<ul>
 												{adv_booking.map((advb: string) => {
 													return (
