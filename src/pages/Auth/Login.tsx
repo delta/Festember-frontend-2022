@@ -6,10 +6,15 @@ import {
 	Heading,
 } from "@chakra-ui/react";
 import { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-hot-toast";
 import { userContext } from "../../contexts/UserContext";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
+
+interface LocationState {
+	from?: string;
+}
 
 const Login = () => {
 	const { isLoggedIn, setuserID, setIsLoggedIn } = useContext(userContext);
@@ -20,10 +25,16 @@ const Login = () => {
 	});
 
 	const navigate = useNavigate();
+	const locationState = useLocation().state as LocationState;
 
 	useEffect(() => {
 		if (isLoggedIn) navigate("/");
 	}, [isLoggedIn]);
+
+	useEffect(() => {
+		if (locationState?.from === "ProtectedRoute")
+			toast.error("You must be logged in to continue");
+	}, []);
 
 	const handleFormChange = (field: string, value: string) => {
 		setLoginForm({ ...loginForm, [field]: value });

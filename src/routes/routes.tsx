@@ -3,16 +3,16 @@ import {
 	Register,
 	Login,
 	Sponsors,
-	Events,
 	Wildfire,
-	EventsPage,
-	Workshops,
 	Accommodation,
 	Hospitality,
 	Instructions,
 	HowToReach,
 	FAQ,
 	Contact,
+	Events,
+	EventsPage,
+	Workshops,
 } from "../pages";
 import React from "react";
 

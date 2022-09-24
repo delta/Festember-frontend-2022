@@ -1,10 +1,10 @@
-import { BASE_URL } from "../../../../config";
+import { config } from "../../../../config";
 
 export const content: any = [
 	{
 		title: "Dance",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Dance.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Dance.jpg",
 		eventDetails: [
 			{
 				title: "EASTERN SOLO",
@@ -238,7 +238,7 @@ export const content: any = [
 	{
 		title: "Music",
 		color: "#FFFFFF",
-		src: BASE_URL + "/Assets/Images/cluster-images/Music.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Music.jpg",
 		eventDetails: [
 			{
 				title: "SOLO VOCALS-WESTERN",
@@ -497,7 +497,7 @@ export const content: any = [
 	{
 		title: "Arts",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Arts.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Arts.jpg",
 		eventDetails: [
 			{
 				title: "CHISEL THE CLIMAX",
@@ -714,7 +714,7 @@ export const content: any = [
 	{
 		title: "Fashion",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Fashion.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Fashion.jpg",
 		eventDetails: [
 			{
 				title: "FASHIONITAS",
@@ -820,7 +820,7 @@ export const content: any = [
 	{
 		title: "Photography",
 		color: "#397BCE",
-		src: BASE_URL + "/Assets/Images/cluster-images/Photography.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Photography.jpg",
 		eventDetails: [
 			{
 				title: "LIVE PHOTOGRAPHY",
@@ -959,7 +959,7 @@ export const content: any = [
 	{
 		title: "Dramatics",
 		color: "#397BCE",
-		src: BASE_URL + "/Assets/Images/cluster-images/Dramatics.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Dramatics.jpg",
 		eventDetails: [
 			{
 				title: "MIME",
@@ -1068,7 +1068,7 @@ export const content: any = [
 	{
 		title: "Telugu Lits",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Telugu.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Telugu.jpg",
 		eventDetails: [
 			{
 				title: "Name The Tune With Bidding",
@@ -1201,7 +1201,7 @@ export const content: any = [
 	{
 		title: "Hindi Lits",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Hindi.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Hindi.jpg",
 		eventDetails: [
 			{
 				title: "CRICKET QUIZ",
@@ -1500,7 +1500,7 @@ export const content: any = [
 	{
 		title: "Tamil Lits",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Tamil.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Tamil.jpg",
 		eventDetails: [
 			{
 				title: "KOLAM",
@@ -1848,7 +1848,7 @@ export const content: any = [
 	{
 		title: "English Lits",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/English.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/English.jpg",
 		eventDetails: [
 			{
 				title: "SCRABBLE",
@@ -2417,7 +2417,7 @@ export const content: any = [
 	{
 		title: "Shrutilaya",
 		color: "#000000",
-		src: BASE_URL + "/Assets/Images/cluster-images/Shrutilaya.jpg",
+		src: config.basePath + "/Assets/Images/cluster-images/Shrutilaya.jpg",
 		eventDetails: [
 			{
 				title: "CARNATIC SOLO PERCUSSION",

@@ -1,6 +1,7 @@
 // import routes from "../../routes/routes";
 import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
+import { config } from "../../../config";
 import styles from "./styles.module.css";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -28,17 +29,7 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route) => {
 						return (
 							<Link
-								as={
-									route.path.startsWith("/#") ? undefined : RouterLink
-								}
-								href={
-									route.path.startsWith("/#") ? route.path : undefined
-								}
-								to={
-									route.path.startsWith("/#")
-										? route.path.substring(1)
-										: route.path
-								}
+								href={`${config.basePath}${route.path}`}
 								key={route.name}
 							>
 								<Center
@@ -60,17 +51,7 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route, key) => {
 						return (
 							<Link
-								as={
-									route.path.startsWith("/#") ? undefined : RouterLink
-								}
-								href={
-									route.path.startsWith("/#") ? route.path : undefined
-								}
-								to={
-									route.path.startsWith("/#")
-										? route.path.substring(1)
-										: route.path
-								}
+								href={`${config.basePath}${route.path}`}
 								_hover={{ border: "none" }}
 								key={route.name}
 							>
