@@ -46,6 +46,10 @@ const eventClusters = [
 		text: "Shrutilaya",
 		link: "/events/shrutilaya",
 	},
+	{
+		text: "Gaming",
+		link: "/events/gaming",
+	},
 ];
 
 const Events = () => {
