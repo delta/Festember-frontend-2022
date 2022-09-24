@@ -52,6 +52,19 @@ const Router = () => {
 							/>
 						);
 					})}
+					{protectedRoutes.map((route) => {
+						return (
+							<Route
+								key={route.path}
+								path={route.path}
+								element={
+									<ProtectedRoute isLoggedIn={isLoggedIn}>
+										{route.element}
+									</ProtectedRoute>
+								}
+							/>
+						);
+					})}
 					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</AppLayout>
