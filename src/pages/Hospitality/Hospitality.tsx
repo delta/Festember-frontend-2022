@@ -1,5 +1,6 @@
 import styles from "./styles.module.css";
 import { Center, Flex, Link } from "@chakra-ui/react";
+import { config } from "../../../config";
 
 const routes = [
 	{ name: "instructions", path: "/hospitality/instructions" },
@@ -10,7 +11,7 @@ const routes = [
 ];
 
 const Hospitality = () => {
-  return (
+	return (
 		<div className={styles.container}>
 			<div className={styles.header}>Hospitality</div>
 			<div className={styles.content}>
@@ -22,7 +23,10 @@ const Hospitality = () => {
 				>
 					{routes.map((route) => {
 						return (
-							<Link href={route.path} key={route.name}>
+							<Link
+								href={`${config.basePath}${route.path}`}
+								key={route.name}
+							>
 								<Center
 									position="relative"
 									fontSize="2xl"
@@ -37,7 +41,7 @@ const Hospitality = () => {
 				</Flex>
 			</div>
 		</div>
-  );
-}
+	);
+};
 
 export default Hospitality;

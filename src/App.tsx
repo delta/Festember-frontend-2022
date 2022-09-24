@@ -1,4 +1,5 @@
 import Router from "./routes";
+import Toast from "./components/Toast/Toast";
 import UserContextProvider from "./contexts/UserContext";
 import "./App.css";
 
@@ -7,6 +8,7 @@ const App = () => {
 	return (
 		<UserContextProvider>
 			<Router />
+			<Toast />
 		</UserContextProvider>
 	);
 };
