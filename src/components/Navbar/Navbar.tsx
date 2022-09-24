@@ -1,6 +1,7 @@
 // import routes from "../../routes/routes";
 import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
+import { config } from "../../../config";
 import styles from "./styles.module.css";
 
 const routes = [
@@ -26,7 +27,10 @@ const Navbar = ({ onClose }: any) => {
 				>
 					{routes.map((route) => {
 						return (
-							<Link href={route.path} key={route.name}>
+							<Link
+								href={`${config.basePath}${route.path}`}
+								key={route.name}
+							>
 								<Center
 									position="relative"
 									fontSize="2xl"
@@ -46,7 +50,7 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route, key) => {
 						return (
 							<Link
-								href={route.path}
+								href={`${config.basePath}${route.path}`}
 								_hover={{ border: "none" }}
 								key={route.name}
 							>

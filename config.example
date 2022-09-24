@@ -4,6 +4,7 @@ export const ReCAPTCHA_SITE_KEY = "";
 export const BASE_URL = "";
 export const config = {
 	backendOrigin: "http://127.0.0.1:3000", //backend URL
+	basePath: "", // leave empty for local | no trailing slash
 	dauth: {
 		clientId: "",
 		redirectURI: ORIGIN + "/auth-callback.html",

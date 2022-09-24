@@ -6,11 +6,12 @@ import { NotFoundPage } from "../pages";
 import { AppLayout } from "../components";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import { userContext } from "../contexts/UserContext";
+import { config } from "../../config";
 
 const Router = () => {
 	const { isLoggedIn } = useContext(userContext);
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={config.basePath}>
 			<AppLayout>
 				<Routes>
 					{routes.map((route) => {
