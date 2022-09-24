@@ -5,12 +5,14 @@ import {
 	Input,
 	Heading,
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { userContext } from "../../contexts/UserContext";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
 
 const Login = () => {
+	const { isLoggedIn, setuserID, setIsLoggedIn } = useContext(userContext);
 	const [formError, setFormError] = useState<string>("");
 	const [loginForm, setLoginForm] = useState<LoginFormType>({
 		user_email: "",
@@ -20,8 +22,8 @@ const Login = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (localStorage.getItem("user")) navigate("/");
-	}, []);
+		if (isLoggedIn) navigate("/");
+	}, [isLoggedIn]);
 
 	const handleFormChange = (field: string, value: string) => {
 		setLoginForm({ ...loginForm, [field]: value });
@@ -49,7 +51,9 @@ const Login = () => {
 				.then((res) => res.json())
 				.then((data) => {
 					if (data.status_code === 200) {
-						localStorage.setItem("user", data.message.user_id);
+						setIsLoggedIn(true);
+						setuserID(data.message.user_id);
+						localStorage.setItem("userID", data.message.user_id);
 						navigate("/");
 					} else setFormError("login_failure");
 				})

@@ -6,7 +6,7 @@ import { isTablet, isBrowser } from "react-device-detect";
 import "@splidejs/react-splide/css/skyblue";
 import styles from "./styles.module.css";
 
-const SplideCarousel = ({ Details }: any) => {
+const SplideCarousel = ({ Details, isCardScrollable }: any) => {
 	return (
 		<Splide
 			style={{ fontFamily: "Poppins" }}
@@ -45,7 +45,7 @@ const SplideCarousel = ({ Details }: any) => {
 			<SplideTrack>
 				{Details.map((obj: any) => {
 					return (
-						<SplideSlide className={styles.card} key={obj.name}>
+						<SplideSlide className={styles.card + ' ' + (isCardScrollable ? styles.cardScroll : styles.cardNoScroll)} key={obj.name}>
 							<Flex
 								flexDirection="column"
 								color="white"

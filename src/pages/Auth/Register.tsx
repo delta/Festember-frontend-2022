@@ -8,13 +8,15 @@ import {
 	RadioGroup,
 	Radio,
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { config } from "../../../config";
 import Recaptcha from "../../components/ReCaptcha/ReCaptcha";
+import { userContext } from "../../contexts/UserContext";
 import styles from "./styles.module.css";
 
 const Register = () => {
+	const { isLoggedIn } = useContext(userContext);
 	const [formPage, setFormPage] = useState<number>(0);
 	const [formError, setFormError] = useState<string>("");
 	const [confirmPassword, setConfirmPassword] = useState<string>("");
@@ -34,7 +36,8 @@ const Register = () => {
 		user_college: "",
 		user_othercollege: "",
 		user_city: "",
-		recaptcha_code: "",
+    recaptcha_code: "",
+    is_app:0
 	});
 	const [colleges, setColleges] = useState<
 		| {
@@ -61,13 +64,12 @@ const Register = () => {
 				setFormError("Error fetching colleges");
 			}
 		};
-		if (localStorage.getItem("user")) {
-			navigate("/");
-		}
-		if (colleges && colleges.length === 0) {
-			fetchColleges();
-		}
+		if (colleges && colleges.length === 0) fetchColleges();
 	}, []);
+
+	useEffect(() => {
+		if (isLoggedIn) navigate("/");
+	}, [isLoggedIn]);
 
 	const handleFormChange = (field: string, value: string) => {
 		if (field === "user_college")

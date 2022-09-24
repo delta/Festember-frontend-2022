@@ -1,0 +1,62 @@
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 90%;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2.5em;
+}
+
+.header{
+    font-size: 2.5em;
+    font-family: Atlantic_Cruise;
+    text-transform: uppercase;  
+    background: linear-gradient(179deg, #FFFFFF 14.23%, #3AD4F8 99.14%);
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    z-index: 9;
+    text-align: center;
+}
+
+.content{
+    position: relative;
+    max-height: 65vh;
+    padding: 1.5em;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 24px rgba(121, 226, 251, 0.35);
+    backdrop-filter: blur(8px);
+    font-size: 0.9em;
+    overflow-y: auto;
+}
+
+@media only screen and (min-width: 1024px){
+    .wrapper{
+        width: 50%;
+        flex-direction: row;
+    }
+    .header{
+        font-family: Atlantic_Cruise;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        font-size: 6.5em;
+        margin-right: -3em;
+    }
+    .content{
+        font-size: 1.15em;
+        padding: 3em;
+    }
+}
