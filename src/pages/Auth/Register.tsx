@@ -36,7 +36,8 @@ const Register = () => {
 		user_college: "",
 		user_othercollege: "",
 		user_city: "",
-		recaptcha_code: "",
+    recaptcha_code: "",
+    is_app:0
 	});
 	const [colleges, setColleges] = useState<
 		| {
