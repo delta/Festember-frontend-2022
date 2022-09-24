@@ -3,9 +3,10 @@ import React from "react";
 import styles from "./styles.module.css";
 
 const TimeLineElement = ({
-	yearTitle,
+	day,
+	venue,
+	time,
 	title,
-	content,
 	index,
 	timelineLength,
 	config,
@@ -20,7 +21,8 @@ const TimeLineElement = ({
 		>
 			<Box className={styles.contentContainer}>
 				<Text className={styles.title}>{title}</Text>
-				<Text className={styles.content}>{content}</Text>
+				<Text className={styles.time}>{time}</Text>
+				<Text className={styles.venue}>{venue}</Text>
 			</Box>
 			<HStack className={styles.timelineContainter}>
 				<Box className={styles.lineContainer + " " + styles.marginZero}>
@@ -43,7 +45,7 @@ const TimeLineElement = ({
 						size={config.radius - config.deltaRadius}
 						className={styles.innerCircle}
 					>
-						<Text className={styles.year}>{yearTitle}</Text>
+						<Text className={styles.year}>{`DAY-${day}`}</Text>
 					</Circle>
 				</Circle>
 				<Box className={styles.lineContainer + " " + styles.marginZero}>

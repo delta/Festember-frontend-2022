@@ -2,9 +2,19 @@ import React from "react";
 import routes from "./routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "../pages";
-import { AppLayout, Page } from "../components";
+import { AppLayout, Page, Timeline } from "../components";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Router = () => {
+	const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
+	if (isSmallerThan600) {
+		routes.push({
+			path: "/timeline",
+			title: "Timeline",
+			description: "Timeline of Festember '22",
+			element: <Timeline />,
+		});
+	}
 	return (
 		<BrowserRouter>
 			<AppLayout>

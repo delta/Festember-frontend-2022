@@ -1,5 +1,6 @@
 interface TimelineElement {
-	yearTitle: string;
+	day: number;
+	venue: string;
+	time: string;
 	title: string;
-	content: string;
 }

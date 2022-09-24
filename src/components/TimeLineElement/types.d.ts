@@ -1,7 +1,8 @@
 interface TimeLineElementProps {
-	yearTitle: string;
+	day: number;
+	venue: string;
+	time: string;
 	title: string;
-	content: string;
 	index: number;
 	timelineLength: number;
 	config: {
@@ -12,5 +13,6 @@ interface TimeLineElementProps {
 		lineThickness: number;
 		mobileLineThickness: number;
 		circleColor: string;
+		circleColorDay1: string;
 	};
 }

@@ -83,13 +83,13 @@
 }
 
 .title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .year {
 	color: #ffffff;
 	background-color: #48a0ff;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 	font-family: "Inter", sans-serif;
 }
@@ -99,6 +99,11 @@
 	width: 100%;
 	height: 16%;
 	background-color: #ffffff;
+}
+
+.time {
+	font-weight: 500;
+	font-family: "Lato", sans-serif;
 }
 
 .timelineStack {
@@ -117,7 +122,7 @@
 @media only screen and (max-width: 600px) {
 	.card {
 		width: max(300px, 81.5%);
-		height: 75%;
+		height: 85%;
 		overflow-y: auto;
 		padding-top: 10%;
 		padding-left: 7%;
@@ -127,6 +132,10 @@
 
 	.card::-webkit-scrollbar {
 		width: 5px;
+	}
+
+	.outerContainer {
+		height: calc(100vh - 10rem);
 	}
 
 	.year {
@@ -141,12 +150,13 @@
 	}
 
 	.title {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
+		font-weight: 600;
 	}
-
-	.content {
-		font-size: 0.6rem;
-		line-height: 100%;
+	.time,
+	.venue {
+		font-size: 0.8rem;
+		margin-block-start: 0 !important;
 	}
 
 	.titleContainer {
