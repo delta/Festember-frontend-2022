@@ -29,7 +29,7 @@ const Login = () => {
 	const locationState = useLocation().state as LocationState;
 
 	useEffect(() => {
-		if (isLoggedIn) navigate("/");
+		if (isLoggedIn) navigate("/profile");
 	}, [isLoggedIn]);
 
 	useEffect(() => {
