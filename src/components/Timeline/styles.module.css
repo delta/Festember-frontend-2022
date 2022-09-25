@@ -1,0 +1,169 @@
+.outerContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.titleContainer {
+	width: 100%;
+	height: 17.5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mainTitle {
+	font-size: 120px;
+	line-height: 100%;
+	font-family: "Atlantic-Cruise";
+	background: -webkit-linear-gradient(#ffffff, #3ad4f8);
+	background: linear-gradient(#ffffff, #3ad4f8);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+	cursor: default;
+}
+
+.card {
+	width: 92.5%;
+	height: 65%;
+	background: rgba(0, 0, 0, 0.45);
+	backdrop-filter: blur(10px);
+	border-radius: 4px;
+	overflow-x: auto;
+}
+
+.card::-webkit-scrollbar {
+	height: 5px;
+}
+
+.card::-webkit-scrollbar-thumb {
+	background: #79e1fb7d;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+.card::-webkit-scrollbar-thumb:hover {
+	background: #79e2fb;
+}
+
+.grid {
+	height: 100%;
+	width: 100%;
+	min-width: 2500px;
+	padding-left: min(50px, 5%);
+	padding-right: min(50px, 5%);
+}
+
+.textContainer {
+	padding: 10%;
+	height: 66.67%;
+	width: 100%;
+	overflow-y: hidden;
+	font-size: 0.85rem;
+}
+
+.oddTextContainer {
+	padding-top: 20%;
+}
+
+.evenTextContainer {
+	padding-bottom: 20%;
+}
+
+.title,
+.content {
+	color: #ffffff;
+	font-family: "Inter", sans-serif;
+}
+
+.title {
+	font-size: 1.25rem;
+}
+
+.year {
+	color: #ffffff;
+	background-color: #48a0ff;
+	font-size: 1.25rem;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+}
+
+.line {
+	transform: scaleX(1.1);
+	width: 100%;
+	height: 16%;
+	background-color: #ffffff;
+}
+
+.time {
+	font-weight: 500;
+	font-family: "Lato", sans-serif;
+}
+
+.timelineStack {
+	width: 100%;
+}
+.timelineElement {
+	margin-top: 0 !important;
+	height: 100px;
+	width: 100%;
+}
+
+.marginZero {
+	margin: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+	.card {
+		width: max(300px, 81.5%);
+		height: 85%;
+		overflow-y: auto;
+		padding-top: 10%;
+		padding-left: 7%;
+		padding-right: 7%;
+		padding-bottom: 10%;
+	}
+
+	.card::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	.outerContainer {
+		height: calc(100vh - 10rem);
+	}
+
+	.year {
+		font-size: 0.65rem;
+	}
+
+	.line {
+		transform: scaleY(1.1);
+		display: block;
+		width: 10%;
+		height: 100%;
+	}
+
+	.title {
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+	.time,
+	.venue {
+		font-size: 0.8rem;
+		margin-block-start: 0 !important;
+	}
+
+	.titleContainer {
+		height: 10%;
+	}
+
+	.mainTitle {
+		font-size: 64px;
+	}
+}

@@ -3,6 +3,7 @@ import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
+import { Link as RouterLink } from "react-router-dom";
 
 const routes = [
 	{ name: "Home", path: "/#home" },
