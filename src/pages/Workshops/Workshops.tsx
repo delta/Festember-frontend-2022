@@ -128,7 +128,7 @@ export default function Workshops() {
 				color={index % 2 ? "#fff" : "#000"}
 				src={
 					appConfig.basePath +
-					"/public/Assets/Images/WorkshopImages/" +
+					"/Assets/Images/WorkshopImages/" +
 					slide.workshop_image_name +
 					".jpeg"
 				}
