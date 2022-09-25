@@ -8,7 +8,7 @@ import { Link as RouterLink } from "react-router-dom";
 const routes = [
 	{ name: "Home", path: "/#home" },
 	{ name: "Events", path: "/events" },
-	// { name: "Workshops", path: "/workshops" },
+	{ name: "Workshops", path: "/workshops" },
 	{ name: "About Us", path: "/#aboutUs" },
 	{ name: "Contact Us", path: "/#contactUs" },
 	// { name: "Sponsors", path: "/sponsors" },
