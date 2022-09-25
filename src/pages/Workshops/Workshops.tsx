@@ -62,17 +62,13 @@ export default function Workshops() {
 		toast("Ticket Sales on September 26th and 27th", {
 			icon: "🎟️",
 			duration: 8000,
-			id: 'ticket-sales-toast'
+			id: "ticket-sales-toast",
 		});
 	}, [showTicketSaleToast]);
 
 	const handleWorkshopRegister = () => {
 		setIsRegisterLoading(true);
-		if (
-			!isLoggedIn ||
-			localStorage.getItem("userID") === null ||
-			localStorage.getItem("userID") === undefined
-		) {
+		if (!isLoggedIn) {
 			navigate("/login");
 			toast.error("Please login to register for a workshop");
 		} else if (choosenSlot === "") {
@@ -131,6 +127,7 @@ export default function Workshops() {
 			<Card
 				color={index % 2 ? "#fff" : "#000"}
 				src={
+					appConfig.basePath +
 					"/public/Assets/Images/WorkshopImages/" +
 					slide.workshop_image_name +
 					".jpeg"
