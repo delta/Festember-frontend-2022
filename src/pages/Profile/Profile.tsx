@@ -20,20 +20,21 @@ const Profile = () => {
     const [userName, setUserName] = useState<string>("")
     const [userID, setUserID] = useState<number>()
     const getDetails = useCallback(() => {
-		fetch(`${config.backendOrigin}/user/details`, {
-			method: "GET",
-			credentials: "include",
-			headers: {
-				"Content-Type": "application/json",
-			},
+        fetch(`${config.backendOrigin}/user/details/new`, {
+            method: "POST",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+            },
             // body: JSON.stringify({ user_id: localStorage.getItem('userID') })
-		})
-			.then((res) => res.json()).then(response => console.log(response))
-			.catch((e) => {
-				console.log(e);
-				
-			});
-	}, [userID]);
+        })
+            .then((res) => res.json()).
+            then((response) => setUserName(response.message.user_name))
+            .catch((e) => {
+                console.log(e);
+
+            });
+    }, [userID]);
 
     const getQR = () => {
 
@@ -42,13 +43,11 @@ const Profile = () => {
             credentials: "include",
             headers: {
                 "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ user_id: localStorage.getItem('userID') })
+            }
 
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.message,localStorage.getItem('userID'))
                 if (data.status_code === 200) {
                     setQr(data.message)
                 } else setQr("")
@@ -72,7 +71,9 @@ const Profile = () => {
                     <div className={styleMobile.title}>Profile</div>
                     <div className={styleMobile.profileDetails}>
 
-                        <div className={styleMobile.name}>RAGHAV KHULLAR</div>
+                        <div className={styleMobile.name}>{userName !== "" && (
+                            <Text> {userName}</Text>
+                        )}</div>
 
                         <div className={styleMobile.qr}>
                             {qr != "" && (
@@ -106,7 +107,9 @@ const Profile = () => {
                         {/* <div className={styleBrowser.check}> */}
                         <div className={styleBrowser.second}>
                             <div className={styleBrowser.name}>
-                                <Text>RAGHAV KHULLAR</Text>
+                                {userName !== "" && (
+                                    <Text> {userName}</Text>
+                                )}
                                 {/* <Image src={line}></Image> */}
                             </div>
 
