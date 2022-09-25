@@ -47,7 +47,6 @@ export default function Workshops() {
 			})
 				.then((res) => res.json())
 				.then((response) => {
-					console.log(response);
 					setWorkshopDetails(response.message.workshop_details);
 					setSlotDetails(response.message.slot_details);
 				})
