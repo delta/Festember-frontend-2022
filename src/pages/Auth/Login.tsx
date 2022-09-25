@@ -64,7 +64,6 @@ const Login = () => {
 					if (data.status_code === 200) {
 						setIsLoggedIn(true);
 						setuserID(data.message.user_id);
-						localStorage.setItem("userID", data.message.user_id);
 						navigate("/");
 					} else setFormError("login_failure");
 				})
