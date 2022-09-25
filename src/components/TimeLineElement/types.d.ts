@@ -13,6 +13,5 @@ interface TimeLineElementProps {
 		lineThickness: number;
 		mobileLineThickness: number;
 		circleColor: string;
-		circleColorDay1: string;
 	};
 }
