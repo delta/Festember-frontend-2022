@@ -74,12 +74,6 @@ export default function Workshops() {
 		} else if (choosenSlot === "") {
 			toast.error("Please choose time slot to register for workshop");
 		} else {
-			console.log(
-				"workshopDetails[clusterIndex].workshop_id",
-				workshopDetails[clusterIndex].workshop_id
-			);
-			console.log("choosenSlot", choosenSlot);
-
 			fetch(`${appConfig.backendOrigin}/registerWorkshopSlots`, {
 				method: "POST",
 				credentials: "include",
@@ -93,7 +87,6 @@ export default function Workshops() {
 			})
 				.then((res) => res.json())
 				.then((response) => {
-					console.log("response status", response.status_code);
 					if (response.status_code === 200) {
 						toast.success("Registered successfully");
 						onClose();
@@ -121,21 +114,23 @@ export default function Workshops() {
 		setClusterIndex(index);
 	}
 
-	const slides = workshopDetails.map((slide, index) => ({
-		key: index,
-		content: (
-			<Card
-				color={index % 2 ? "#fff" : "#000"}
-				src={
-					appConfig.basePath +
-					"/public/Assets/Images/WorkshopImages/" +
-					slide.workshop_image_name +
-					".jpeg"
-				}
-			/>
-		),
-		onClick: () => navigateClusters(index),
-	}));
+	const slides =
+		workshopDetails &&
+		workshopDetails.map((slide, index) => ({
+			key: index,
+			content: (
+				<Card
+					color={index % 2 ? "#fff" : "#000"}
+					src={
+						appConfig.basePath +
+						"/Assets/Images/WorkshopImages/" +
+						slide.workshop_image_name +
+						".jpeg"
+					}
+				/>
+			),
+			onClick: () => navigateClusters(index),
+		}));
 
 	return (
 		<>
@@ -143,20 +138,26 @@ export default function Workshops() {
 				<div></div>
 				<div className={styles.workshopCarousel}>
 					<div className={styles.workshops}>
-						{workshopDetails[clusterIndex]?.workshop_name}
+						{workshopDetails &&
+							workshopDetails[clusterIndex]?.workshop_name}
 					</div>
-					<Carousel
-						slides={slides}
-						goToSlide={goToSlide}
-						showNavigation={false}
-						offsetRadius={2}
-						animationConfig={config.gentle}
-					/>
+					{workshopDetails && (
+						<Carousel
+							slides={slides}
+							goToSlide={goToSlide}
+							showNavigation={false}
+							offsetRadius={2}
+							animationConfig={config.gentle}
+						/>
+					)}
 				</div>
 
 				<div className={styles.workshopDetails}>
 					<h3>Workshop Description</h3>
-					<p>{workshopDetails[clusterIndex]?.workshop_desc}</p>
+					<p>
+						{workshopDetails &&
+							workshopDetails[clusterIndex]?.workshop_desc}
+					</p>
 					<br />
 					{/* <h3>Workshop Details</h3>
 					<p>{content[clusterIndex].details}</p>
@@ -189,25 +190,28 @@ export default function Workshops() {
 									onChange={(e) => setChoosenSlot(e.target.value)}
 								>
 									<option value="">Select time slot</option>
-									{slotDetails.map((slot) => {
-										if (
-											slot.workshop_id ===
-											workshopDetails[clusterIndex].workshop_id
-										) {
-											return (
-												<option
-													key={slot.slot_id}
-													value={slot.slot_id}
-												>
-													{formatDate(slot.workshop_date)} {"  "}
-													{slot.slot_start_time.slice(
-														0,
-														-3
-													)} - {slot.slot_end_time.slice(0, -3)}
-												</option>
-											);
-										}
-									})}
+									{slotDetails &&
+										slotDetails.map((slot) => {
+											if (
+												workshopDetails &&
+												slot.workshop_id ===
+													workshopDetails[clusterIndex].workshop_id
+											) {
+												return (
+													<option
+														key={slot.slot_id}
+														value={slot.slot_id}
+													>
+														{formatDate(slot.workshop_date)}{" "}
+														{"  "}
+														{slot.slot_start_time.slice(
+															0,
+															-3
+														)} - {slot.slot_end_time.slice(0, -3)}
+													</option>
+												);
+											}
+										})}
 								</Select>
 								<Button
 									mt={6}
