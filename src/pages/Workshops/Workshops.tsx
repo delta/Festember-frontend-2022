@@ -127,6 +127,7 @@ export default function Workshops() {
 			<Card
 				color={index % 2 ? "#fff" : "#000"}
 				src={
+					appConfig.basePath +
 					"/public/Assets/Images/WorkshopImages/" +
 					slide.workshop_image_name +
 					".jpeg"
