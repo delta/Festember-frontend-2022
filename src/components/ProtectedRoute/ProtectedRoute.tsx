@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface ChildrenProps {
 	isLoggedIn: boolean;
+	loading: boolean;
 	children: React.ReactNode;
 }
 
-const ProtectedRoute: React.FC<ChildrenProps> = ({ isLoggedIn, children }) => {
+const ProtectedRoute: React.FC<ChildrenProps> = ({
+	isLoggedIn,
+	loading,
+	children,
+}) => {
 	const navigate = useNavigate();
-	if (!isLoggedIn) navigate("/login", { state: { from: "ProtectedRoute" } });
+	useEffect(() => {
+		if (!isLoggedIn && !loading)
+			navigate("/login", { state: { from: "ProtectedRoute" } });
+	}, [isLoggedIn, loading]);
 
 	return <>{children}</>;
 };
