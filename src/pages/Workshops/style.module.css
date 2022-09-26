@@ -97,6 +97,13 @@ backdrop-filter: blur(4.3px);
         transform: scale(1.1);
       }
 
+.infromalsButtonGroup {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 @media (max-height: 1000px){
 
     .workshopDetails{
