@@ -59,7 +59,7 @@ export default function Workshops() {
 	}, []);
 
 	useEffect(() => {
-		toast("Ticket Sales on September 26th and 27th", {
+		toast("Ticket Sales on September 27th and 28th", {
 			icon: "🎟️",
 			duration: 8000,
 			id: "ticket-sales-toast",
