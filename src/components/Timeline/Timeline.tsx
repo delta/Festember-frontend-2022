@@ -12,6 +12,7 @@ import {
 import styles from "./styles.module.css";
 import TimeLineElement from "../TimeLineElement/TimeLineElement";
 import timeline from "./content";
+import { isMobile } from "react-device-detect";
 
 const config = {
 	radius: 130,
@@ -24,17 +25,16 @@ const config = {
 };
 
 const Timeline = () => {
-	const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
 	return (
 		<Box className={styles.outerContainer}>
 			<Box className={styles.titleContainer}>
 				<Text className={styles.mainTitle}>TIMELINE</Text>
 			</Box>
 			<Box className={styles.card}>
-				{!isSmallerThan600 ? (
+				{!isMobile ? (
 					<Grid
 						templateRows={
-							isSmallerThan600
+							isMobile
 								? `repeat(${timeline.length}, 1fr)`
 								: "repeat(5, 1fr)"
 						}

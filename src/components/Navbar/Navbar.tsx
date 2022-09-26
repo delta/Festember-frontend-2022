@@ -4,6 +4,7 @@ import { BrowserView, MobileView } from "react-device-detect";
 import { config } from "../../../config";
 import styles from "./styles.module.css";
 import { Link as RouterLink } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 const routes = [
 	{ name: "Home", path: "/#home" },
@@ -14,6 +15,10 @@ const routes = [
 	// { name: "Sponsors", path: "/sponsors" },
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
+	{
+		name: "Timeline",
+		path: isMobile ? "/timeline" : "/#timeline",
+	},
 ];
 
 const Navbar = ({ onClose }: any) => {

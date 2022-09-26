@@ -7,11 +7,11 @@ import { AppLayout, Page, Timeline, ProtectedRoute } from "../components";
 import { useMediaQuery } from "@chakra-ui/react";
 import { userContext } from "../contexts/UserContext";
 import { config } from "../../config";
+import { isMobile } from "react-device-detect";
 
 const Router = () => {
 	const { isLoggedIn, loading } = useContext(userContext);
-	const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
-	if (isSmallerThan600) {
+	if (isMobile) {
 		routes.push({
 			path: "/timeline",
 			title: "Timeline",
