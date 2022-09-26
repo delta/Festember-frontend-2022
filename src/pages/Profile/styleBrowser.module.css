@@ -31,10 +31,9 @@
     display:flex;
 }
 
-.second{
+.container{
         display:flex;
         flex-direction: column;
-        /* height:100%; */
         width: 50%;
         font-size:100%;
 }
@@ -73,14 +72,13 @@
 }
 
 
-.hello{
+.dummyDiv{
     margin-top: 10%;
     height: 20%;
 }
 
 .tshirtHeading{
     font-size:20%;
-    /* padding:10%; */
     font-weight: 600;
     text-align: center;
     width:100%;
@@ -113,14 +111,12 @@
 }
 
 .available{
-    /* transition: background 1s ease-out;   */
     width:30%;
     padding-left: 5%;
 }
 
 .available:hover{
     background: -webkit-linear-gradient(right, rgba(255,255,255,0), #79E2FB);
-    /* background-position:100px; */
 }
 
 @media screen and (min-width: 1400px) and (max-width:1600px)  {
@@ -138,11 +134,4 @@
         font-size:80px;
     }
 }
-/* @media screen and (min-width: 900px) and (max-width:1600px)  {
-    .title{
-        font-size:8em;
-    }
-    .profileDetails{
-        font-size:0.8em;
-    }
-} */
+

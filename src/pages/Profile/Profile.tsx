@@ -1,14 +1,11 @@
 import styleMobile from "./styleMobile.module.css";
 import styleBrowser from "./styleBrowser.module.css";
-import sample from "./../../../public/logo192.png";
-import { Image, Box } from "@chakra-ui/react";
 import { MobileView, BrowserView } from "react-device-detect";
 import { useState, useEffect, useContext, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { Text } from '@chakra-ui/react';
 import { userContext } from "../../contexts/UserContext";
 import { config } from "../../../config";
-import line from "../../../public/Assets/Images/Line 8.svg";
 const Profile = () => {
     const { isLoggedIn, loading } = useContext(userContext);
     const [qr, setQr] = useState<string>("");
@@ -20,13 +17,12 @@ const Profile = () => {
     const [userName, setUserName] = useState<string>("")
     const [userID, setUserID] = useState<number>()
     const getDetails = useCallback(() => {
-        fetch(`${config.backendOrigin}/user/details/new`, {
-            method: "POST",
+        fetch(`${config.backendOrigin}/user/details`, {
+            method: "GET",
             credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
-            // body: JSON.stringify({ user_id: localStorage.getItem('userID') })
         })
             .then((res) => res.json()).
             then((response) => setUserName(response.message.user_name))
@@ -58,7 +54,6 @@ const Profile = () => {
 
     const navigate = useNavigate();
     useEffect(() => {
-        // if(loading) navigate("/profile");
         if (isLoggedIn) {
             getQR();
             getDetails();
@@ -104,13 +99,13 @@ const Profile = () => {
                 <div className={styleBrowser.display}>
                     <div className={styleBrowser.title}>Profile</div>
                     <div className={styleBrowser.profileDetails}>
-                        {/* <div className={styleBrowser.check}> */}
-                        <div className={styleBrowser.second}>
+                        <div className={styleBrowser.container}>
                             <div className={styleBrowser.name}>
                                 {userName !== "" && (
+                                    <>
                                     <Text> {userName}</Text>
-                                )}
-                                {/* <Image src={line}></Image> */}
+                                    </>)}
+                                
                             </div>
 
 
@@ -118,12 +113,11 @@ const Profile = () => {
                                 {qr != "" && (
                                     <img src={`data:image/png;base64,${qr}`} alt="QR" />
                                 )}
-                                {/* <img src={sample}></img> */}
 
                             </div>
                         </div>
                         <div className={styleBrowser.tshirt}>
-                            <div className={styleBrowser.hello}></div>
+                            <div className={styleBrowser.dummyDiv}></div>
                             <div className={styleBrowser.tshirtHeading}>T-Shirt Preference</div>
 
                             <div className={styleBrowser.currentSize}><p>{size}</p></div>
@@ -137,8 +131,6 @@ const Profile = () => {
 
 
                         </div>
-
-                        {/* </div> */}
                     </div>
                 </div>
             </BrowserView>
