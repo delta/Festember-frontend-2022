@@ -12,6 +12,8 @@ import {
 	Contact,
 	Events,
 	EventsPage,
+	Informals,
+	Workshops
 } from "../pages";
 import React from "react";
 import { Timeline } from "../components";
@@ -94,6 +96,18 @@ const routes: RouteType[] = [
 		path: "/events/:cluster",
 		description: "Events Page of Festember 2022",
 		element: <EventsPage />,
+	},
+	{
+		title: "Informals Page",
+		path: "/informals",
+		description: "Informals Page of Festember 2022",
+		element: <Informals />,
+	},
+	{
+		title: "Workshops Page",
+		path: "/workshops",
+		description: "Workshops Page of Festember 2022",
+		element: <Workshops />,
 	},
 ];
 
