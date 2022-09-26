@@ -15,6 +15,7 @@ import {
 	Workshops,
 } from "../pages";
 import React from "react";
+import { Timeline } from "../components";
 
 const routes: RouteType[] = [
 	{
