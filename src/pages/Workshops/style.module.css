@@ -27,6 +27,29 @@
 backdrop-filter: blur(4.3px);
 -webkit-backdrop-filter: blur(4.3px);}
 
+.modalHead{
+    font-size: 2rem;
+    color: #79E2FB;   
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formInput {
+	background: rgba(255, 255, 255, 0.07) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 12px !important;
+	caret-color: #ffffff !important;
+	margin-bottom: 1rem !important;
+	color: #ffffffcc !important;
+}
+
+.workshopRegisterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
     .workshopDetails h3{
         font-size: 2rem;
         color: #79E2FB
@@ -42,7 +65,7 @@ backdrop-filter: blur(4.3px);
     }
 
   .workshops {
-  font-size: 20vh;
+  font-size: 12vh;
   font-family: 'Atlantic-Cruise';
   margin-top: 1rem;
   background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
@@ -125,6 +148,10 @@ backdrop-filter: blur(4.3px);
 
     .workshopDetails h3{
         font-size: 1rem;
+    }
+
+    .modalHead{
+        font-size: 1.5rem;
     }
 }
 

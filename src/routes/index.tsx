@@ -9,7 +9,7 @@ import { userContext } from "../contexts/UserContext";
 import { config } from "../../config";
 
 const Router = () => {
-	const { isLoggedIn } = useContext(userContext);
+	const { isLoggedIn, loading } = useContext(userContext);
 	const [isSmallerThan600] = useMediaQuery("(max-width: 600px)");
 	if (isSmallerThan600) {
 		routes.push({
@@ -45,20 +45,10 @@ const Router = () => {
 								key={route.path}
 								path={route.path}
 								element={
-									<ProtectedRoute isLoggedIn={isLoggedIn}>
-										{route.element}
-									</ProtectedRoute>
-								}
-							/>
-						);
-					})}
-					{protectedRoutes.map((route) => {
-						return (
-							<Route
-								key={route.path}
-								path={route.path}
-								element={
-									<ProtectedRoute isLoggedIn={isLoggedIn}>
+									<ProtectedRoute
+										isLoggedIn={isLoggedIn}
+										loading={loading}
+									>
 										{route.element}
 									</ProtectedRoute>
 								}
