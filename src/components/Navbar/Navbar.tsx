@@ -7,19 +7,16 @@ import { Link as RouterLink } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 
 const routes = [
-	{ name: "Home", path: "/#home" },
+	{ name: "Home", path: "/" },
 	{ name: "Events", path: "/events" },
 	{ name: "Workshops", path: "/workshops" },
-	{ name: "About Us", path: "/#aboutUs" },
-	{ name: "Contact Us", path: "/#contactUs" },
-	// { name: "Sponsors", path: "/sponsors" },
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
-	{
-		name: "Timeline",
-		path: isMobile ? "/timeline" : "/#timeline",
-	},
 ];
+
+if (isMobile) {
+	routes.push({ name: "Timeline", path: "/timeline" });
+}
 
 const Navbar = ({ onClose }: any) => {
 	return (
@@ -37,7 +34,7 @@ const Navbar = ({ onClose }: any) => {
 								as={
 									route.path.startsWith("/#") ? undefined : RouterLink
 								}
-								to={`${config.basePath}${route.path}`}
+								to={`${route.path}`}
 								href={
 									route.path.startsWith("/#")
 										? `${config.basePath}${route.path}`
@@ -67,7 +64,7 @@ const Navbar = ({ onClose }: any) => {
 								as={
 									route.path.startsWith("/#") ? undefined : RouterLink
 								}
-								to={`${config.basePath}${route.path}`}
+								to={`${route.path}`}
 								href={
 									route.path.startsWith("/#")
 										? `${config.basePath}${route.path}`
