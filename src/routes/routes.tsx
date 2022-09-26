@@ -10,6 +10,8 @@ import {
 	HowToReach,
 	FAQ,
 	Contact,
+	Events,
+	EventsPage,
 } from "../pages";
 import React from "react";
 import { Timeline } from "../components";
@@ -80,6 +82,18 @@ const routes: RouteType[] = [
 		path: "/hospitality/faq",
 		description: "FAQ for Festember 2022",
 		element: <FAQ />,
+	},
+	{
+		title: "Events",
+		path: "/events",
+		description: "Event Clusters of Festember 2022",
+		element: <Events />,
+	},
+	{
+		title: "Events Page",
+		path: "/events/:cluster",
+		description: "Events Page of Festember 2022",
+		element: <EventsPage />,
 	},
 ];
 
