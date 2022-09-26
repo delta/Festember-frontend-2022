@@ -1,6 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { config } from "../../../config";
 import { isMobile } from "react-device-detect";
+import { userContext } from "../../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 
 enum AuthStatusEnum {
@@ -15,6 +17,9 @@ enum AuthStatusEnum {
 
 const DAuthLogin = () => {
 	const [authStatus, setAuthStatus] = useState(AuthStatusEnum.PRE);
+	const { setuserID, setIsLoggedIn } = useContext(userContext);
+
+	const navigate = useNavigate();
 
 	const generateDauthAuthorizeUrl = () => {
 		const dauthAuthorizeURL = new URL(
@@ -65,8 +70,12 @@ const DAuthLogin = () => {
 					}
 				})
 				.then((data) => {
-					// store data in session
-				});
+					if (data.status_code === 200) {
+						setIsLoggedIn(true);
+						setuserID(data.message.user_id);
+						navigate("/");
+					}
+				})
 		} catch (err) {
 			console.log(err);
 			setAuthStatus(AuthStatusEnum.ERROR);
