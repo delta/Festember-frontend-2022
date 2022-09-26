@@ -34,7 +34,15 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route) => {
 						return (
 							<Link
-								href={`${config.basePath}${route.path}`}
+								as={
+									route.path.startsWith("/#") ? undefined : RouterLink
+								}
+								to={`${config.basePath}${route.path}`}
+								href={
+									route.path.startsWith("/#")
+										? `${config.basePath}${route.path}`
+										: undefined
+								}
 								key={route.name}
 							>
 								<Center
@@ -56,7 +64,15 @@ const Navbar = ({ onClose }: any) => {
 					{routes.map((route, key) => {
 						return (
 							<Link
-								href={`${config.basePath}${route.path}`}
+								as={
+									route.path.startsWith("/#") ? undefined : RouterLink
+								}
+								to={`${config.basePath}${route.path}`}
+								href={
+									route.path.startsWith("/#")
+										? `${config.basePath}${route.path}`
+										: undefined
+								}
 								_hover={{ border: "none" }}
 								key={route.name}
 							>
