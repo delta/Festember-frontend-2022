@@ -24,15 +24,8 @@ const Hospitality = () => {
 					{routes.map((route) => {
 						return (
 							<Link
-								as={
-									route.path.startsWith("/#") ? undefined : RouterLink
-								}
-								to={`${config.basePath}${route.path}`}
-								href={
-									route.path.startsWith("/#")
-										? `${config.basePath}${route.path}`
-										: undefined
-								}
+								as={RouterLink}
+								to={`${route.path}`}
 								key={route.name}
 							>
 								<Center
