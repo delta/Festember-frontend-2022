@@ -24,8 +24,9 @@
     color: white;
     overflow-y: auto;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.3px);
--webkit-backdrop-filter: blur(4.3px);}
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+}
 
 .modalHead{
     font-size: 2rem;
@@ -50,52 +51,52 @@ backdrop-filter: blur(4.3px);
     justify-content: center;
 }
 
-    .workshopDetails h3{
-        font-size: 2rem;
-        color: #79E2FB
-    }
+.workshopDetails h3{
+    font-size: 2rem;
+    color: #79E2FB
+}
 
-    .workshopDetails a{
-        color: white;
-    }
-  
-    .carouselFix{
-        opacity: 0;
-        font-size: 0.1rem;
-    }
+.workshopDetails a{
+    color: white;
+}
 
-  .workshops {
-  font-size: 8vh;
-  font-family: 'Atlantic-Cruise';
-  margin-top: 1rem;
-  background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
-  background : linear-gradient(#FFFFFF, #3AD4F8);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
-  }
+.carouselFix{
+    opacity: 0;
+    font-size: 0.1rem;
+}
+
+.workshops {
+    font-size: 8vh;
+    font-family: 'Atlantic-Cruise';
+    margin-top: 1rem;
+    background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+    background : linear-gradient(#FFFFFF, #3AD4F8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+}
 
 
-    .registerButton {
-        background: #79E2FB;
-        color: #0F1B33;
-        padding: 0.75em 1em;
-        text-transform: uppercase;
-        font-size: Poppins;
-        font-weight: bold;
-        outline: none;
-        border: none;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        transition: 0.5s;
-        cursor: pointer;
-      }
-      
-      .registerButton:hover {
-        background-color: #50b6cf;
-        transform: scale(1.1);
-      }
+.registerButton {
+    background: #79E2FB;
+    color: #0F1B33;
+    padding: 0.75em 1em;
+    text-transform: uppercase;
+    font-size: Poppins;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.registerButton:hover {
+    background-color: #50b6cf;
+    transform: scale(1.1);
+}
 
 .infromalsButtonGroup {
     margin-top: 2rem;
@@ -134,7 +135,7 @@ backdrop-filter: blur(4.3px);
     }
 
     .workshopDetails {
-      height: 15rem;
+      height: 40vh;
       width: 100%;
       font-size: 1rem;
       padding: 2rem;

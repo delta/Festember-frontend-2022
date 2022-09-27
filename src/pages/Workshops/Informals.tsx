@@ -20,6 +20,7 @@ import "./style.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./style.module.css";
+import Loader from "../../components/LoadingSpinner/Loader";
 
 export default function Informals() {
 	const { isLoggedIn } = useContext(userContext);
@@ -118,80 +119,84 @@ export default function Informals() {
 
 	return (
 		<>
-			<div className={styles.workshopsLayout}>
-				<div></div>
-				<div className={styles.workshopCarousel}>
-					<div className={styles.workshops}>
-						{informalsDetails &&
-							informalsDetails[clusterIndex]?.informals_name}
+			{informalsDetails.length > 0 ? (
+				<div className={styles.workshopsLayout}>
+					<div></div>
+					<div className={styles.workshopCarousel}>
+						<div className={styles.workshops}>
+							{informalsDetails &&
+								informalsDetails[clusterIndex]?.informals_name}
+						</div>
+						{informalsDetails && (
+							<Carousel
+								slides={slides}
+								goToSlide={goToSlide}
+								showNavigation={false}
+								offsetRadius={2}
+								animationConfig={config.gentle}
+							/>
+						)}
 					</div>
 					{informalsDetails && (
-						<Carousel
-							slides={slides}
-							goToSlide={goToSlide}
-							showNavigation={false}
-							offsetRadius={2}
-							animationConfig={config.gentle}
-						/>
+						<div className={styles.workshopDetails}>
+							<h3>
+								{informalsDetails &&
+									informalsDetails[clusterIndex]?.informals_name}{" "}
+								Description
+							</h3>
+							<br />
+							<p>
+								{informalsDetails &&
+									informalsDetails[clusterIndex]?.informals_desc}
+							</p>
+							<br />
+							<button
+								className={styles.registerButton}
+								type="button"
+								onClick={onToggle}
+							>
+								Register here
+							</button>
+						</div>
 					)}
+					<Modal isOpen={isOpen} onClose={onClose} isCentered>
+						<ModalOverlay />
+						<ModalContent p={6} m={6}>
+							<ModalCloseButton />
+							<ModalBody>
+								<div className={styles.workshopRegisterForm}>
+									<div className={styles.modalHead}>
+										Enter Number of Tickets
+									</div>
+									<Input
+										style={{ width: "75%" }}
+										className={styles.formInput}
+										placeholder="Number of Tickets"
+										type="number"
+										value={numberOfTickets}
+										onChange={(e) =>
+											setNumberOfTickets(parseInt(e.target.value))
+										}
+									/>
+									<div className={styles.infromalsButtonGroup}>
+										<Button
+											mx={6}
+											isLoading={isRegisterLoading}
+											loadingText="Registering"
+											onClick={handleInformalRegister}
+										>
+											REGISTER
+										</Button>
+										<Button onClick={onClose}>CANCEL</Button>
+									</div>
+								</div>
+							</ModalBody>
+						</ModalContent>
+					</Modal>
 				</div>
-				{informalsDetails && (
-					<div className={styles.workshopDetails}>
-						<h3>
-							{informalsDetails &&
-								informalsDetails[clusterIndex]?.informals_name}{" "}
-							Description
-						</h3>
-						<br />
-						<p>
-							{informalsDetails &&
-								informalsDetails[clusterIndex]?.informals_desc}
-						</p>
-						<br />
-						<button
-							className={styles.registerButton}
-							type="button"
-							onClick={onToggle}
-						>
-							Register here
-						</button>
-					</div>
-				)}
-				<Modal isOpen={isOpen} onClose={onClose} isCentered>
-					<ModalOverlay />
-					<ModalContent p={6} m={6}>
-						<ModalCloseButton />
-						<ModalBody>
-							<div className={styles.workshopRegisterForm}>
-								<div className={styles.modalHead}>
-									Enter Number of Tickets
-								</div>
-								<Input
-									style={{ width: "75%" }}
-									className={styles.formInput}
-									placeholder="Number of Tickets"
-									type="number"
-									value={numberOfTickets}
-									onChange={(e) =>
-										setNumberOfTickets(parseInt(e.target.value))
-									}
-								/>
-								<div className={styles.infromalsButtonGroup}>
-									<Button
-										mx={6}
-										isLoading={isRegisterLoading}
-										loadingText="Registering"
-										onClick={handleInformalRegister}
-									>
-										REGISTER
-									</Button>
-									<Button onClick={onClose}>CANCEL</Button>
-								</div>
-							</div>
-						</ModalBody>
-					</ModalContent>
-				</Modal>
-			</div>
+			) : (
+				<Loader />
+			)}
 		</>
 	);
 }

@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./style.module.css";
 import { toast } from "react-hot-toast";
+import Loader from "../../components/LoadingSpinner/Loader";
 
 export default function Workshops() {
 	const { isLoggedIn } = useContext(userContext);
@@ -135,24 +136,24 @@ export default function Workshops() {
 
 	return (
 		<>
-			<div className={styles.workshopsLayout}>
-				<div></div>
-				<div className={styles.workshopCarousel}>
-					<div className={styles.workshops}>
-						{workshopDetails &&
-							workshopDetails[clusterIndex]?.workshop_name}
+			{workshopDetails.length > 0 ? (
+				<div className={styles.workshopsLayout}>
+					<div></div>
+					<div className={styles.workshopCarousel}>
+						<div className={styles.workshops}>
+							{workshopDetails &&
+								workshopDetails[clusterIndex]?.workshop_name}
+						</div>
+						{workshopDetails && (
+							<Carousel
+								slides={slides}
+								goToSlide={goToSlide}
+								showNavigation={false}
+								offsetRadius={2}
+								animationConfig={config.gentle}
+							/>
+						)}
 					</div>
-					{workshopDetails && (
-						<Carousel
-							slides={slides}
-							goToSlide={goToSlide}
-							showNavigation={false}
-							offsetRadius={2}
-							animationConfig={config.gentle}
-						/>
-					)}
-				</div>
-				{workshopDetails && (
 					<div className={styles.workshopDetails}>
 						<h3>Workshop Description</h3>
 						<p>
@@ -168,63 +169,69 @@ export default function Workshops() {
 							Register here
 						</button>
 					</div>
-				)}
-				<Modal
-					isOpen={isOpen}
-					onClose={() => {
-						setChoosenSlot("");
-						onClose();
-					}}
-					isCentered
-				>
-					<ModalOverlay />
-					<ModalContent p={6} m={6}>
-						<ModalCloseButton />
-						<ModalBody>
-							<div className={styles.workshopRegisterForm}>
-								<div className={styles.modalHead}>Choose Time Slot</div>
-								<Select
-									className={styles.formInput}
-									value={choosenSlot}
-									onChange={(e) => setChoosenSlot(e.target.value)}
-								>
-									<option value="">Select time slot</option>
-									{slotDetails &&
-										slotDetails.map((slot) => {
-											if (
-												workshopDetails &&
-												slot.workshop_id ===
-													workshopDetails[clusterIndex].workshop_id
-											) {
-												return (
-													<option
-														key={slot.slot_id}
-														value={slot.slot_id}
-													>
-														{formatDate(slot.workshop_date)}{" "}
-														{"  "}
-														{slot.slot_start_time.slice(
-															0,
-															-3
-														)} - {slot.slot_end_time.slice(0, -3)}
-													</option>
-												);
-											}
-										})}
-								</Select>
-								<Button
-									mt={6}
-									isLoading={isRegisterLoading}
-									loadingText="Registering"
-									onClick={handleWorkshopRegister}
-								>
-									REGISTER
-								</Button>
-							</div>
-						</ModalBody>
-					</ModalContent>
-				</Modal>
-			</div>
+					<Modal
+						isOpen={isOpen}
+						onClose={() => {
+							setChoosenSlot("");
+							onClose();
+						}}
+						isCentered
+					>
+						<ModalOverlay />
+						<ModalContent p={6} m={6}>
+							<ModalCloseButton />
+							<ModalBody>
+								<div className={styles.workshopRegisterForm}>
+									<div className={styles.modalHead}>
+										Choose Time Slot
+									</div>
+									<Select
+										className={styles.formInput}
+										value={choosenSlot}
+										onChange={(e) => setChoosenSlot(e.target.value)}
+									>
+										<option value="">Select time slot</option>
+										{slotDetails &&
+											slotDetails.map((slot) => {
+												if (
+													workshopDetails &&
+													slot.workshop_id ===
+														workshopDetails[clusterIndex]
+															.workshop_id
+												) {
+													return (
+														<option
+															key={slot.slot_id}
+															value={slot.slot_id}
+														>
+															{formatDate(slot.workshop_date)}{" "}
+															{"  "}
+															{slot.slot_start_time.slice(
+																0,
+																-3
+															)}{" "}
+															- {slot.slot_end_time.slice(0, -3)}
+														</option>
+													);
+												}
+											})}
+									</Select>
+									<Button
+										mt={6}
+										isLoading={isRegisterLoading}
+										loadingText="Registering"
+										onClick={handleWorkshopRegister}
+									>
+										REGISTER
+									</Button>
+								</div>
+							</ModalBody>
+						</ModalContent>
+					</Modal>
+				</div>
+			) : (
+				<Loader />
+			)}
 		</>
 	);
 }
