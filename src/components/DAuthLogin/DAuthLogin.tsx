@@ -55,6 +55,7 @@ const DAuthLogin = () => {
             //backend url
 			fetch(config.backendOrigin + "/auth/dauth/web", {
 				method: "POST",
+				credentials: "include",
 				headers: {
 					"Content-Type": "application/json",
 				},
