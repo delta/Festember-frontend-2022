@@ -196,19 +196,38 @@ export default function Workshops() {
 												slot.workshop_id ===
 													workshopDetails[clusterIndex].workshop_id
 											) {
-												return (
-													<option
-														key={slot.slot_id}
-														value={slot.slot_id}
-													>
-														{formatDate(slot.workshop_date)}{" "}
-														{"  "}
-														{slot.slot_start_time.slice(
-															0,
-															-3
-														)} - {slot.slot_end_time.slice(0, -3)}
-													</option>
-												);
+												if (
+													workshopDetails[clusterIndex]
+														?.workshop_name ===
+													"Photography by Sony"
+												) {
+													return (
+														<option
+															key={slot.slot_id}
+															value={slot.slot_id}
+														>
+															{formatDate(slot.workshop_date)}{" "}
+															{" 10:00 - 12:00 & "}
+															{slot.slot_start_time.slice(0, -3)}{" "}
+															- {slot.slot_end_time.slice(0, -3)}
+														</option>
+													);
+												} else {
+													return (
+														<option
+															key={slot.slot_id}
+															value={slot.slot_id}
+														>
+															{formatDate(slot.workshop_date)}{" "}
+															{"  "}
+															{slot.slot_start_time.slice(
+																0,
+																-3
+															)}{" "}
+															- {slot.slot_end_time.slice(0, -3)}
+														</option>
+													);
+												}
 											}
 										})}
 								</Select>
