@@ -17,6 +17,7 @@ import {
 } from "../pages";
 import React from "react";
 import { Timeline } from "../components";
+import GuestLectures from "../pages/GuestLectures/GuestLectures";
 
 const routes: RouteType[] = [
 	{
@@ -108,6 +109,12 @@ const routes: RouteType[] = [
 		path: "/workshops",
 		description: "Workshops Page of Festember 2022",
 		element: <Workshops />,
+	},
+	{
+		title: "Guest Lectures Page",
+		path: "/guestlectures",
+		description: "Guest Lectures Page of Festember 2022",
+		element: <GuestLectures />,
 	},
 ];
 
