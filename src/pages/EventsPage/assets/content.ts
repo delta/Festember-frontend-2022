@@ -633,6 +633,44 @@ export const content: any = [
 				},
 			},
 			{
+				title: "PAPER DRESSING",
+				details: {
+					description: [
+						"Present your craft at Festember's Paper Dressing event. In teams of five, become an artisan on a budget using newspapers! Cut them, stick them, make them serve their purpose, and let your work of art truly speak for itself!",
+					],
+					link: ["https://forms.gle/wLKayVBeefvzB7mp7"],
+					format: ["Number of rounds: 1", "Time limit : 2 hours"],
+					rules: [
+						"Teams will have to dress one of the participants using newspapers provided by the organizers.",
+						"Number of members per team : 5 (maximum)",
+						"Number of teams per college : 3 (maximum)",
+						"No particular theme",
+						"Participants can wear  black T-shirts and leggings.",
+						"Use of materials other than those provided by the organizers will not be allowed.						",
+						"Use of phones, tablets or printouts to copy a design will lead to immediate disqualification from the event.",
+						"All the teams will be given time to explain the final work to the judges.",
+						"The decision of the judge will be final and binding.",
+						"Spot registrations will close half an hour prior to the event.",
+						"Both Pre registrations and Spot Registrations are compulsory.",
+					],
+					"judgement criteria": [
+						"Creativity and originality",
+						"Visual appeal",
+						"Adherence to the theme",
+						"Overall impression",
+					],
+					prizes: [
+						"First Place : 6000 INR",
+						"Second Place : 4000 INR",
+						"Third Place : 2000 INR",
+					],
+					contact: [
+						"Preethika 9943805452",
+						"Rehma 6382305540",
+					],
+				},
+			},
+			{
 				title: "FACE PAINTING",
 				details: {
 					description: [
@@ -1431,13 +1469,13 @@ export const content: any = [
 					description: [
 						"A competition where the participants need to decipher media clues. Rack your brain and maneuver through the twists in this exciting event.",
 					],
-
 					link: ["https://forms.gle/MwX3KAAaZEY39PZz6"],
 					format: [
-						"This is a solo participation event consisting of 3 rounds:",
+						"This is a team event consisting of 3 rounds:",
 						"Round 1 - Image Rebus",
 						"Round 2 - Video Investigation ",
 						"Round 3 - Audio Reading",
+						"Each team should have 3 members compulsorily.",
 						"The rules and regulations of each round will be elaborated on spot to the participants once the event commences. ",
 						"The media displayed shall not be shown again at any cost. Hence, the participants are expected to pay complete attention during the display.",
 						"There shall be a time limit of 30 seconds for the participants to accurately portray the correct meaning of the displayed image, appropriately deciphering the video and audio.",
