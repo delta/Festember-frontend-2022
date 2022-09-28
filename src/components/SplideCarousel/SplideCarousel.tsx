@@ -45,7 +45,16 @@ const SplideCarousel = ({ Details, isCardScrollable }: any) => {
 			<SplideTrack>
 				{Details.map((obj: any) => {
 					return (
-						<SplideSlide className={styles.card + ' ' + (isCardScrollable ? styles.cardScroll : styles.cardNoScroll)} key={obj.name}>
+						<SplideSlide
+							className={
+								styles.card +
+								" " +
+								(isCardScrollable
+									? styles.cardScroll
+									: styles.cardNoScroll)
+							}
+							key={obj.name}
+						>
 							<Flex
 								flexDirection="column"
 								color="white"
@@ -60,7 +69,7 @@ const SplideCarousel = ({ Details, isCardScrollable }: any) => {
 								<Text align="center" fontSize="lg">
 									{obj.designation}
 								</Text>
-								<Flex 
+								<Flex
 									flexDirection="column"
 									align="center"
 									justifyContent="center"
@@ -68,15 +77,19 @@ const SplideCarousel = ({ Details, isCardScrollable }: any) => {
 									width="100%"
 									m={[15, 0, 0, 0]}
 								>
-								{obj.content.map((cont : any) => {
-									return(
-										<Text align="center" fontSize="md" p={1.5}>
-											{cont}
-										</Text>
-									)
-								})}
+									{obj.content.map((cont: any) => {
+										return (
+											<Text
+												align="center"
+												fontSize="md"
+												p={1.5}
+												key={cont}
+											>
+												{cont}
+											</Text>
+										);
+									})}
 								</Flex>
-								
 							</Flex>
 						</SplideSlide>
 					);
