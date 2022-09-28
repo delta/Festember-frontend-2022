@@ -14,7 +14,6 @@ import {
 	EventsPage,
 	Informals,
 	Workshops,
-	Profile
 } from "../pages";
 import React from "react";
 import { Timeline } from "../components";
@@ -109,12 +108,6 @@ const routes: RouteType[] = [
 		path: "/workshops",
 		description: "Workshops Page of Festember 2022",
 		element: <Workshops />,
-	},
-	{
-		title: "Profile",
-		path: "/profile",
-		description: "Profile Page of Festember 2022",
-		element: <Profile />,
 	},
 ];
 
