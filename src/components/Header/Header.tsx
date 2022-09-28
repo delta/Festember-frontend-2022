@@ -9,7 +9,6 @@ import {
 	DrawerContent,
 	DrawerOverlay,
 	SlideFade,
-	useMediaQuery,
 } from "@chakra-ui/react";
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -28,7 +27,6 @@ import { useContext } from "react";
 const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 	const { isLoggedIn, setIsLoggedIn } = useContext(userContext);
 	const navigate = useNavigate();
-	const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
 
 	const handleLogout = () => {
 		fetch(`${config.backendOrigin}/auth/logout`, {
@@ -52,7 +50,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 
 	return (
 		<Box className={styles.gradient}>
-			{isSmallerThan1200 ? (
+			<MobileView>
 				<Flex align="center" justifyContent="space-around" h="20em">
 					<Box className={styles.menuBar} mr={5} onClick={onOpen}>
 						<Image
@@ -64,8 +62,8 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 						<Image src={festemberLogoSVG} alt="Festember" />
 					</Box>
 					{/* <Box className={styles.nittLogo}>
-					<Image src={nittLogo} alt="NITT" />
-				</Box> */}
+						<Image src={nittLogo} alt="NITT" />
+					</Box> */}
 					<Drawer
 						isOpen={isOpen}
 						placement="left"
@@ -78,8 +76,9 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 						</DrawerContent>
 					</Drawer>
 				</Flex>
-			) : (
-				<Flex width="100%">
+			</MobileView>
+			<BrowserView>
+				<Flex position="relative" width="100%">
 					<Box className={styles.festemberLogo}>
 						<Image src={festemberLogoSVG} alt="Festember" />
 					</Box>
@@ -112,7 +111,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 						</Box>
 					</Center>
 				</Flex>
-			)}
+			</BrowserView>
 			{!isLoggedIn &&
 				window.location.pathname !== "/login" &&
 				window.location.pathname !== "/register" && (
