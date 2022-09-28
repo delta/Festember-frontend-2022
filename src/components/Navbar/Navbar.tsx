@@ -5,12 +5,12 @@ import { config } from "../../../config";
 import styles from "./styles.module.css";
 import { Link as RouterLink } from "react-router-dom";
 import { isMobile } from "react-device-detect";
-import { useMediaQuery } from "@chakra-ui/react";
+
 const routes = [
 	{ name: "Home", path: "/" },
 	{ name: "Events", path: "/events" },
 	{ name: "Workshops", path: "/workshops" },
-	{ name: "Informals", path: "/informals" },
+	{name: "Informals", path: "/informals"},
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
 ];
@@ -20,10 +20,9 @@ if (isMobile) {
 }
 
 const Navbar = ({ onClose }: any) => {
-	const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
 	return (
 		<>
-			{isSmallerThan1200 ? (
+			<MobileView>
 				<Flex
 					flexDirection="column"
 					align="center"
@@ -57,7 +56,8 @@ const Navbar = ({ onClose }: any) => {
 						);
 					})}
 				</Flex>
-			) : (
+			</MobileView>
+			<BrowserView>
 				<Center mt={1} style={{ fontFamily: "Poppins" }}>
 					{routes.map((route, key) => {
 						return (
@@ -108,7 +108,7 @@ const Navbar = ({ onClose }: any) => {
 						);
 					})}
 				</Center>
-			)}
+			</BrowserView>
 		</>
 	);
 };
