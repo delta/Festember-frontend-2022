@@ -74,7 +74,7 @@ const DAuthLogin = () => {
 					if (data.status_code === 200) {
 						setIsLoggedIn(true);
 						setuserID(data.message.user_id);
-						navigate("/");
+						navigate("/profile");
 					}
 				})
 		} catch (err) {

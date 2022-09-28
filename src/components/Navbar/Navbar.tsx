@@ -13,6 +13,7 @@ const routes = [
 	{name: "Informals", path: "/informals"},
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
+	{ name: "Dashboard", path: "/profile" },
 ];
 
 if (isMobile) {

@@ -68,7 +68,7 @@ const Register = () => {
 	}, []);
 
 	useEffect(() => {
-		if (isLoggedIn) navigate("/");
+		if (isLoggedIn) navigate("/profile");
 	}, [isLoggedIn]);
 
 	const handleFormChange = (field: string, value: string) => {

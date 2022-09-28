@@ -2,7 +2,6 @@ import styleMobile from "./styleMobile.module.css";
 import styleBrowser from "./styleBrowser.module.css";
 import { MobileView, BrowserView } from "react-device-detect";
 import { useState, useEffect, useContext, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import { Text } from '@chakra-ui/react';
 import { userContext } from "../../contexts/UserContext";
 import { config } from "../../../config";
@@ -52,7 +51,6 @@ const Profile = () => {
 
     };
 
-    const navigate = useNavigate();
     useEffect(() => {
         if (isLoggedIn) {
             getQR();

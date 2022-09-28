@@ -29,7 +29,7 @@ const Login = () => {
 	const locationState = useLocation().state as LocationState;
 
 	useEffect(() => {
-		if (isLoggedIn) navigate("/");
+		if (isLoggedIn) navigate("/profile");
 	}, [isLoggedIn]);
 
 	useEffect(() => {
@@ -65,7 +65,7 @@ const Login = () => {
 					if (data.status_code === 200) {
 						setIsLoggedIn(true);
 						setuserID(data.message.user_id);
-						navigate("/");
+						navigate("/profile");
 					} else setFormError("login_failure");
 				})
 				.catch(() => setFormError("login_failure"));
