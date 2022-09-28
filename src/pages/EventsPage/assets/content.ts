@@ -664,10 +664,7 @@ export const content: any = [
 						"Second Place : 4000 INR",
 						"Third Place : 2000 INR",
 					],
-					contact: [
-						"Preethika 9943805452",
-						"Rehma 6382305540",
-					],
+					contact: ["Preethika 9943805452", "Rehma 6382305540"],
 				},
 			},
 			{
