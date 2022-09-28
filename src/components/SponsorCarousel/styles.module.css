@@ -8,14 +8,37 @@
 .cardNoScroll {
   height: auto!important;
 }
-
-.cardDiv:hover{
+.cardDiv{
+  position:relative;
+}
+.cardDiv:hover .cardImageParent {
   opacity: 20%;
 }
-
-.cardScroll {
-  overflow-y: auto;
+.cardHoverTextChild{
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items:center ;
+  justify-content: center ;
+  font-size: x-large;
 }
+.cardHoverText {
+  height: fit-content;
+}
+.cardDiv:hover .cardHoverParent{
+  position: absolute ;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  color: white;
+  z-index: 20;  
+  height: 80%;
+}
+.cardScroll {
+  overflow-y: hidden;
+}
+
 
 .cardImage{
   height:80%;
@@ -24,5 +47,9 @@
 }
 
 .cardImage>img{
-  max-height: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.cardHoverParent{
+  display: none;
 }
