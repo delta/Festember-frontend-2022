@@ -50,87 +50,97 @@ const adv_booking_inst = [
 	"After verifying the payment, confirmation regarding the advance booking will be mailed, which should be shown while coming to Festember.",
 	"The advance money is collected only to ensure the availability of accommodation. Note: The booking will get cancelled if the participants don’t turn up within the buffer time for reporting.",
 	"People who have done advance booking have to pay the actual accommodation charges only on arrival.",
-]
+];
 
 const Accommodation = () => {
 	return (
-			<ReactFullpage
-					scrollingSpeed={1000}
-					render={() => {
-						return (
-							<ReactFullpage.Wrapper>
-								<div className={`section ${styles.about}`}>
-									<div className={styles.wrapper}>
-										<div className={styles.header}>Rules</div>
-										<div className={styles.content}>
-											<ul>
-												{rules.map((rule: string) => {
-													return <li>{rule}</li>;
-												})}
-											</ul>
-										</div>
-									</div>
+		<ReactFullpage
+			normalScrollElements=".scrollable_fullpage"
+			scrollingSpeed={1000}
+			render={() => {
+				return (
+					<ReactFullpage.Wrapper>
+						<div className={`section ${styles.about}`}>
+							<div className={styles.wrapper}>
+								<div className={styles.header}>Rules</div>
+								<div
+									className={styles.content + " .scrollable_fullpage"}
+								>
+									<ul>
+										{rules.map((rule: string) => {
+											return <li>{rule}</li>;
+										})}
+									</ul>
 								</div>
-								<div className={`section ${styles.about}`}>
-									<div className={styles.wrapper}>
-										<div className={styles.header}>Fares</div>
-										<div className={styles.content}>
-											<ul>
-												{fares.map((fare: string) => {
-													return <li>{fare}</li>;
-												})}
-											</ul>
-										</div>
-									</div>
+							</div>
+						</div>
+						<div className={`section ${styles.about}`}>
+							<div className={styles.wrapper}>
+								<div className={styles.header}>Fares</div>
+								<div
+									className={styles.content + " .scrollable_fullpage"}
+								>
+									<ul>
+										{fares.map((fare: string) => {
+											return <li>{fare}</li>;
+										})}
+									</ul>
 								</div>
-								<div className={`section ${styles.about}`}>
-									<div className={styles.wrapper}>
-										<div className={styles.header} style={{ fontSize: isMobile ? "2em" : '', marginBottom: isMobile ? '' : "2em"}}>
-											Advance Booking
-										</div>
-										<div className={styles.content}>
-											<ul>
-												{adv_booking.map((advb: string) => {
-													return (
-														<li style={{ padding: "0.1em" }}>
-															{advb}
-														</li>
-													);
-												})}
-												<ul style={{ paddingLeft: "1.5em" }}>
-													{adv_booking_sub.map((advbs: string) => {
-														return (
-															<li style={{ padding: "0.1em" }}>
-																{advbs}
-															</li>
-														);
-													})}
-												</ul>
-												<li>
-													**Advance booking will be valid only till
-													a buffer time of 2 hours from the
-													check-in time informed to us, and after
-													that advance booking gets automatically
-													cancelled.
-												</li>
-												<li>Instructions</li>
-												<ul style={{ paddingLeft: "1.5em" }}>
-													{adv_booking_inst.map((advbi: string) => {
-														return (
-															<li style={{ padding: "0.1em" }}>
-																{advbi}
-															</li>
-														);
-													})}
-												</ul>
-											</ul>
-										</div>
-									</div>
+							</div>
+						</div>
+						<div className={`section ${styles.about}`}>
+							<div className={styles.wrapper}>
+								<div
+									className={styles.header}
+									style={{
+										fontSize: isMobile ? "2em" : "",
+										marginBottom: isMobile ? "" : "2em",
+									}}
+								>
+									Advance Booking
 								</div>
-							</ReactFullpage.Wrapper>
-						);
-					}}
-				/>
+								<div
+									className={styles.content + ". .scrollable_fullpage"}
+								>
+									<ul>
+										{adv_booking.map((advb: string) => {
+											return (
+												<li style={{ padding: "0.1em" }}>{advb}</li>
+											);
+										})}
+										<ul style={{ paddingLeft: "1.5em" }}>
+											{adv_booking_sub.map((advbs: string) => {
+												return (
+													<li style={{ padding: "0.1em" }}>
+														{advbs}
+													</li>
+												);
+											})}
+										</ul>
+										<li>
+											**Advance booking will be valid only till a
+											buffer time of 2 hours from the check-in time
+											informed to us, and after that advance booking
+											gets automatically cancelled.
+										</li>
+										<li>Instructions</li>
+										<ul style={{ paddingLeft: "1.5em" }}>
+											{adv_booking_inst.map((advbi: string) => {
+												return (
+													<li style={{ padding: "0.1em" }}>
+														{advbi}
+													</li>
+												);
+											})}
+										</ul>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</ReactFullpage.Wrapper>
+				);
+			}}
+		/>
 	);
 };
 
