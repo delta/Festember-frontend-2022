@@ -2,7 +2,8 @@ import { Center, Flex, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView, isTablet } from "react-device-detect";
 import { SplideCarousel } from "../../components";
 import styles from "./styles.module.css";
-
+import {contentUp,contentDown} from "./assets/content";
+import SponsorCarousel from "../../components/SponsorCarousel/SponsorCarousel";
 const Sponsor = [
 	{
 		name: "Lorem ipsum",
@@ -31,17 +32,17 @@ const Sponsors = () => {
 				<div className={styles.mobileContainer}>
 					<Text className={styles.name}>SPONSORS</Text>
 					<Flex p={3}>
-						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
+						<SponsorCarousel isCardScrollable={true} Details={[...contentUp,...contentDown]} />
 					</Flex>
 				</div>
 			</MobileView>
 			<BrowserView>
 				<Flex flexDirection="column" className={styles.container}>
 					<Center mb={5}>
-						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
+						<SponsorCarousel isCardScrollable={true} Details={contentUp} />
 					</Center>
 					<Center>
-						<SplideCarousel isCardScrollable={true} Details={Sponsor} />
+						<SponsorCarousel isCardScrollable={true} Details={contentDown} />
 					</Center>
 					<Text className={styles.name}>SPONSORS</Text>
 				</Flex>

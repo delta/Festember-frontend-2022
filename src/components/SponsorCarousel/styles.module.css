@@ -1,0 +1,28 @@
+.card{
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 24px rgba(121, 226, 251, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.cardNoScroll {
+  height: auto!important;
+}
+
+.cardDiv:hover{
+  opacity: 20%;
+}
+
+.cardScroll {
+  overflow-y: auto;
+}
+
+.cardImage{
+  height:80%;
+  display:flex;
+  align-items: center;
+}
+
+.cardImage>img{
+  max-height: 100%;
+}
