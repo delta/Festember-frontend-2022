@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronUpIcon, CloseIcon } from "@chakra-ui/icons";
 import { BrowserView, MobileView } from "react-device-detect";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "../../contexts/UserContext";
 import festemberLogoSVG from "../../../public/Assets/Images/festember_logo.svg";
 import menuToggleSVGClosed from "../../../public/Assets/Images/menu_toggle.svg";
@@ -56,10 +56,11 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 						<Image
 							src={isOpen ? menuToggleSVGClosed : menuToggleSVGOpen}
 							alt="Festember"
+							onClick={() => navigate('/')}
 						/>
 					</Box>
 					<Box className={styles.festemberLogo}>
-						<Image src={festemberLogoSVG} alt="Festember" />
+						<Image src={festemberLogoSVG} alt="Festember" onClick={() => navigate('/')} />
 					</Box>
 					{/* <Box className={styles.nittLogo}>
 						<Image src={nittLogo} alt="NITT" />
@@ -80,7 +81,7 @@ const Header = ({ isOpen, onClose, onOpen, onToggle }: any) => {
 			<BrowserView>
 				<Flex position="relative" width="100%">
 					<Box className={styles.festemberLogo}>
-						<Image src={festemberLogoSVG} alt="Festember" />
+						<Image src={festemberLogoSVG} className={styles.imageFestember} alt="Festember" onClick={() => navigate('/')} />
 					</Box>
 					{/* <Box className={styles.nittLogoBrowser}>
 						<Image src={nittLogo} alt="NITT" />
