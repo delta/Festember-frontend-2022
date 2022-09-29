@@ -1,8 +1,10 @@
-.display{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    font-size:150px;
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 150px;
+    margin-top: -1em;
+    text-transform: uppercase;
 }
 
 .title {
@@ -16,10 +18,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
-  }
+}
 
 .profileDetails {
-    background-color: rgb(0, 0, 0,0.25);
+    background-color: rgb(0, 0, 0, 0.25);
     height: 50vh;
     margin: 8%;
     margin-bottom: 3%;
@@ -28,17 +30,27 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
-    display:flex;
+    display: flex;
 }
 
-.container{
-        display:flex;
-        flex-direction: column;
-        width: 50%;
-        font-size:100%;
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 50%;
+    font-size: 100%;
 }
 
-.name{
+.event {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
     font-size: 33%;
     font-weight: 600;
     margin-top: 2%;
@@ -49,89 +61,110 @@
     margin-bottom: 2%;
 }
 
-.qr{
-     width: 100%;
-     height: 65%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border-right: 5px solid white;
+.qr {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 5px solid white;
 }
 
-.qr >img{
+.qr>img {
     max-width: 40%;
     max-height: 95%;
 }
 
-.tshirt{
-    width:30%;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    color: #FFFFFF;
-}
-
-
-.dummyDiv{
-    margin-top: 10%;
-    height: 20%;
-}
-
-.tshirtHeading{
-    font-size:20%;
-    font-weight: 600;
-    text-align: center;
-    width:100%;
-    height:15%;
-}
-
-.currentSize{
-    text-align: center;
-    font-size: 120%;
-    font-weight: 600;
-    width: 100%;
-    height:70%;
-    
-}
-
-.currentSize >p {
-    text-shadow: 0px 0px ;
-    height:80%;
-}
-
-.tshirtOptions{
-    margin-top: 15%;
+.eventOptions {
+    margin-top: 1em;
     font-size: 15%;
-    width: 20%;
+    width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    align-items: center;
 }
 
-.available{
-    width:30%;
+.available {
+    width: 100%;
     padding-left: 5%;
 }
 
-.available:hover{
-    background: -webkit-linear-gradient(right, rgba(255,255,255,0), #79E2FB);
+.available:hover {
+    background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0), #79E2FB);
 }
 
-@media screen and (min-width: 1400px) and (max-width:1600px)  {
-    .display{
-        font-size:125px;
-    }
+.other {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.25);
+    height: 55vh;
+    margin: 8%;
+    margin-bottom: 3%;
+    margin-top: 0;
+    color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow-y: scroll;
 }
-@media screen and (min-width: 1200px) and (max-width:1399px)  {
-    .display{
-        font-size:100px;
-    }
+
+.subContainer {
+    width: 50%;
 }
-@media screen and (min-width: 800px) and (max-width:1199px)  {
-    .display{
-        font-size:80px;
+
+.list{
+    margin-left: 1.5em;
+}
+
+.header {
+    font-size: 0.5em;
+    font-family: 'Atlantic-Cruise';
+    background: -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+    background: linear-gradient(#FFFFFF, #3AD4F8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+}
+
+.eventHeader {
+    font-size: 3.5em;
+    font-family: 'Atlantic-Cruise';
+    /* text-align: center; */
+    background: -webkit-linear-gradient(#FFFFFF, #3AD4F8);
+    background: linear-gradient(#FFFFFF, #3AD4F8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
+}
+
+.eventName {
+    font-size: 1.75em;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.eventDetail {
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+@media screen and (min-width: 1400px) and (max-width:1600px) {
+    .display {
+        font-size: 125px;
     }
 }
 
+@media screen and (min-width: 1200px) and (max-width:1399px) {
+    .display {
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width:1199px) {
+    .display {
+        font-size: 80px;
+    }
+}
