@@ -4,7 +4,6 @@ import protectedRoutes from "./protectedRoutes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "../pages";
 import { AppLayout, Page, Timeline, ProtectedRoute } from "../components";
-import { useMediaQuery } from "@chakra-ui/react";
 import { userContext } from "../contexts/UserContext";
 import { config } from "../../config";
 import { isMobile } from "react-device-detect";

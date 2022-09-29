@@ -11,9 +11,10 @@ const routes = [
 	{ name: "Dashboard", path: "/profile" },
 	{ name: "Events", path: "/events" },
 	{ name: "Workshops", path: "/workshops" },
-	{name: "Informals", path: "/informals"},
+	{ name: "Informals", path: "/informals" },
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
+	{ name: "Sponsors", path: "/sponsors" },
 ];
 
 if (isMobile) {
@@ -34,11 +35,15 @@ const Navbar = ({ onClose }: any) => {
 						return (
 							<Link
 								as={
-									route.path.startsWith("/#") ? undefined : RouterLink
+									route.path.startsWith("/#") ||
+									route.path === "/sponsors"
+										? undefined
+										: RouterLink
 								}
 								to={`${route.path}`}
 								href={
-									route.path.startsWith("/#")
+									route.path.startsWith("/#") ||
+									route.path === "/sponsors"
 										? `${config.basePath}${route.path}`
 										: undefined
 								}
@@ -64,11 +69,15 @@ const Navbar = ({ onClose }: any) => {
 						return (
 							<Link
 								as={
-									route.path.startsWith("/#") ? undefined : RouterLink
+									route.path.startsWith("/#") ||
+									route.path === "/sponsors"
+										? undefined
+										: RouterLink
 								}
 								to={`${route.path}`}
 								href={
-									route.path.startsWith("/#")
+									route.path.startsWith("/#") ||
+									route.path === "/sponsors"
 										? `${config.basePath}${route.path}`
 										: undefined
 								}

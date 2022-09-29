@@ -14,66 +14,81 @@ const SplideCarousel = ({ Details, isCardScrollable }: any) => {
 			options={
 				!isBrowser
 					? {
-						perPage: window.innerWidth < 390 ? 2 : isTablet ? 4 : 3,
-						perMove: 1,
-						direction: "ttb",
-						height:
-							window.innerWidth < 390
-								? "25rem"
-								: isTablet
+							perPage: window.innerWidth < 390 ? 2 : isTablet ? 4 : 3,
+							perMove: 1,
+							direction: "ttb",
+							height:
+								window.innerWidth < 390
+									? "25rem"
+									: isTablet
 									? "44rem"
 									: "34rem",
-						pagination: false,
-						arrows: true,
-						gap: "0.8em",
-						heightRatio: 0.4,
-					}
+							pagination: false,
+							arrows: true,
+							gap: "0.8em",
+							heightRatio: 0.4,
+					  }
 					: {
-						type: "loop",
-						perPage: 3,
-						perMove: 1,
-						width: "120%",
-						autoHeight: true,
-						rewind: true,
-						pagination: false,
-						arrows: true,
-						gap: "1.15em",
-						heightRatio: 0.25,
-					}
+							type: "loop",
+							perPage: 3,
+							perMove: 1,
+							width: "120%",
+							autoHeight: true,
+							rewind: true,
+							pagination: false,
+							arrows: true,
+							gap: "1.15em",
+							heightRatio: 0.25,
+					  }
 			}
 		>
 			<SplideTrack>
 				{Details.map((obj: any) => {
-					console.log(obj);
 					return (
-						<SplideSlide className={styles.card + ' ' + (isCardScrollable ? styles.cardScroll : styles.cardNoScroll)} key={obj.name}>
-								<Flex
-									flexDirection="column"
-									color="white"
-									p={2}
-									align="center"
-									justifyContent="center"
-									height="100%"
-									className={styles.cardDiv}
-								>
-									<div className={styles.cardImageParent}>
-										<div className={styles.cardImage}>
-											<Image src={obj.src} />
-										</div>
-										<div className={styles.cardText}>
-											<Text align="center" style={isBrowser ? { fontSize: "125%" } : { fontSize: "100%" }}>
-												{obj.companyName}
-											</Text>
-										</div>
+						<SplideSlide
+							className={
+								styles.card +
+								" " +
+								(isCardScrollable
+									? styles.cardScroll
+									: styles.cardNoScroll)
+							}
+							key={obj.name}
+						>
+							<Flex
+								flexDirection="column"
+								color="white"
+								p={2}
+								align="center"
+								justifyContent="center"
+								height="100%"
+								className={styles.cardDiv}
+							>
+								<div className={styles.cardImageParent}>
+									<div className={styles.cardImage}>
+										<Image src={obj.src} />
 									</div>
-									<div className={styles.cardHoverParent}>
-										<div className={styles.cardHoverTextChild}>
-											<Text className={styles.cardHoverText}>{obj.portfolio}</Text>
-										</div>
+									<div className={styles.cardText}>
+										<Text
+											align="center"
+											style={
+												isBrowser
+													? { fontSize: "125%" }
+													: { fontSize: "100%" }
+											}
+										>
+											{obj.companyName}
+										</Text>
 									</div>
-									
-								</Flex>
-								
+								</div>
+								<div className={styles.cardHoverParent}>
+									<div className={styles.cardHoverTextChild}>
+										<Text className={styles.cardHoverText}>
+											{obj.portfolio}
+										</Text>
+									</div>
+								</div>
+							</Flex>
 						</SplideSlide>
 					);
 				})}
