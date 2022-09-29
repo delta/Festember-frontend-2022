@@ -18,10 +18,10 @@ const rules = [
 ];
 
 const fares = [
+	"Caution deposit is mandatory for both event registration and accomodation",
 	"The mandatory registration fee for all attendees is ₹370.",
 	"The hospitality charges per person are : \
-	Standardized Accommodation Cost: ₹300 per day\
-	Caution Deposit: ₹150 (refundable)",
+	Standardized Accommodation Cost: ₹300 per day",
 	"*All accommodation is provided with a common fare and air conditioners are subject to  availability",
 	"**Caution deposit will be refunded at the sole discretion of Festember.",
 	"***The fare for faculty members is the same as the fare for students.",

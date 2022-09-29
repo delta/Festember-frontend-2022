@@ -10,6 +10,10 @@
     background: linear-gradient(180deg, #000000 -48.72%, rgba(0, 0, 0, 0) 184.19%);
 }
 
+.imageFestember:hover {
+    cursor: pointer;
+}
+
 /* .nittLogoBrowser{
     display: flex;
     justify-content:center;

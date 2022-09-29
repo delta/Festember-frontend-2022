@@ -7,10 +7,10 @@ import { Link as RouterLink } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 
 const routes = [
-	{ name: "Home", path: "/" },
 	{ name: "Dashboard", path: "/profile" },
 	{ name: "Events", path: "/events" },
 	{ name: "Workshops", path: "/workshops" },
+	{ name: "GL", path: "/guestlectures" },
 	{ name: "Informals", path: "/informals" },
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },

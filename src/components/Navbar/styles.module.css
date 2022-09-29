@@ -22,6 +22,7 @@
 
 .navbarText {
 	transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s all;
+	font-size: 18px;
 }
 
 .navbarText:hover {
