@@ -87,13 +87,13 @@ const Profile = () => {
 										registered events
 									</div>
 									<div className={styleMobile.eventOptions}>
-										{eventDetails.map((i: any) => {
+										{eventDetails.length > 0 ? (eventDetails.map((i: any) => {
 											return (
 												<li className={styleMobile.available}>
 													{i.event_name}
 												</li>
 											);
-										})}
+										})) : (<div>No Registered Events</div>)}
 									</div>
 								</div>
 
@@ -102,13 +102,13 @@ const Profile = () => {
 										registered worshops
 									</div>
 									<div className={styleMobile.eventOptions}>
-										{workshopDetails.map((i: any) => {
+										{workshopDetails.length > 0 ? (workshopDetails.map((i: any) => {
 											return (
 												<li className={styleMobile.available}>
 													{i.workshop_name}
 												</li>
 											);
-										})}
+										})) : (<div>No Registered Workshops</div>)}
 									</div>
 								</div>
 
@@ -117,13 +117,13 @@ const Profile = () => {
 										registered informals
 									</div>
 									<div className={styleMobile.eventOptions}>
-										{informalDetails.map((i: any) => {
+										{informalDetails.length > 0 ? (informalDetails.map((i: any) => {
 											return (
 												<li className={styleMobile.available}>
 													{i.informals_name}
 												</li>
 											);
-										})}
+										})) : (<div>No registered informals</div>)}
 									</div>
 								</div>
 							</div>
@@ -170,17 +170,23 @@ const Profile = () => {
 																styleBrowser.eventOptions
 															}
 														>
-															{eventDetails.map((event: any) => {
-																return (
-																	<div
-																		className={
-																			styleBrowser.available
-																		}
-																	>
-																		{event.event_name}
-																	</div>
-																);
-															})}
+															{eventDetails.length > 0 ? (
+																eventDetails.map(
+																	(event: any) => {
+																		return (
+																			<div
+																				className={
+																					styleBrowser.available
+																				}
+																			>
+																				{event.event_name}
+																			</div>
+																		);
+																	}
+																)
+															) : (
+																<div>No Registered events</div>
+															)}
 														</div>
 													</div>
 												</div>
@@ -195,40 +201,62 @@ const Profile = () => {
 											Registered Workshops and Informals
 										</div>
 										<div className={styleBrowser.other}>
-											<div className={styleBrowser.subContainer}>
-												<ul className={styleBrowser.list}>
-													{workshopDetails.map((field: any) => {
-														return (
-															<li>
-																<div
-																	className={
-																		styleBrowser.eventName
-																	}
-																>
-																	{field.workshop_name}
-																</div>
-															</li>
-														);
-													})}
-												</ul>
-											</div>
-											<div className={styleBrowser.subContainer}>
-												<ul className={styleBrowser.list}>
-													{informalDetails.map((field: any) => {
-														return (
-															<li>
-																<div
-																	className={
-																		styleBrowser.eventName
-																	}
-																>
-																	{field.informals_name}
-																</div>
-															</li>
-														);
-													})}
-												</ul>
-											</div>
+											{informalDetails.length +
+												workshopDetails.length >
+											0 ? (
+												<>
+													<div
+														className={styleBrowser.subContainer}
+													>
+														<ul className={styleBrowser.list}>
+															{workshopDetails.map(
+																(field: any) => {
+																	return (
+																		<li>
+																			<div
+																				className={
+																					styleBrowser.eventName
+																				}
+																			>
+																				{
+																					field.workshop_name
+																				}
+																			</div>
+																		</li>
+																	);
+																}
+															)}
+														</ul>
+													</div>
+													<div
+														className={styleBrowser.subContainer}
+													>
+														<ul className={styleBrowser.list}>
+															{informalDetails.map(
+																(field: any) => {
+																	return (
+																		<li>
+																			<div
+																				className={
+																					styleBrowser.eventName
+																				}
+																			>
+																				{
+																					field.informals_name
+																				}
+																			</div>
+																		</li>
+																	);
+																}
+															)}
+														</ul>
+													</div>
+												</>
+											) : (
+												<div style={{fontSize: "2em"}}>
+													No Registered Workshops or Informals
+												</div>
+											)}
 										</div>
 									</div>
 								</ReactFullpage.Wrapper>
