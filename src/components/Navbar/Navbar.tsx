@@ -15,6 +15,7 @@ const routes = [
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
 	{ name: "Sponsors", path: "/sponsors" },
+	{ name: "Download APK", path: "https://festember.com/apk" },
 ];
 
 if (isMobile) {
@@ -36,6 +37,7 @@ const Navbar = ({ onClose }: any) => {
 							<Link
 								as={
 									route.path.startsWith("/#") ||
+									route.path.startsWith("https") ||
 									route.path === "/sponsors"
 										? undefined
 										: RouterLink
@@ -43,11 +45,15 @@ const Navbar = ({ onClose }: any) => {
 								to={`${route.path}`}
 								href={
 									route.path.startsWith("/#") ||
+									route.path.startsWith("https") ||
 									route.path === "/sponsors"
 										? `${config.basePath}${route.path}`
 										: undefined
 								}
 								key={route.name}
+								target={
+									route.path.startsWith("https") ? "_blank" : undefined
+								}
 							>
 								<Center
 									position="relative"
@@ -70,6 +76,7 @@ const Navbar = ({ onClose }: any) => {
 							<Link
 								as={
 									route.path.startsWith("/#") ||
+									route.path.startsWith("https") ||
 									route.path === "/sponsors"
 										? undefined
 										: RouterLink
@@ -77,12 +84,16 @@ const Navbar = ({ onClose }: any) => {
 								to={`${route.path}`}
 								href={
 									route.path.startsWith("/#") ||
+									route.path.startsWith("https") ||
 									route.path === "/sponsors"
 										? `${config.basePath}${route.path}`
 										: undefined
 								}
 								_hover={{ border: "none" }}
 								key={route.name}
+								target={
+									route.path.startsWith("https") ? "_blank" : undefined
+								}
 							>
 								<Flex
 									fontSize="xl"
