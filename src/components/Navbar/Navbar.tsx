@@ -47,7 +47,11 @@ const Navbar = ({ onClose }: any) => {
 									route.path.startsWith("/#") ||
 									route.path.startsWith("https") ||
 									route.path === "/sponsors"
-										? `${config.basePath}${route.path}`
+										? `${
+												route.path.startsWith("https")
+													? ""
+													: config.basePath
+										  }${route.path}`
 										: undefined
 								}
 								key={route.name}
@@ -86,7 +90,11 @@ const Navbar = ({ onClose }: any) => {
 									route.path.startsWith("/#") ||
 									route.path.startsWith("https") ||
 									route.path === "/sponsors"
-										? `${config.basePath}${route.path}`
+										? `${
+												route.path.startsWith("https")
+													? ""
+													: config.basePath
+										  }${route.path}`
 										: undefined
 								}
 								_hover={{ border: "none" }}
