@@ -14,4 +14,5 @@ export { default as Instructions } from "./Instructions/Instructions";
 export { default as HowToReach } from "./HowToReach/HowToReach";
 export { default as Contact } from "./Contact/Contact";
 export { default as FAQ } from "./FAQ/FAQ";
-export {default as Profile} from "./Profile/Profile";
+export { default as Profile } from "./Profile/Profile";
+export { default as LeaderBoard } from "./LeaderBoard/LeaderBoard";

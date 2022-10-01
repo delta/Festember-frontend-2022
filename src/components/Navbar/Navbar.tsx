@@ -15,6 +15,7 @@ const routes = [
 	{ name: "Wildfire", path: "/wildfire" },
 	{ name: "Hospitality", path: "/hospitality" },
 	{ name: "Sponsors", path: "/sponsors" },
+	{ name: "Leaderboard", path: "/leaderboard" },
 	{ name: "Download APK", path: "https://festember.com/apk" },
 ];
 
@@ -30,6 +31,7 @@ const Navbar = ({ onClose }: any) => {
 					flexDirection="column"
 					align="center"
 					mt={10}
+					className={styles.mobileNavbar}
 					style={{ fontFamily: "Poppins" }}
 				>
 					{routes.map((route) => {

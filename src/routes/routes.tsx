@@ -14,6 +14,7 @@ import {
 	EventsPage,
 	Informals,
 	Workshops,
+	LeaderBoard,
 } from "../pages";
 import React from "react";
 import { Timeline } from "../components";
@@ -115,6 +116,12 @@ const routes: RouteType[] = [
 		path: "/guestlectures",
 		description: "Guest Lectures Page of Festember 2022",
 		element: <GuestLectures />,
+	},
+	{
+		title: "Leaderboard Page",
+		path: "/leaderboard",
+		description: "Leaderboard Page of Festember 2022",
+		element: <LeaderBoard />,
 	},
 ];
 
