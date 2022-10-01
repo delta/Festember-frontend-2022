@@ -20,7 +20,6 @@ const LeaderBoard = () => {
 			})
 				.then((res) => res.json())
 				.then((response) => {
-					console.log(response.message);
 					setLeaderBoardDetails(response.message);
 				})
 				.catch((e) => {
@@ -51,7 +50,7 @@ const LeaderBoard = () => {
 									<div className="two item">
 										<div className="pic runner1">
 											<div className="avatar" id="runner1Color">
-												{leaderBoardDetails[1].college_name[0]}
+												{leaderBoardDetails[1]?.college_name[0]}
 											</div>
 											<div
 												className="rankingDiamond"
@@ -61,26 +60,26 @@ const LeaderBoard = () => {
 											</div>
 										</div>
 										<Tooltip
-											label={leaderBoardDetails[1].college_name}
+											label={leaderBoardDetails[1]?.college_name}
 										>
 											<div className="name sideNames">
-												{leaderBoardDetails[1].college_name.length >
-												25
-													? leaderBoardDetails[1].college_name.substring(
+												{leaderBoardDetails[1]?.college_name
+													.length > 25
+													? leaderBoardDetails[1]?.college_name.substring(
 															0,
 															24
 													  ) + "..."
-													: leaderBoardDetails[1].college_name}
+													: leaderBoardDetails[1]?.college_name}
 											</div>
 										</Tooltip>
 										<div className="score" id="runner1Color">
-											{leaderBoardDetails[1].points}
+											{leaderBoardDetails[1]?.points}
 										</div>
 									</div>
 									<div className="one item">
 										<div className="pic winner">
 											<div className="avatar" id="winnerColor">
-												{leaderBoardDetails[0].college_name[0]}
+												{leaderBoardDetails[0]?.college_name[0]}
 											</div>
 											<div
 												className="rankingDiamond"
@@ -90,26 +89,26 @@ const LeaderBoard = () => {
 											</div>
 										</div>
 										<Tooltip
-											label={leaderBoardDetails[0].college_name}
+											label={leaderBoardDetails[0]?.college_name}
 										>
 											<div className="name winnerName">
-												{leaderBoardDetails[0].college_name.length >
-												25
-													? leaderBoardDetails[0].college_name.substring(
+												{leaderBoardDetails[0]?.college_name
+													.length > 25
+													? leaderBoardDetails[0]?.college_name.substring(
 															0,
 															24
 													  ) + "..."
-													: leaderBoardDetails[0].college_name}
+													: leaderBoardDetails[0]?.college_name}
 											</div>
 										</Tooltip>
 										<div className="score" id="winnerColor">
-											{leaderBoardDetails[0].points}
+											{leaderBoardDetails[0]?.points}
 										</div>
 									</div>
 									<div className="three item">
 										<div className="pic runner2">
 											<div className="avatar" id="runner2Color">
-												{leaderBoardDetails[2].college_name[0]}
+												{leaderBoardDetails[2]?.college_name[0]}
 											</div>
 											<div
 												className="rankingDiamond"
@@ -119,23 +118,23 @@ const LeaderBoard = () => {
 											</div>
 										</div>
 										<Tooltip
-											label={leaderBoardDetails[2].college_name}
+											label={leaderBoardDetails[2]?.college_name}
 										>
 											<div className="name sideNames">
-												{leaderBoardDetails[2].college_name.length >
-												25
-													? leaderBoardDetails[2].college_name.substring(
+												{leaderBoardDetails[2]?.college_name
+													.length > 25
+													? leaderBoardDetails[2]?.college_name.substring(
 															0,
 															24
 													  ) + "..."
-													: leaderBoardDetails[2].college_name}
+													: leaderBoardDetails[2]?.college_name}
 											</div>
 										</Tooltip>
 										<div
 											className="score"
 											style={{ color: "#8BA7DF" }}
 										>
-											{leaderBoardDetails[2].points}
+											{leaderBoardDetails[2]?.points}
 										</div>
 									</div>
 								</div>
@@ -153,7 +152,7 @@ const LeaderBoard = () => {
 																<div className="avatar">
 																	{
 																		leaderBoardDetails[index]
-																			.college_name[0]
+																			?.college_name[0]
 																	}
 																</div>
 																<div className="rankingDiamond">
@@ -164,7 +163,7 @@ const LeaderBoard = () => {
 																		{
 																			leaderBoardDetails[
 																				index
-																			].rank
+																			]?.rank
 																		}
 																	</div>
 																</div>
@@ -172,12 +171,12 @@ const LeaderBoard = () => {
 															<div className="lbBottomContent breakWord">
 																{
 																	leaderBoardDetails[index]
-																		.college_name
+																		?.college_name
 																}
 															</div>
 														</div>
 														<div className="lbBottomContent">
-															{leaderBoardDetails[index].points}
+															{leaderBoardDetails[index]?.points}
 														</div>
 													</div>
 													{index <
