@@ -3,6 +3,7 @@
 	width: 100%;
 	padding-left: 36.25%;
 	padding-right: 36.25%;
+	overflow-y: auto;
 }
 
 .titleContainer {
@@ -30,7 +31,7 @@
 .linksContainer {
 	height: 75%;
 	width: 100%;
-	overflow-y: auto;
+	/* overflow-y: auto; */
 
 	display: flex;
 	flex-direction: column;
