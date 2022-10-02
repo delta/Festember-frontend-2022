@@ -11,15 +11,15 @@
 }
 
 .leaderBoardTitle {
-    font-size: 8vh;
-    font-family: 'Atlantic-Cruise';
-    margin-top: 1rem;
-    background : -webkit-linear-gradient(#FFFFFF, #3AD4F8);
-    background : linear-gradient(#FFFFFF, #3AD4F8);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 1rem rgb(177, 175, 175));	
+	font-size: 7vh;
+	font-family: "Atlantic-Cruise";
+	margin-top: 1rem;
+	background: -webkit-linear-gradient(#ffffff, #3ad4f8);
+	background: linear-gradient(#ffffff, #3ad4f8);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(0 0 1rem rgb(177, 175, 175));
 	text-align: center;
 }
 
@@ -29,7 +29,7 @@
 	z-index: 0;
 	margin: 0rem auto 3rem auto;
 	height: calc(100vh - 12rem);
-    overflow: auto;
+	overflow: auto;
 	background: rgba(0, 0, 0, 0.45);
 	backdrop-filter: blur(4px);
 }
@@ -80,8 +80,11 @@
 	position: relative;
 	background: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(47.52px);
+	max-width: 9rem;
 	width: 9rem;
 	min-height: 7rem;
+	height: 7rem;
+	max-height: 7rem;
 	text-align: center;
 	transform-origin: bottom;
 	transition: transform 200ms ease-in-out;
@@ -92,9 +95,10 @@
 .top3 .item .pic {
 	position: absolute;
 	top: -2rem;
-	left: 2.5rem;
-	width: 4rem;
-	height: 4rem;
+	left: 2.7rem;
+	max-width: 3.5rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	border-radius: 50%;
 	background-size: cover;
 	background-position: center;
@@ -187,7 +191,7 @@
 	color: rgb(255 255 255);
 	font-weight: 500;
 	font-family: "Lato";
-	font-size: 1rem;
+	font-size: 0.9rem;
 }
 
 .breakWord {
@@ -243,13 +247,11 @@
 
 .top3 .item .sideNames {
 	margin-top: 2.5rem;
-	font-size: 1.125rem;
-	line-height: 1.75rem;
+	font-size: 0.8rem;
 }
 
 .top3 .item .winnerName {
-	font-size: 1.125rem;
-	line-height: 1.75rem;
+	font-size: 0.8rem;
 }
 
 .top3 .item .score {
@@ -264,8 +266,11 @@
 }
 
 .top3 .item.one {
+	max-width: 10rem;
 	width: 10rem;
 	min-height: 10rem;
+	height: 10rem;
+	max-height: 10rem;
 	padding-top: 3.5rem;
 	border-radius: 34.7368px 34.7368px 0px 0px;
 	z-index: 4;
@@ -325,23 +330,31 @@
 	}
 }
 
+@media (max-width: 769px) and (min-width: 426px) {
+	.top3 .item .pic {
+		left: 3.2rem;
+	}
+}
+
 @media only screen and (max-width: 426px) and (min-width: 360px) {
 	.leaderboardContainer {
 		width: 95%;
 	}
 	.top3 .item {
 		width: 9rem;
-		min-height: 10rem;
+		max-width: 9rem;
+		min-width: 5rem;
 	}
 	.top3 .item .pic {
 		top: -1rem;
 		left: 2.5rem;
+		max-width: 3rem;
 		width: 3rem;
 		height: 3rem;
 	}
 	.top3 .item.one {
+		max-width: 10rem;
 		width: 10rem;
-		min-height: 13rem;
 		padding-top: 3.5rem;
 	}
 }
@@ -351,16 +364,26 @@
 		width: 95%;
 	}
 	.top3 .item {
+		max-width: 9rem;
 		width: 9rem;
+		min-width: 5rem;
 	}
 	.top3 .item .pic {
 		top: -1rem;
-		left: 1.5rem;
+		left: 2rem;
+		max-width: 3rem;
 		width: 3rem;
 		height: 3rem;
 	}
 	.top3 .item.one {
+		max-width: 10rem;
 		width: 10rem;
 		padding-top: 3.5rem;
+	}
+}
+
+@media only screen and (max-width: 330px) {
+	.top3 .item .pic {
+		left: 1.5rem;
 	}
 }
