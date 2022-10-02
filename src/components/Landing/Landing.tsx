@@ -72,7 +72,7 @@ const Landing = ({ isSmallerThan600 }: { isSmallerThan600: any }) => {
 					>
 						<ModalOverlay />
 						<ModalContent>
-							<ModalHeader>Festermber'22 App</ModalHeader>
+							<ModalHeader>Festember'22 App</ModalHeader>
 							<ModalCloseButton />
 							<ModalBody>
 								Download the festember app now to get live updates!
