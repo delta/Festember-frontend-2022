@@ -60,6 +60,27 @@
   transform: scale(1.1);
 }
 
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 1em;
+  box-shadow: 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -7px rgb(0 0 0 / 20%);
+  padding: 1em;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.5em;
+  flex-direction: column;
+}
+
 /* Phones */
 @media screen and (max-width: 350px){
   .title {

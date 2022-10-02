@@ -16,7 +16,7 @@ const Homepage = () => {
 				return (
 					<ReactFullpage.Wrapper>
 						<div className="section">
-							<Landing />
+							<Landing isSmallerThan600={isSmallerThan600}/>
 						</div>
 						<div className="section">
 							<AboutUs />

@@ -2,19 +2,33 @@ import {
 	Box,
 	Image,
 } from "@chakra-ui/react";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../contexts/UserContext";
 import { BrowserView, MobileView } from "react-device-detect";
 import "./styles.css";
 import nittLogo from "../../../public/Assets/Images/NITT.png";
-const Landing = () => {
+const Landing = ({isSmallerThan600} : {isSmallerThan600 : any}) => {
 	const navigate = useNavigate();
 	const { isLoggedIn } = useContext(userContext);
-	useEffect(() => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(isSmallerThan600);
+
+  useEffect(() => {
 		localStorage.setItem("chakra-ui-color-mode", "dark");
 	}, []);
-	return (
+
+  useEffect(()=>{
+    setIsModalOpen(isSmallerThan600);
+    if(isSmallerThan600){
+      document.addEventListener("click",(e : MouseEvent)=>{
+        const target = (e.target as HTMLElement);
+        if(target && target.className && target.className != 'modal')
+          setIsModalOpen(false);
+      });
+    }
+  },[isSmallerThan600]);
+	
+  return (
 		<>
 			<div className="title-box">
 				<MobileView>
@@ -39,7 +53,22 @@ const Landing = () => {
 						Register
 					</button>
 				)}
+        { 
+      isModalOpen && <div className="modal">
+      Download the festember app now to get live updates!
+      <button
+          className="register-button"
+          type="button"
+          onClick={() => {
+            window.open("https://festember.com/apk", '_blank');
+          }}
+        >
+          Download APK
+        </button>
+    </div>
+      }
 			</div>
+      
 		</>
 	);
 };
