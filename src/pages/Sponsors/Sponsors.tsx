@@ -1,14 +1,14 @@
 import { Center, Flex, Text } from "@chakra-ui/react";
 import { BrowserView, MobileView } from "react-device-detect";
 import styles from "./styles.module.css";
-import { contentUp, contentDown } from "./assets/content";
+import { list } from "./assets/content";
 import SponsorCarousel from "../../components/SponsorCarousel/SponsorCarousel";
 
 const Sponsors = () => {
 	return (
 		<>
 			<MobileView>
-				<div className={styles.mobileContainer}>
+				{/* <div className={styles.mobileContainer}>
 					<Text className={styles.name}>SPONSORS</Text>
 					<Flex p={3}>
 						<SponsorCarousel
@@ -16,10 +16,10 @@ const Sponsors = () => {
 							Details={[...contentUp, ...contentDown]}
 						/>
 					</Flex>
-				</div>
+				</div> */}
 			</MobileView>
 			<BrowserView>
-				<Flex flexDirection="column" className={styles.container}>
+				{/* <Flex flexDirection="column" className={styles.container}>
 					<Center mb={5}>
 						<SponsorCarousel
 							isCardScrollable={true}
@@ -33,7 +33,34 @@ const Sponsors = () => {
 						/>
 					</Center>
 					<Text className={styles.name}>SPONSORS</Text>
-				</Flex>
+				</Flex> */}
+				<div className={styles.container}>
+					
+						{list.map((item: any) => {
+							return (
+								<div className={styles.sponsorList}>
+									<div className={styles.title}>{item.title}</div>
+									<div className={styles.data}>
+										{item.data.map((data: any) => {
+											return (
+												<div className={styles.row}>
+													{data.map((i: any) => {
+														return (
+															<div className={styles.cards}>
+																<div className={styles.portfolio}>{i.portfolio}</div>
+																<div className={styles.logo}><img src={i.src} alt={data.name} /></div>
+															</div>
+														)
+													})}
+												</div>
+											)
+										})}
+									</div>
+								</div>
+							)
+						})}
+
+				</div>
 			</BrowserView>
 		</>
 	);

@@ -1,13 +1,13 @@
 import { config } from "../../../../config";
 
 const sponsors: any = [
-	[
-		{
-			name: "RECAL",
-			portfolio: "Nostalgia Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
-	],
+	// [
+	// 	{
+	// 		name: "RECAL",
+	// 		portfolio: "Nostalgia Partner",
+	// 		src: config.basePath + "/Assets/Images/SponsorImages",
+	// 	},
+	// ],
 	[
 		{
 			name: "Ubon Headphones",
@@ -36,16 +36,16 @@ const sponsors: any = [
 
 const proshowSponsors: any = [
 	[
-		{
-			name: "RealMe",
-			portfolio: "Popular Nite Title Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
-		{
-			name: "KTM",
-			portfolio: "Adventure Bikes Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "RealMe",
+		// 	portfolio: "Popular Nite Title Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
+		// {
+		// 	name: "KTM",
+		// 	portfolio: "Adventure Bikes Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 		{
 			name: "Britannia Industries",
 			portfolio: "Comedy Nite Title Partner",
@@ -81,11 +81,11 @@ const bankingSponsors: any = [
 			portfolio: "Student Loans Partner",
 			src: config.basePath + "/Assets/Images/SponsorImages/CanaraBank.jpeg",
 		},
-		{
-			name: "State Bank of India",
-			portfolio: "YONO Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "State Bank of India",
+		// 	portfolio: "YONO Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 		{
 			name: "Union Bank of India",
 			portfolio: "Finance Partner",
@@ -100,11 +100,11 @@ const bankingSponsors: any = [
 			portfolio: "Financial Services Partner",
 			src: config.basePath + "/Assets/Images/SponsorImages/BankOfBaroda.png",
 		},
-		{
-			name: "ICICI Bank",
-			portfolio: "Banking Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "ICICI Bank",
+		// 	portfolio: "Banking Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 	],
 ];
 
@@ -189,11 +189,11 @@ const educationSponsor: any = [
 				config.basePath +
 				"/Assets/Images/SponsorImages/AceEngineeringAcademy.png",
 		},
-		{
-			name: "TIME",
-			portfolio: "Crack CAT Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "TIME",
+		// 	portfolio: "Crack CAT Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 		{
 			name: "Byju's Careerlabs",
 			portfolio: "Higher Education Partner",
@@ -213,11 +213,11 @@ const educationSponsor: any = [
 			portfolio: "English Lits Partner",
 			src: config.basePath + "/Assets/Images/SponsorImages/Scholastic.jpg",
 		},
-		{
-			name: "Indian Oil Corporation Limited",
-			portfolio: "Industrial Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "Indian Oil Corporation Limited",
+		// 	portfolio: "Industrial Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 	],
 	[
 		{
@@ -283,11 +283,11 @@ const additonalSponsor: any = [
 			portfolio: "Snacks Partner",
 			src: config.basePath + "/Assets/Images/SponsorImages/Cornados.jpeg",
 		},
-		{
-			name: "Firstcry",
-			portfolio: "Toddler Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "Firstcry",
+		// 	portfolio: "Toddler Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 		{
 			name: "Bharath Snacks",
 			portfolio: "Chikki Partner",
@@ -314,11 +314,11 @@ const photographySponsors: any = [
 			portfolio: "Photography Partner",
 			src: config.basePath + "/Assets/Images/SponsorImages/FujiFilm.png",
 		},
-		{
-			name: "Indian Institute of Photography",
-			portfolio: "Photography Partner",
-			src: config.basePath + "/Assets/Images/SponsorImages",
-		},
+		// {
+		// 	name: "Indian Institute of Photography",
+		// 	portfolio: "Photography Partner",
+		// 	src: config.basePath + "/Assets/Images/SponsorImages",
+		// },
 	],
 	[
 		{
