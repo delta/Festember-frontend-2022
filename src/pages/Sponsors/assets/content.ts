@@ -479,6 +479,133 @@ const socialMediaSponsor: any = [
 	],
 ];
 
+const mediaRelationSponsors1: any = [
+	[
+		{
+			name: "Movies Now",
+			portfolio: "Presenting Partner",
+			src: config.basePath + "/Assets/Images/SponsorImages/Presenting Partner.jpg",
+			href: "http://timesnetwork.in/",
+		},
+		{
+			name: "Mirror Now",
+			portfolio: "Media Partner",
+			src: config.basePath + "/Assets/Images/SponsorImages/Media Partner.jpg",
+			href: "http://timesnetwork.in/",
+		},
+		{
+			name: "Suryan FM",
+			portfolio: "Radio Partner",
+			src: config.basePath + "/Assets/Images/SponsorImages/Radio Partner.jpg",
+			href: "https://www.suryanfm.in/",
+		},
+	],
+	[
+		{
+			name: "Fever FM",
+			portfolio: "Enjoyment Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Enjoyment partner.jpeg",
+			href: "https://www.htmedia.in/fever-fm",
+		},
+		{
+			name: "AGS",
+			portfolio: "Cine Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/AGS CINEMAS OFFICIAL LOGO black.jpg",
+			href: "https://www.agscinemas.com/",
+		},
+		{
+			name: "Women's Era",
+			portfolio: "Lifestyle Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Lifestyle Partner.jpg",
+			href: "https://www.womansera.com/",
+		},
+	],
+	[
+		{
+			name: "The Week",
+			portfolio: "Weekly News Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Weekly News Partner.jpg",
+			href: "https://www.theweek.in/",
+		},
+		{
+			name: "Dinamalar",
+			portfolio: "Daily News Partner",
+			src: config.basePath+ "/Assets/Images/SponsorImages/Dinamalar.jpg",
+			href: "https://www.dinamalar.com/",
+		},
+		{
+			name: "KalviMalar",
+			portfolio: "Daily Educational News Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Daily Educational Partner.jpg",
+			href: "https://kalvimalar.dinamalar.com/home.asp",
+		},
+	],
+]
+
+const mediaRelationSponsors2: any = [
+	[
+		{
+			name: "Book My Event",
+			portfolio: "Online Ticketing Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/BME Logo.jpg",
+			href: "https://www.bookmyevent.com/",
+		},
+		{
+			name: "The Logical Indian",
+			portfolio: "Story Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/STORY PARTNER.jpg",
+			href: "https://thelogicalindian.com/",
+		},
+		{
+			name: "Shortfundly",
+			portfolio: "Digital Streaming Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Digital streaming partner.jpg",
+			href: "https://www.shortfundly.com/",
+		},
+	],
+	[
+		{
+			name: "Chennaiyil.com",
+			portfolio: "Chennai News Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Chennai News Partner.jpg",
+			href: "https://chennaiyil.com/",
+		},
+		{
+			name: "Youth Incorporated",
+			portfolio: "Youth Media Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Youth Media Partner.jpg",
+			href: "https://youthincmag.com/",
+		},
+		{
+			name: "Namma Trichy",
+			portfolio: "Namma Magazine Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Namma Magazine Partner.jpg",
+			href: "https://nammatrichy.in/",
+		},
+	],
+	[
+		{
+			name: "Harami Pun",
+			portfolio: "PUN Partner",
+			src: config.basePath +"/Assets/Images/SponsorImages/PUN Partner.jpg",
+			href: "https://www.instagram.com/haramipun/?hl=en",
+		},
+		{
+			name: "Awesong",
+			portfolio: "Music Streaming Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/music streaming partner.jpg",
+			href: "https://awesong.in/",
+		},
+		{
+			name: "Unstop",
+			portfolio: "Powered By Partner",
+			src: config.basePath+"/Assets/Images/SponsorImages/Powered by Partner_unStop.jpg",
+			href: "https://unstop.com/",
+		},
+	],
+]
+
+
 export const list: any = [
 	{
 		title: "Sponsors",
@@ -493,12 +620,20 @@ export const list: any = [
 		data: bankingSponsors,
 	},
 	{
+		title: "Media Sponsors",
+		data: mediaRelationSponsors1,
+	},
+	{
 		title: "Fashion Sponsors",
 		data: fashionSponsors,
 	},
 	{
 		title: "Education Sponsors",
 		data: educationSponsor,
+	},
+	{
+		title: "Media Sponsors",
+		data: mediaRelationSponsors2,
 	},
 	{
 		title: "Additional Sponsors",
