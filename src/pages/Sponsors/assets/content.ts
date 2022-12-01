@@ -620,7 +620,7 @@ export const list: any = [
 		data: bankingSponsors,
 	},
 	{
-		title: "Media Relation Sponsors",
+		title: "Media Sponsors",
 		data: mediaRelationSponsors1,
 	},
 	{
@@ -632,7 +632,7 @@ export const list: any = [
 		data: educationSponsor,
 	},
 	{
-		title: "Media Relation Sponsors",
+		title: "Media Sponsors",
 		data: mediaRelationSponsors2,
 	},
 	{
