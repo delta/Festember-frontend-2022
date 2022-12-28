@@ -83,7 +83,7 @@ const Landing = ({ isSmallerThan600 }: { isSmallerThan600: any }) => {
 									colorScheme="blue"
 									onClick={() => {
 										window.open(
-											"https://festember.com/apk",
+											"https://play.google.com/store/apps/details?id=edu.nitt.delta&pli=1",
 											"_blank"
 										);
 									}}
