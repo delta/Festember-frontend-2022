@@ -16,7 +16,7 @@ const routes = [
 	{ name: "Hospitality", path: "/hospitality" },
 	{ name: "Sponsors", path: "/sponsors" },
 	{ name: "Leaderboard", path: "/leaderboard" },
-	{ name: "Download APK", path: "https://festember.com/apk" },
+	{ name: "Download APK", path: "https://play.google.com/store/apps/details?id=edu.nitt.delta&pli=1" },
 ];
 
 if (isMobile) {
