@@ -1,9 +1,8 @@
 FROM node:19-alpine as base
 
 WORKDIR /app
-RUN mkdir -p .
-COPY package.json .
-COPY yarn.lock .
+COPY package.json package.json
+COPY yarn.lock yarn.lock
 RUN yarn install
 COPY . .
 RUN yarn run build
