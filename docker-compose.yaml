@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  server:
+    container_name: main_site_22
+    image: main_site_22:prod
+    build:
+      context: .
+      target: prod
+    ports:
+      - 3000:80
+    restart: always
