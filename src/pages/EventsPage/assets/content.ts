@@ -1893,7 +1893,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLScCr90fuXQodfBG34H6fSXzB7sWD4kABLUxYwN7xgp7BuWlFw/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1qXgGGZZjTTMz-YnaWv0rD6e9F1g1dBpVnThURTvC-Bk/edit?usp=sharing"
 					],
 					format: [
 						"Participants can form teams of maximum 2 members. ",
@@ -1934,7 +1934,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSffJn5lOFNX6FLh9C-GiwhGSpe_KQaIk_h9F3thAi4de8SlZQ/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/109ePqQimmHayfwrfidrhfRD4DyrCH1fh3cyMOCwrDlw/edit?usp=sharing"
 					],
 					format: [
 						"On spot registration is mandatory.",
@@ -1983,7 +1983,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSetD2rw3fmo7n3lPqOvIwlK1yuen_nBdnWWJrRSaY0AhuyIoQ/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1Hi23bQwC1Wuj3dAp2XY0zl0nvLnI37pypgc8IatzvxY/edit?usp=sharing"
 					],
 					format: [
 						"Quiz will only consist of Audio, Video and Visual based questions.",
@@ -2025,7 +2025,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSd0XV4Ri-W3QokBobgbPHakptgZ7teDY6-yckcPmJ9u3xB7yg/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1nWMMWcBML6KaX6PUUd7q7FPo4SbC7U2L8JPbXKcE2Ik/edit?usp=sharing"
 					],
 					format: [
 						"The quiz consists of two rounds: prelims and finals.",
@@ -2066,7 +2066,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSf_DSdbN74KzH_vQx0U9GmUgxJ3o6I6Q9zRlbV1HnI0IrxbpA/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1QYNsHV7rjqMo7hVmuXYbNx7viB7rAocqo9gpvXjDCIc/edit?usp=sharing"
 					],
 					format: [
 						"This is a general quiz. It has no particular theme.",
@@ -2107,7 +2107,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSdNXWe-WwF_ntNfXBZ10e0mql6dPhOeJYSIEBb5J9nJxo-ueQ/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1B-6bETyhzJomBLTvPAOfpgAT-RtqRGEh0yCzDon2ub8/edit?usp=sharing"
 					],
 					format: [
 						"Potpourri is an E-Lits event that is a combination of every other E-Lits event. ",
@@ -2144,7 +2144,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSexWQxnhkQhTdXxT9qiEk_KkMXTKizpNOOvNeGFTzVMLTlIZA/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1AUi3E4Q4sbPOIzCVJQCcX4PKprvElwEF57r2-xQcgnE/edit?usp=sharing"
 					],
 					format: [
 						"Participants can form teams of 2 members.",
@@ -2180,7 +2180,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSf08MwQ8c30LqF7GYbjm6oi9PZjN4zsy5dx0RIatIkFnTJE9w/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/15nAntEerxNcK_vK5G_o4RKgeWXThJa9LCD--HOVDMsI/edit?usp=sharing"
 					],
 					format: [
 						"The event will be conducted in two rounds: prelims and finals.",
@@ -2219,7 +2219,7 @@ export const content: any = [
 						"If general knowledge and lightning-quick reflexes are your fortes, turn up for Festember's Buzzer Quiz as a team of 2 or less to test yourself!",
 					],
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSee8H7OhPXsdR6d66ck41Ct0XywNrPBNs5OBuXMTFHhg-lq3g/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1Xaz46tlO41vlYza7p3iUKptPCpthlmdlFIwyCMtiyYQ/edit?usp=sharing"
 					],
 					format: [
 						"This is a general quiz.",
@@ -2259,7 +2259,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSee8H7OhPXsdR6d66ck41Ct0XywNrPBNs5OBuXMTFHhg-lq3g/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1PS0PZl8I5qz2AI_N7FFZc3UfIQjj_70keMlkMgXoYDY/edit?usp=sharing"
 					],
 					format: [
 						"On spot registration is mandatory.",
@@ -2299,7 +2299,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSeBYKCGFLeHNGPH8Vpyr-PPWAQn_GMyEM2rS1EwncXr3s3D8Q/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1tqyksgyt-aeUMVyYjRmWq986QHA-2GEFUDI6TcqIkEU/edit?usp=sharing"
 					],
 					format: [
 						"Teams of 3 members each.",
@@ -2334,7 +2334,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSfxX7ihAD95cLLv_R7KC6K8wxu05nuBGARPZiWtHbJb6-uhwQ/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1sZDsUt2opgpekxnvUN7eg7SxtJhQUMqba2bpjp97wX4/edit?usp=sharing"
 					],
 					format: [
 						"An individual speaking event with 1-minute rounds.",
@@ -2379,7 +2379,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSf4XuLExlsYwNUWxZSZXiPSuKdy8VqIg_q3wn4deUoEDFtpPw/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1Y4iFq96Oenwe9XT3zUzJut9RfdxMSXQpscUfCk4U68M/edit?usp=sharing"
 					],
 					format: [
 						"The quiz consists of two rounds: prelims and finals.",
@@ -2420,7 +2420,7 @@ export const content: any = [
 					],
 
 					link: [
-						"https://docs.google.com/forms/d/e/1FAIpQLSf1HRjYEC-A-L-GM89W10-fJaGSKp8OgfxUw1bbZDwPyB7tTw/viewform?usp=sf_link",
+						"https://docs.google.com/document/d/1jt4f4I9eIxbF2MZ6ICWXlybanxzLx7UwitF0kgUivro/edit?usp=sharing"
 					],
 					format: [
 						"It is an individual event ",
